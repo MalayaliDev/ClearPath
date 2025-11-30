@@ -1,106 +1,63 @@
-import React from 'react';
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
-import MainPage from './pages/MainPage.jsx';
-import AboutPage from './pages/AboutPage.jsx';
-import FeaturesPage from './pages/FeaturesPage.jsx';
-import StatsPage from './pages/StatsPage.jsx';
-import SupportPage from './pages/SupportPage.jsx';
-import LoginPage from './pages/LoginPage.jsx';
-import RegisterPage from './pages/RegisterPage.jsx';
-import StudentDashboard from './pages/StudentDashboard.jsx';
-import ComplaintsPage from './pages/ComplaintsPage.jsx';
-import StaffDashboard from './pages/StaffDashboard.jsx';
-import StudyLab from './pages/StudyLab.jsx';
-import PdfLab from './pages/PdfLab.jsx';
-import MentorLab from './pages/MentorLab.jsx';
-import ExamLab from './pages/ExamLab.jsx';
-import ExamQuiz from './pages/ExamQuiz.jsx';
-import StudyTools from './pages/StudyTools.jsx';
-import TicketDetailPage from './pages/TicketDetailPage.jsx';
-import MyTicketsPage from './pages/MyTicketsPage.jsx';
-import ProfilePage from './pages/ProfilePage.jsx';
-import Layout from './components/Layout.jsx';
-import { getStoredUser } from './services/authStorage.js';
-import StaffTicketsPage from './pages/staff/StaffTicketsPage.jsx';
-import StaffUserManagementPage from './pages/staff/StaffUserManagementPage.jsx';
-import StaffStudentInsightsPage from './pages/staff/StaffStudentInsightsPage.jsx';
-import StaffAiLimitsPage from './pages/staff/StaffAiLimitsPage.jsx';
-import StaffTicketConfigPage from './pages/staff/StaffTicketConfigPage.jsx';
-import StaffPdfMaintenancePage from './pages/staff/StaffPdfMaintenancePage.jsx';
+const express = require('express');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
 
-function ProtectedRoute({ children, allowedRoles }) {
-  const user = getStoredUser();
-  const location = useLocation();
+const authRoutes = require('./routes/authRoutes');
+const complaintRoutes = require('./routes/complaintRoutes');
+const pdfRoutes = require('./routes/pdfRoutes');
+const mentorRoutes = require('./routes/mentorRoutes');
+const userRoutes = require('./routes/userRoutes');
+const examRoutes = require('./routes/examRoutes');
+const studyRoutes = require('./routes/studyRoutes');
 
-  if (!user) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+const app = express();
+app.set('trust proxy', 1);
+
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://clear-path-two.vercel.app',
+];
+
+// CORS FIRST - before any other middleware
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  
+  // Always send CORS headers if origin is allowed
+  if (origin && allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   }
-
-  if (allowedRoles && !allowedRoles.includes(user.role)) {
-    return <Navigate to="/" replace />;
+  
+  // Handle preflight OPTIONS requests
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
   }
+  
+  next();
+});
 
-  return children;
-}
+// Then body parsers
+app.use(express.json());
+app.use(cookieParser());
 
-export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/features" element={<FeaturesPage />} />
-      <Route path="/stats" element={<StatsPage />} />
-      <Route path="/support" element={<SupportPage />} />
+app.get('/', (req, res) => {
+  res.json({ message: 'Brototype Complaints API running' });
+});
 
-      <Route
-        path="/app"
-        element={
-          <ProtectedRoute>
-            <Layout />
-          </ProtectedRoute>
-        }
-      >
-        <Route index element={<StudentDashboard />} />
-        <Route path="pdf-lab" element={<PdfLab />} />
-        <Route path="mentor-lab" element={<MentorLab />} />
-        <Route path="exam-lab" element={<ExamLab />} />
-        <Route path="exam-lab/:sessionId" element={<ExamQuiz />} />
-        <Route path="study-tools" element={<StudyTools />} />
-        <Route path="study-lab" element={<StudyLab />} />
-        <Route path="complaints" element={<ComplaintsPage />} />
-        <Route path="my-tickets" element={<MyTicketsPage />} />
-        <Route path="profile" element={<ProfilePage />} />
-        <Route path="tickets/:ticketId" element={<TicketDetailPage />} />
-        <Route
-          path="staff"
-          element={
-            <ProtectedRoute allowedRoles={['staff', 'admin']}>
-              <StaffDashboard />
-            </ProtectedRoute>
-          }
-        >
-          <Route index element={<Navigate to="tickets" replace />} />
-          <Route path="tickets" element={<StaffTicketsPage />} />
-          <Route path="user-management" element={<StaffUserManagementPage />} />
-          <Route path="student-insights" element={<StaffStudentInsightsPage />} />
-          <Route path="ai-limits" element={<StaffAiLimitsPage />} />
-          <Route path="ticket-config" element={<StaffTicketConfigPage />} />
-          <Route path="pdf-maintenance" element={<StaffPdfMaintenancePage />} />
-        </Route>
-      </Route>
+app.use('/uploads', express.static(require('path').join(__dirname, '../uploads')));
+app.use('/api/auth', authRoutes);
+app.use('/api/complaints', complaintRoutes);
+app.use('/api/pdf', pdfRoutes);
+app.use('/api/mentor', mentorRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/exam', examRoutes);
+app.use('/api/study', studyRoutes);
 
-      <Route
-        path="/ticket/:ticketId"
-        element={
-          <ProtectedRoute>
-            <TicketDetailPage />
-          </ProtectedRoute>
-        }
-      />
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({ message: 'Internal server error' });
+});
 
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  );
-}
+module.exports = app;

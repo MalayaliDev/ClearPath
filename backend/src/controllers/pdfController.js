@@ -938,9 +938,6 @@ exports.listAllUploads = async (req, res) => {
     const requestedLimit = Number.parseInt(req.query?.limit, 10);
     const limit = Number.isNaN(requestedLimit) ? 50 : Math.min(Math.max(requestedLimit, 5), 200);
     
-    // Ensure upload directory exists
-    ensureUploadDir();
-    
     const uploads = await readRecentUploads(limit, null);
     console.log(`✅ listAllUploads: Found ${uploads.length} uploads`);
     res.json({ success: true, uploads });

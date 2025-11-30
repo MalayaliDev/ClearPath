@@ -90,7 +90,7 @@ export default function StaffDashboard() {
         {staffSections.map(({ id, icon: Icon, label, description, path }) => (
           <NavLink
             key={id}
-            to={path}
+            to={`/app/staff/${path}`}
             className={({ isActive }) =>
               `snap-start rounded-2xl border px-4 py-3 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                 isActive

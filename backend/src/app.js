@@ -18,7 +18,9 @@ const allowedOrigins = [
   'https://clear-path-two.vercel.app',
 ];
 
-// CORS FIRST - before any other middleware
+// ============================================
+// CORS MIDDLEWARE - MUST BE FIRST
+// ============================================
 app.use((req, res, next) => {
   const origin = req.headers.origin;
   
@@ -30,7 +32,7 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
   }
   
-  // Handle preflight OPTIONS requests
+  // Handle preflight OPTIONS requests immediately
   if (req.method === 'OPTIONS') {
     return res.sendStatus(200);
   }
@@ -38,7 +40,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// Then body parsers
+// ============================================
+// BODY PARSERS
+// ============================================
 app.use(express.json());
 app.use(cookieParser());
 
@@ -55,7 +59,22 @@ app.use('/api/user', userRoutes);
 app.use('/api/exam', examRoutes);
 app.use('/api/study', studyRoutes);
 
+// ============================================
+// ERROR HANDLER - MUST ALSO SEND CORS HEADERS
+// ============================================
 app.use((err, req, res, next) => {
+  const origin = req.headers.origin;
+  const allowedOrigins = [
+    'http://localhost:5173',
+    'https://clear-path-two.vercel.app',
+  ];
+  
+  // Send CORS headers even on error
+  if (origin && allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+    res.header('Access-Control-Allow-Credentials', 'true');
+  }
+  
   console.error(err);
   res.status(500).json({ message: 'Internal server error' });
 });

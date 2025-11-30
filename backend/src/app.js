@@ -12,10 +12,26 @@ const studyRoutes = require('./routes/studyRoutes');
 
 const app = express();
 
-app.use(cors({
-  origin: 'http://localhost:5173',
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://clear-path-two.vercel.app',
+];
+
+const corsOptions = {
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('Not allowed by CORS'));
+  },
   credentials: true,
-}));
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  allowedHeaders: 'Content-Type,Authorization',
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 

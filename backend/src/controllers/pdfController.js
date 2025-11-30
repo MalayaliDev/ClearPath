@@ -579,7 +579,7 @@ const callGroq = async (prompt) => {
   }
 
   const payload = {
-    model: process.env.GROQ_MODEL || 'llama3-8b-8192',
+    model: process.env.GROQ_MODEL || 'mixtral-8x7b-32768',
     temperature: 0.2,
     messages: [
       {

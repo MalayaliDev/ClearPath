@@ -421,7 +421,7 @@ export default function PdfLab() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <header className="rounded-[32px] border border-amber-100 bg-gradient-to-br from-amber-50/80 via-white to-white px-6 py-6 shadow-lg shadow-amber-100/70">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>

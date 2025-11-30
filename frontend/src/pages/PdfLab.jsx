@@ -1,7 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { BookOpen, FileText, Loader2, MessageSquare, Send, Sparkles, Trash2, UploadCloud } from 'lucide-react';
-import { getToken } from '../services/authStorage.js';
+import { getToken, getStoredUser } from '../services/authStorage.js';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -33,6 +34,8 @@ const formatChatDate = (iso) => {
 };
 
 export default function PdfLab() {
+  const user = getStoredUser();
+  const isStudent = user?.role === 'student';
   const [uploads, setUploads] = useState([]);
   const [selectedFileId, setSelectedFileId] = useState(null);
   const [uploading, setUploading] = useState(false);
@@ -235,6 +238,7 @@ export default function PdfLab() {
   };
 
   const fetchUploads = async () => {
+    if (!isStudent) return;
     try {
       const response = await axios.get(`${API_BASE}/api/pdf/uploads/recent`, authorizedConfig);
       const uploads = response.data.uploads || [];
@@ -254,6 +258,7 @@ export default function PdfLab() {
   };
 
   const fetchChats = async () => {
+    if (!isStudent) return;
     setChatListLoading(true);
     try {
       const response = await axios.get(`${API_BASE}/api/pdf/chats`, authorizedConfig);
@@ -268,11 +273,13 @@ export default function PdfLab() {
   };
 
   useEffect(() => {
+    if (!isStudent) return;
     fetchUploads();
     fetchChats();
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [isStudent]);
 
   useEffect(() => {
+    if (!isStudent) return;
     if (!chatSummaries.length) return;
 
     if (!selectedFileId) {
@@ -420,8 +427,26 @@ export default function PdfLab() {
     }
   };
 
+  if (!isStudent) {
+    return (
+      <div className="space-y-6 rounded-3xl border border-amber-100 bg-white/95 p-6 text-slate-900 shadow-sm">
+        <h1 className="text-2xl font-semibold text-slate-900">PDF Lab is student-only</h1>
+        <p className="text-sm text-slate-500">
+          Admins and staff can now manage study PDFs from the dedicated maintenance surface. Use the staff dashboard to upload new
+          files or purge outdated content.
+        </p>
+        <Link
+          to="/app/staff/pdf-maintenance"
+          className="inline-flex items-center gap-2 rounded-2xl bg-amber-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-amber-200/70"
+        >
+          Open staff PDF maintenance
+        </Link>
+      </div>
+    );
+  }
+
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <header className="rounded-[32px] border border-amber-100 bg-gradient-to-br from-amber-50/80 via-white to-white px-6 py-6 shadow-lg shadow-amber-100/70">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>

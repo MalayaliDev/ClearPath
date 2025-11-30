@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import axios from 'axios';
 import { RefreshCcw, Trash2, UploadCloud } from 'lucide-react';
-import { getToken } from '../../services/authStorage.js';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -27,7 +26,7 @@ export default function StaffPdfMaintenancePage() {
 
   const authorizedConfig = useMemo(
     () => ({
-      headers: { Authorization: `Bearer ${getToken()}` },
+      withCredentials: true,
     }),
     []
   );
@@ -57,8 +56,8 @@ export default function StaffPdfMaintenancePage() {
         const formData = new FormData();
         formData.append('file', file);
         await axios.post(`${API_BASE}/api/pdf/upload`, formData, {
+          withCredentials: true,
           headers: {
-            ...authorizedConfig.headers,
             'Content-Type': 'multipart/form-data',
           },
         });

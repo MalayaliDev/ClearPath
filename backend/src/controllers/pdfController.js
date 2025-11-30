@@ -531,7 +531,9 @@ const readRecentUploads = async (limit = 5, studentId = null) => {
 
 const callOpenRouter = async (prompt) => {
   if (!process.env.OPENROUTER_API_KEY) {
-    throw new Error('OPENROUTER_API_KEY missing');
+    const err = new Error('OPENROUTER_API_KEY missing');
+    err.response = { status: 503 }; // Service unavailable
+    throw err;
   }
 
   const payload = {
@@ -571,7 +573,9 @@ const callOpenRouter = async (prompt) => {
 
 const callGroq = async (prompt) => {
   if (!process.env.GROQ_API_KEY) {
-    throw new Error('GROQ_API_KEY missing');
+    const err = new Error('GROQ_API_KEY missing');
+    err.response = { status: 503 }; // Service unavailable
+    throw err;
   }
 
   const payload = {

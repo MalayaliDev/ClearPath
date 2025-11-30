@@ -5,6 +5,8 @@ import { User, Mail, Lock, Sparkles, ArrowRight, CheckCircle2 } from 'lucide-rea
 import MainNavbar from '../components/MainNavbar.jsx';
 import { getStoredUser } from '../services/authStorage.js';
 
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
 const registerPerks = [
   'Live status timeline and ticket history.',
   'AI suggestions to phrase your issue clearly.',
@@ -27,7 +29,7 @@ export default function RegisterPage() {
     setSuccess('');
     setLoading(true);
     try {
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post(`${API_BASE}/api/auth/register`, {
         name,
         email,
         password,

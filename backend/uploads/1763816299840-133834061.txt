@@ -1,0 +1,85 @@
+
+
+Ardebil Province | Ardabil, Ardabil, Azadi town, Azarbaijan St.
+MaleSingleStill to do22/11/2005Minimum Salary Expectation: Negotiable
+Sobhan Rasoulzadeh
+Asl
+Programmer
++989934347502
+sobhan.rasoulzadeh.asl@gmail.com
+Skills
+TypeScript
+Expert
+JavaScript
+Expert
+Node.js
+Expert
+API Development
+Expert
+HTML
+Expert
+CSS
+Advanced
+Python
+Intermediate
+React
+Intermediate
+C++
+Beginner
+MongoDB
+Expert
+Git
+Beginner
+Debugging
+Expert
+Problem-Solving
+Expert
+Fast Learning Ability
+Expert
+Testing
+Expert
+SASS
+Expert
+Educations
+Below Diploma
+B.Sc. in Computer Engineering – Islamic Azad University of Ardabil (2024 – Present)
+1 / 3
+
+Below Diploma
+B.Sc. in Electrical Engineering – Islamic Azad University of Ardabil (2023 – 2024, GPA: 14/20)
+(Transferred major to Computer Engineering)
+Languages
+English
+Intermediate
+Azerbaijani
+Expert
+Projects
+Official Website of Arta Omran Varaq2025 /06 - 2025 /07
+https://a-o-v.ir/
+A corporate introduction website for Arta Omran Varaq, a steel structure and warehouse construction company.
+Includes company information and portfolio showcase.
+Padio – Discord Radio Bot2024 /07 - 2025 /08
+https://github.com/Persian-Caesar/Radio-Bot
+A multilingual open-source Discord bot that automatically joins a voice channel and streams selected online radio channels with high-
+quality audio.
+(More projects available at my GitHub profile below)
+Courses
+Web Design (HTML, CSS, Sass)2024 /12 - 2025 /02
+Python Programming2025 /04 - 2025 /08
+Links and Portfolios
+gitlab.com/Sobhan-SRZA
+www.instagram.com/mr.sinre
+2 / 3
+
+www.linkedin.com/in/sobhan-rasoulzadeh-asl-a0679635b/
+github.com/Sobhan-SRZA
+github.com/Persian-Caesar
+github.com/aparatjs
+srza.ir/
+www.npmjs.com/~sobhan-srza
+Description
+Hello! I am Sobhan, a Full-Stack developer focused on modern web technologies such as TypeScript, Node.js, and React.
+I love solving complex problems with clean and efficient code.
+So far, I have designed and implemented 20+ real projects, including Discord bots, web applications, and utility tools.
+I am always eager to learn new technologies and collaborate on challenging projects.
+3 / 3

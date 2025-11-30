@@ -1,2 +1,13 @@
 .windsurf/rules/kluster-code-verify.md
 .kluster
+
+# Uploads (user-generated files, not tracked in git)
+backend/uploads/
+uploads/
+
+# Dependencies
+node_modules/
+.env
+.env.local
+dist/
+build/

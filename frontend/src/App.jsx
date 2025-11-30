@@ -26,6 +26,7 @@ import StaffUserManagementPage from './pages/staff/StaffUserManagementPage.jsx';
 import StaffStudentInsightsPage from './pages/staff/StaffStudentInsightsPage.jsx';
 import StaffAiLimitsPage from './pages/staff/StaffAiLimitsPage.jsx';
 import StaffTicketConfigPage from './pages/staff/StaffTicketConfigPage.jsx';
+import StaffPdfMaintenancePage from './pages/staff/StaffPdfMaintenancePage.jsx';
 
 function ProtectedRoute({ children, allowedRoles }) {
   const user = getStoredUser();
@@ -36,6 +37,7 @@ function ProtectedRoute({ children, allowedRoles }) {
   }
 
   if (allowedRoles && !allowedRoles.includes(user.role)) {
+    console.warn('Access denied. User role:', user.role, 'Allowed roles:', allowedRoles);
     return <Navigate to="/" replace />;
   }
 
@@ -86,6 +88,7 @@ export default function App() {
           <Route path="student-insights" element={<StaffStudentInsightsPage />} />
           <Route path="ai-limits" element={<StaffAiLimitsPage />} />
           <Route path="ticket-config" element={<StaffTicketConfigPage />} />
+          <Route path="pdf-maintenance" element={<StaffPdfMaintenancePage />} />
         </Route>
       </Route>
 

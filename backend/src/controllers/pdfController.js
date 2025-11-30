@@ -932,3 +932,66 @@ exports.getPdfMetadata = async (req, res) => {
     res.status(500).json({ success: false, message: 'Failed to load metadata' });
   }
 };
+
+exports.listAllUploads = async (req, res) => {
+  try {
+    const requestedLimit = Number.parseInt(req.query?.limit, 10);
+    const limit = Number.isNaN(requestedLimit) ? 50 : Math.min(Math.max(requestedLimit, 5), 200);
+    
+    // Ensure upload directory exists
+    ensureUploadDir();
+    
+    const uploads = await readRecentUploads(limit, null);
+    console.log(`✅ listAllUploads: Found ${uploads.length} uploads`);
+    res.json({ success: true, uploads });
+  } catch (error) {
+    console.error('❌ listAllUploads error', error);
+    res.status(500).json({ success: false, message: 'Failed to load uploads' });
+  }
+};
+
+exports.adminDeleteUpload = async (req, res) => {
+  try {
+    const { fileId } = req.params;
+    if (!fileId) {
+      return res.status(400).json({ success: false, message: 'fileId is required' });
+    }
+
+    const metaFile = metadataPath(fileId);
+    let found = false;
+
+    if (fs.existsSync(metaFile)) {
+      found = true;
+      let metadata = null;
+      try {
+        const raw = await readFileAsync(metaFile, 'utf-8');
+        metadata = JSON.parse(raw);
+        safeUnlink(metaFile);
+        if (metadata?.storedName) {
+          safeUnlink(path.join(UPLOAD_DIR, metadata.storedName));
+        }
+      } catch (err) {
+        console.warn('Failed to parse metadata for admin delete', fileId, err.message);
+        safeUnlink(metaFile);
+      }
+    }
+
+    const textFile = textPath(fileId);
+    if (fs.existsSync(textFile)) {
+      found = true;
+      safeUnlink(textFile);
+    }
+
+    if (!found) {
+      return res.status(404).json({ success: false, message: 'File not found' });
+    }
+
+    await PdfChat.updateMany({ file_id: fileId }, { file_removed: true });
+
+    const uploads = await readRecentUploads(50, null);
+    res.json({ success: true, uploads });
+  } catch (error) {
+    console.error('adminDeleteUpload error', error);
+    res.status(500).json({ success: false, message: 'Failed to delete upload' });
+  }
+};

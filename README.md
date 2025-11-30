@@ -111,3 +111,4 @@ VITE_API_URL=http://localhost:5000   # or deployed API URL
 - For frontend deploy issues, view the static host deployment log (Vercel/Netlify/etc.).
 
 Good luck reviewing, and thank you for considering Clean Path for the Brototype competition!
+"# ClearPath" 

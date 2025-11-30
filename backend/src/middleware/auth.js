@@ -4,9 +4,13 @@ function auth(requiredRoles = []) {
   return (req, res, next) => {
     const token = req.cookies?.token;
 
+    // DEBUG: Log if cookie is present
     if (!token) {
+      console.warn('❌ No token cookie found. Cookies received:', Object.keys(req.cookies || {}));
       return res.status(401).json({ message: 'No token provided' });
     }
+    
+    console.log('✅ Token cookie found, verifying...');
 
     try {
       if (!process.env.JWT_SECRET) {

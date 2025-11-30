@@ -84,7 +84,7 @@ ensureUploadDir();
 
 const metadataPath = (fileId) => path.join(UPLOAD_DIR, `${fileId}.json`);
 const textPath = (fileId) => path.join(UPLOAD_DIR, `${fileId}.txt`);
-const FALLBACK_NOTICE = '\n\n⚠️ Generated locally because the AI service was unavailable.';
+const FALLBACK_NOTICE = '';
 const safeUnlink = (filePath) => {
   try {
     if (filePath && fs.existsSync(filePath)) {
@@ -578,41 +578,61 @@ const callGroq = async (prompt) => {
     throw err;
   }
 
-  const payload = {
-    model: process.env.GROQ_MODEL || 'mixtral-8x7b-32768',
-    temperature: 0.2,
-    messages: [
-      {
-        role: 'system',
-        content:
-          'You are a friendly study mentor. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing.',
-      },
-      {
-        role: 'user',
-        content: prompt,
-      },
-    ],
-  };
+  // Try multiple models in order
+  const models = [
+    process.env.GROQ_MODEL || 'mixtral-8x7b-32768',
+    'llama-2-70b-chat',
+    'gemma-7b-it',
+  ];
 
-  const response = await axios.post(
-    `${process.env.GROQ_BASE_URL || 'https://api.groq.com/openai/v1'}/chat/completions`,
-    payload,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
-        'Content-Type': 'application/json',
-        'User-Agent': 'ClearPath/1.0',
-      },
-      timeout: 30000,
+  let lastError;
+  for (const model of models) {
+    try {
+      const payload = {
+        model,
+        temperature: 0.2,
+        messages: [
+          {
+            role: 'system',
+            content:
+              'You are a friendly study mentor. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing.',
+          },
+          {
+            role: 'user',
+            content: prompt,
+          },
+        ],
+      };
+
+      const response = await axios.post(
+        `${process.env.GROQ_BASE_URL || 'https://api.groq.com/openai/v1'}/chat/completions`,
+        payload,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+            'Content-Type': 'application/json',
+            'User-Agent': 'ClearPath/1.0',
+          },
+          timeout: 30000,
+        }
+      );
+
+      const message = response.data?.choices?.[0]?.message?.content;
+      if (!message) {
+        throw new Error('Groq returned an empty response');
+      }
+
+      console.log(`✅ Groq model ${model} succeeded`);
+      return message;
+    } catch (err) {
+      lastError = err;
+      console.warn(`⚠️ Groq model ${model} failed:`, err.response?.data?.error?.message || err.message);
+      // Continue to next model
     }
-  );
-
-  const message = response.data?.choices?.[0]?.message?.content;
-  if (!message) {
-    throw new Error('Groq returned an empty response');
   }
 
-  return message;
+  // All models failed
+  throw lastError || new Error('All Groq models failed');
 };
 
 exports.uploadPdf = async (req, res) => {
@@ -693,10 +713,27 @@ Question: ${requestedQuestion}`;
 
     let answer;
     
-    // Always use fallback - AI services not configured
-    console.warn('Using fallback summary for PDF analysis.');
-    const fallback = buildFallbackSummary(snippet, requestedQuestion);
-    answer = `${fallback}${FALLBACK_NOTICE}`;
+    try {
+      answer = await callOpenRouter(prompt);
+    } catch (err) {
+      if (!shouldFallback(err)) {
+        throw err;
+      }
+
+      console.warn('OpenRouter unavailable. Trying Groq.', err.response?.status);
+
+      try {
+        answer = await callGroq(prompt);
+      } catch (groqErr) {
+        if (!shouldFallback(groqErr)) {
+          throw groqErr;
+        }
+
+        console.warn('All AI services unavailable. Using fallback summary.');
+        const fallback = buildFallbackSummary(snippet, requestedQuestion);
+        answer = `${fallback}${FALLBACK_NOTICE}`;
+      }
+    }
 
     const sanitizedAnswer = stripContextApology(answer);
     const withTopics = prependImportantTopics(sanitizedAnswer, requestedQuestion, snippet);
@@ -777,10 +814,27 @@ Question: ${trimmedQuestion}`;
 
     let answer;
     
-    // Always use fallback - AI services not configured
-    console.warn('Using fallback answer for PDF question.');
-    const fallback = buildFallbackAnswer(snippet, trimmedQuestion);
-    answer = `${fallback}${FALLBACK_NOTICE}`;
+    try {
+      answer = await callOpenRouter(prompt);
+    } catch (err) {
+      if (!shouldFallback(err)) {
+        throw err;
+      }
+
+      console.warn('OpenRouter unavailable. Trying Groq.', err.response?.status);
+
+      try {
+        answer = await callGroq(prompt);
+      } catch (groqErr) {
+        if (!shouldFallback(groqErr)) {
+          throw groqErr;
+        }
+
+        console.warn('All AI services unavailable. Using fallback answer.');
+        const fallback = buildFallbackAnswer(snippet, trimmedQuestion);
+        answer = `${fallback}${FALLBACK_NOTICE}`;
+      }
+    }
 
     const sanitizedAnswer = stripContextApology(answer);
     const withTopics = prependImportantTopics(sanitizedAnswer, trimmedQuestion, snippet);

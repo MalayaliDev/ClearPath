@@ -38,6 +38,13 @@ const staffSections = [
     icon: Settings2,
     path: 'ticket-config',
   },
+  {
+    id: 'pdf-maintenance',
+    label: 'PDF maintenance',
+    description: 'Upload or purge AI study files',
+    icon: FileText,
+    path: 'pdf-maintenance',
+  },
 ];
 
 const quickActions = [

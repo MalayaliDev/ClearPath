@@ -5,6 +5,8 @@ import { Mail, Lock, LogIn, Eye, EyeOff, ShieldCheck, ArrowRight, CheckCircle2 }
 import { saveAuth, getStoredUser } from '../services/authStorage.js';
 import MainNavbar from '../components/MainNavbar.jsx';
 
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
 const heroStats = [
   { label: 'Tickets resolved', value: '128', meta: 'this month' },
   { label: 'Avg. first reply', value: '11m', meta: 'mentor pods live' },
@@ -35,7 +37,7 @@ export default function LoginPage() {
     setError('');
     setLoading(true);
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/login', {
+      const res = await axios.post(`${API_BASE}/api/auth/login`, {
         email,
         password,
       });

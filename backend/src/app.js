@@ -11,11 +11,38 @@ const examRoutes = require('./routes/examRoutes');
 const studyRoutes = require('./routes/studyRoutes');
 
 const app = express();
+app.set('trust proxy', 1);
 
-app.use(cors({
-  origin: 'http://localhost:5173',
-  credentials: true,
-}));
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://clear-path-two.vercel.app',
+];
+
+// ============================================
+// CORS MIDDLEWARE - MUST BE FIRST
+// ============================================
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  
+  // Always send CORS headers if origin is allowed
+  if (origin && allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+    res.header('Access-Control-Allow-Credentials', 'true');
+    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+  }
+  
+  // Handle preflight OPTIONS requests immediately
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(200);
+  }
+  
+  next();
+});
+
+// ============================================
+// BODY PARSERS
+// ============================================
 app.use(express.json());
 app.use(cookieParser());
 
@@ -32,7 +59,22 @@ app.use('/api/user', userRoutes);
 app.use('/api/exam', examRoutes);
 app.use('/api/study', studyRoutes);
 
+// ============================================
+// ERROR HANDLER - MUST ALSO SEND CORS HEADERS
+// ============================================
 app.use((err, req, res, next) => {
+  const origin = req.headers.origin;
+  const allowedOrigins = [
+    'http://localhost:5173',
+    'https://clear-path-two.vercel.app',
+  ];
+  
+  // Send CORS headers even on error
+  if (origin && allowedOrigins.includes(origin)) {
+    res.header('Access-Control-Allow-Origin', origin);
+    res.header('Access-Control-Allow-Credentials', 'true');
+  }
+  
   console.error(err);
   res.status(500).json({ message: 'Internal server error' });
 });

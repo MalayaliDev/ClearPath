@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import { MessageCircle, ShieldBan, Gauge, Settings2, GraduationCap, Sparkles } from 'lucide-react';
+import { MessageCircle, ShieldBan, Gauge, Settings2, GraduationCap, Sparkles, FileText } from 'lucide-react';
 
 const staffSections = [
   {
@@ -37,6 +37,13 @@ const staffSections = [
     description: 'Portal automation policies',
     icon: Settings2,
     path: 'ticket-config',
+  },
+  {
+    id: 'pdf-maintenance',
+    label: 'PDF maintenance',
+    description: 'Upload or purge AI study files',
+    icon: FileText,
+    path: 'pdf-maintenance',
   },
 ];
 
@@ -83,7 +90,7 @@ export default function StaffDashboard() {
         {staffSections.map(({ id, icon: Icon, label, description, path }) => (
           <NavLink
             key={id}
-            to={path}
+            to={`/app/staff/${path}`}
             className={({ isActive }) =>
               `snap-start rounded-2xl border px-4 py-3 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
                 isActive

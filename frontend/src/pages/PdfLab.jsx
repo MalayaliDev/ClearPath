@@ -96,9 +96,7 @@ export default function PdfLab() {
   }, [qaThread]);
 
   const authorizedConfig = {
-    headers: {
-      Authorization: `Bearer ${getToken()}`,
-    },
+    withCredentials: true,
   };
 
   const upsertChatSummary = (summary) => {
@@ -311,8 +309,8 @@ export default function PdfLab() {
         const formData = new FormData();
         formData.append('file', file);
         const response = await axios.post(`${API_BASE}/api/pdf/upload`, formData, {
+          withCredentials: true,
           headers: {
-            ...authorizedConfig.headers,
             'Content-Type': 'multipart/form-data',
           },
         });

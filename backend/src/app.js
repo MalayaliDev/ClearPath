@@ -11,6 +11,9 @@ const studyRoutes = require('./routes/studyRoutes');
 
 const app = express();
 
+app.use(cookieParser());
+app.use(express.json());
+
 const allowedOrigins = [
   'http://localhost:5173',
   'https://clear-path-two.vercel.app',
@@ -33,8 +36,6 @@ app.use((req, res, next) => {
 
   return next();
 });
-app.use(express.json());
-app.use(cookieParser());
 
 app.get('/', (req, res) => {
   res.json({ message: 'Brototype Complaints API running' });

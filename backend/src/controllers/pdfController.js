@@ -723,8 +723,15 @@ Question: ${requestedQuestion}`;
 
     res.json({ success: true, answer: blendedAnswer, chat: persistence?.chat, entry: persistence?.entry });
   } catch (error) {
-    console.error('analyzePdf error', error);
-    res.status(500).json({ success: false, message: 'Failed to analyze PDF' });
+    console.error('❌ analyzePdf error:', error.message || error);
+    if (error.response?.data) {
+      console.error('API response:', error.response.data);
+    }
+    res.status(500).json({ 
+      success: false, 
+      message: 'Failed to analyze PDF',
+      error: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
   }
 };
 

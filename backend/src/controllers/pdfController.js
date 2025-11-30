@@ -961,6 +961,8 @@ exports.adminDeleteUpload = async (req, res) => {
       return res.status(400).json({ success: false, message: 'fileId is required' });
     }
 
+    console.log(`🗑️ Attempting to delete upload: ${fileId}`);
+
     const metaFile = metadataPath(fileId);
     let found = false;
 
@@ -970,9 +972,12 @@ exports.adminDeleteUpload = async (req, res) => {
       try {
         const raw = await readFileAsync(metaFile, 'utf-8');
         metadata = JSON.parse(raw);
+        console.log(`✅ Deleting metadata file: ${metaFile}`);
         safeUnlink(metaFile);
         if (metadata?.storedName) {
-          safeUnlink(path.join(UPLOAD_DIR, metadata.storedName));
+          const pdfPath = path.join(UPLOAD_DIR, metadata.storedName);
+          console.log(`✅ Deleting PDF file: ${pdfPath}`);
+          safeUnlink(pdfPath);
         }
       } catch (err) {
         console.warn('Failed to parse metadata for admin delete', fileId, err.message);
@@ -983,19 +988,22 @@ exports.adminDeleteUpload = async (req, res) => {
     const textFile = textPath(fileId);
     if (fs.existsSync(textFile)) {
       found = true;
+      console.log(`✅ Deleting text file: ${textFile}`);
       safeUnlink(textFile);
     }
 
     if (!found) {
+      console.warn(`⚠️ File not found for deletion: ${fileId}`);
       return res.status(404).json({ success: false, message: 'File not found' });
     }
 
     await PdfChat.updateMany({ file_id: fileId }, { file_removed: true });
 
     const uploads = await readRecentUploads(50, null);
+    console.log(`✅ Delete successful. Remaining uploads: ${uploads.length}`);
     res.json({ success: true, uploads });
   } catch (error) {
-    console.error('adminDeleteUpload error', error);
+    console.error('❌ adminDeleteUpload error', error);
     res.status(500).json({ success: false, message: 'Failed to delete upload' });
   }
 };

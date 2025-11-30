@@ -630,7 +630,16 @@ exports.uploadPdf = async (req, res) => {
     const fileBuffer = await readFileAsync(req.file.path);
     const parsed = await pdfParse(fileBuffer);
 
-    await writeFileAsync(textPath(fileId), parsed.text || '');
+    // Clean up extracted text - fix encoding issues
+    let extractedText = parsed.text || '';
+    // Remove corrupted characters and normalize whitespace
+    extractedText = extractedText
+      .replace(/[\u0080-\u009F]/g, '') // Remove control characters
+      .replace(/[\uFFF0-\uFFFF]/g, '') // Remove invalid Unicode
+      .replace(/\s+/g, ' ') // Normalize whitespace
+      .trim();
+
+    await writeFileAsync(textPath(fileId), extractedText);
 
     const metadata = {
       id: fileId,

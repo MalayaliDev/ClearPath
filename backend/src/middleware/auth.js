@@ -19,12 +19,16 @@ function auth(requiredRoles = []) {
       }
 
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      const userRole = decoded.role || 'student'; // Default to student if role is missing
+      
       req.user = {
         ...decoded,
         id: (decoded.id || decoded._id || '').toString(),
+        role: userRole,
       };
 
-      if (requiredRoles.length && !requiredRoles.includes(decoded.role)) {
+      if (requiredRoles.length && !requiredRoles.includes(userRole)) {
+        console.warn(`❌ Access denied. User role: ${userRole}, Required: ${requiredRoles.join(', ')}`);
         return res.status(403).json({ message: 'Forbidden' });
       }
 

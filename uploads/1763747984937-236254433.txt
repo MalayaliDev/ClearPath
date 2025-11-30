@@ -1,0 +1,8577 @@
+
+
+ 
+                                                    Chapter 1 
+                                       Units and Measurement 
+1.Name the fundamental(base) quantities and  units according to SI 
+system. 
+                 
+2.Define angle 
+                      
+ 
+ 
+ 
+ 
+3.Define solid angle 
+                  
+4.Write the dimensional formulae of following derived quantities.                                                                                                            
+                        Area -L
+2
+                                 Work or energy - ML
+2
+T
+−2
+ 
+                      Volume -L
+3
+                                                   Power - ML
+2
+T
+−3
+                  
+                    Density -ML
+−3
+                                        Pressure - ML
+−1
+T
+−2
+ 
+                           Velocity- LT
+−1
+                                              Stress - ML
+−1
+T
+−2
+ 
+                  Acceleration - LT
+−2
+                  Modulus of elasticity- ML
+−1
+T
+−2
+ 
+                   Momentum - MLT
+−1
+     
+                            Force - MLT
+−2
+ 
+  5.Write two physical quantities having no unit and dimension 
+                          Relative density, strain                 
+.............................................................................................................................. 
+                                                               Seema Elizabeth, MARM Govt HSS Santhipuram, Thrissur 
+             
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+6.Write two physical quantities that have unit but no dimension 
+                         Plane angle, solid angle, angular displacement 
+7. 
+ 
+8. 
+ 
+9.Name and state the principle used to check the correctness of an 
+equation. 
+     Principle of homogeneity of dimensions. 
+     For an equation to be correct the dimensions of each terms on both 
+sides of the equation must be the same                   Or 
+      The magnitudes of physical quantities may be added or subtracted only 
+if they  have the same dimensions. 
+10. Write the uses of dimensional analysis  
+1. Checking the dimensional consistency (correctness) of equatons. 
+2. Deducing relation among the physical quantities. 
+11.  Using the method of dimension check whether the equation is 
+dimensionally correct or not 
+                   
+Since the dimensions of all terms are not same the equation is not correct 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+12.  Using the method of dimension check whether the equation is 
+dimensionally correct or not 
+          
+Since the dimensions of all terms on both sides are same the equation is 
+dimensionally correct correct 
+13.  Using the method of dimension check whether the equation is 
+dimensionally correct or not 
+ 
+14.Check the dimensional correctness of the equation E=m퐜
+ퟐ
+            
+ 
+15.In the given equation v = x + at , find the dimensions of  x. 
+                      (where v= velocity , a=acceleration , t=time) 
+             
+16. In the given equatio  x= a + bt + c퐭
+ퟐ
+  , find the dimensions of  a,b and c. 
+                      (where x is in meters and t in seconds) 
+   
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+17.The Van der waals equation of 'n' moles of a real gas is 
+(P+
+풂
+푽
+ퟐ
+)(V−b)=nRT. Where P is the pressure, V is the volume, T is absolute 
+temperature, R is molar gas constant and a, b, c are Van der 
+waal constants. Find the dimensional formula for a and b. 
+                        (P+
+퐚
+퐕
+ퟐ
+)(V−b)=nRT. 
+By principle of homegeneity, the quantities with same dimensions can be 
+added or subtracted. 
+                                        [P] =[
+a
+V
+2
+]     
+                                        [a] =[PV
+2
+] 
+                                              =ML
+−1
+T
+−2
+  x L
+6
+ 
+                                       [a] = ML
+5
+T
+−2
+   
+                                      [b] = [V] 
+                                       [b] =L
+3
+ 
+18.Derive the equation for kinetic energy E of a body of mass m moving 
+    with  velocity v 
+           
+19.derive the expression for period of oscillations of a simple pendulum 
+using the method of dimensions 
+ 
+     
+                                                        T=k
+√
+푙
+푔
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+20.Write any two limitations of dimensional analysis. 
+ 
+21.What do you mean by significant figures? 
+The reliable digits plus the first uncertain digit in a measurement are 
+known as significant digits or significant figures. 
+ 
+22.Find the number of significant figures in following numbers 
+                       0.02380 - 4 
+                       23.08      - 4 
+                       23.80      - 4 
+                       2380       - 3 
+                       43.00      - 4 
+                       4300       - 2 
+           4.700 × 10
+2
+      - 4 
+           4.700 × 10
+−3
+    - 4 
+23.If mass of an object is measured to be,  4.237 g (four significant figures) 
+and its volume is measured to be 2.51cm3(3 significant figures), then  find 
+its density in appropriate significant figures. 
+                   Density =
+푚푎푠푠
+푣표푙푢푚푒
+= 
+4.237 푔
+2.51푐푚
+3
+ = 1.688047 
+As per rule the final result should be rounded to 3 significant figures . 
+                                     So the answer is 1.69 g/ 푐푚
+3
+  
+24.Find the sum of the numbers 436.32 g, 227.2 g and 0.301 g to 
+appropriate significant figures. 
+                                436.32   g   +            (2 decimal places) 
+                                227.2      g   +            (1 decimal place) 
+                                     0.301 g                   (3 decimal places) 
+                               _______________ 
+                                663.821 g 
+As per rule ,the final result should be rounded to 1 decimal place. 
+                              So the answer 663.8 g 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                   Chapter 2 
+                                      Motion in a Straight Line 
+ 
+1.Define instantaneous velocity?  
+The velocity at an instant is called instantaneous velocity. 
+                                             v = lim
+Δt→0
+  
+Δx
+Δt
+  
+                                            v = 
+퐝퐱
+퐝퐭
+ 
+2.When does the average velocity become equal to instantaneous velocity? 
+When the time interval Δt→0 ,the average velocity becomes equal to 
+instantaneous velocity. 
+                                             v = lim
+Δt→0
+  
+Δx
+Δt
+   = 
+dx
+dt
+ 
+ 
+3.The speedometer of a vehicle shows ....................... 
+                                           Instantaneous speed. 
+4. The area under velocity -time graph gives -------- 
+                     Displacement  
+ 
+ 
+5. The slope of velocity-time graph gives ------------- 
+                    Acceleration    
+ 
+6. Define average accelaration 
+The average acceleration over a time interval is defined as the ratio of 
+change in velocity to the time interval. 
+                                           퐚
+⃗ 
+=
+퐯
+ퟐ
+−퐯
+ퟏ
+퐭
+ퟐ
+−퐭
+ퟏ
+ =
+횫퐯
+횫퐭
+ 
+ 
+7.Define instantaneous acceleration. 
+The acceleration of a particle at any instant of its motion is called 
+instantaneous acceleration.   
+                                             a = 퐥퐢퐦
+횫퐭→ퟎ
+  
+횫퐯
+횫퐭
+ = 
+퐝퐯
+퐝퐭
+ 
+                                            a = 
+퐝퐯
+퐝퐭
+                 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+8.Draw the position- time graph of an object  moving with  
+   
+9. Draw the velocity- time graph of an object  moving with  
+      (a) uniform positive acceleration        (b) uniform negative acceleration  
+                                     
+10.Draw the velocity- time graph of a stone thown vertiaccly upwrds and 
+comes back. 
+                                         
+11.Draw the speed- time graph of a stone thown vertiaccly upwrds and 
+comes back. 
+                                     
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+12. Draw the velocity-time graph of a freely falling body.( A stone 
+vertically falling downwards) 
+                                            
+13. Is it possible for a body to have zero velocity with a nonzero 
+acceleration. Give an example. 
+Yes. When a body is thrown upwards ,at the highest point of 
+projection, its velocity is zero , but it has an acceleration. 
+14.The velocity -time graph of a ball thrown vertically upward with an 
+initial velocity is shown in figure. 
+                                        
+    a)What is themagnitude of initial velocity of ball? 
+    b)Calculate the distance travelled by the ball during 20seconds from the 
+grah. 
+    c) Calculate the acceleration of the ball from the graph 
+          a)Initial velocity=100m/s 
+          b)Distance travelled  = area of graph 
+                                                   =
+1
+2
+ b
+1
+h
+1 
+ +
+1
+2
+ b
+2
+h
+2 
+  
+                                                   =
+1
+2
+ x10 x 100 
+ 
+ + 
+1
+2
+  x 10 x100
+ 
+  
+                                                   =1000m        
+          c)            Acceleration = slope 
+                                                 = 
+v
+2
+−v
+1
+t
+2
+−t
+1
+ =
+0−100
+10−0
+ =-10 m/s
+2 
+19. (a)Draw  the velocity-time graph of a body with uniform aceeleration . 
+       (b) Using the graph obtain              (i) Velocity - time relation 
+                                                                       (ii) Displacement -tme relation 
+                                                                      (iii) Displacement velocity relation 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+Consider a body moving with uniform acceleration . The velocity – time 
+graph is as shown in figure 
+                 
+ 
+(1) Velocity – time relation  
+  From the graph , acceleration = slope  
+                                          a = 
+BC
+AC
+ 
+                                          a = 
+v−u
+t
+  
+                                      v-u = at 
+                                         v = u +at -------------------- (1)     
+                                                   or (v = v
+0
++at) 
+(2) Position-time relation 
+                 Displacement = Area under the graph  
+                                         s = Area of      + Area of       
+                                         s = ut + ½ (v-u) t  
+But from equation (1) 
+                                   v -u = at  
+                                        s = ut + ½ at x t 
+                                   s = ut + ½ at
+2
+ ------------------(2) 
+                                                                               or (s=v
+0
+t +½ at
+2
+) 
+(3)Position – velocity relation 
+         Displacement = Average velocity x time  
+                                s = 
+(
+v+u
+2
+  
+)
+ 
+(
+v−u
+a
+)
+ 
+                                s = 
+(
+v
+2
+−u
+2
+2a
+  
+)
+ 
+                   v
+2
+−u
+2
+ = 2as 
+                        퐯
+ퟐ
+=퐮
+ퟐ
+ + 2as  ----------------(3) 
+                                                                           Or  (퐯
+ퟐ
+=퐯
+ퟎ
+ퟐ
+ + 2as )  
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+20.What do you mean by stopping distance of vehicles ? Obtain its 
+expression. 
+When brakes are applied to a moving vehicle, the distance it travels before 
+stopping is called stopping distance. 
+                         푣
+2
+=푢
+2
+ + 2as 
+                           0=푢
+2
+ + 2as  
+                      −푢
+2
+ = 2as  
+                        s = 
+−풖
+ퟐ
+ퟐ풂
+ 
+21. An object is under freefall. Draw its (a) Acceleration -time graph 
+                                                                            (b) Velocity- time graph 
+                                                                            (c) Displacement-time graph 
+      
+ 
+ 
+ 
+ 
+ 
+    
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+22.Velocity – time graph of a body is given below                                                                        
+                           
+   a) Which portion of the graph represents uniform retardation?  
+                 (i) OA   (ii)AB    (iii) BC    (iv) OC  
+b) Find the displacement in time 2s to 7s.  
+c) A stone is dropped from a height h. Arrive at an expression for the 
+time  taken to reach the ground. 
+        
+   a)BC              
+  b) 
+           
+  Displacement = area  of rectangle 
+                            = 6 x 5 = 30m 
+      
+ 
+   c)                      s =  ut +½ at
+2 
+                                                
+-h=  0 - ½ gt
+2 
+                               t
+2 
+=
+2h
+g
+ 
+                               t =
+√
+2h
+g
+ 
+ 
+23.A ball is thrown vertically upwards with a velocity of 20 m s
+–1
+ from the 
+top of a multistorey building. The height of the point from where the ball is 
+thrown is 25.0 m from the ground.  
+(a) How high will the ball rise ? and  
+(b) how long will it be before the ball hits the ground? Take g = 10 m s
+–2 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                    
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                Chapter  3 
+                                            Motion in a Plane 
+ 
+1. Differentiate scalar and vector quantities 
+      A scalar quantity has only magnitude and no direction.  
+Eg.  distance , speed, mass , temperature, time ,work ,power, energy,   
+pressure, frequency, angular frequency etc. 
+ 
+      A vector quantity has  both  magnitude and  direction and obeys the 
+triangle law 
+      of  addition or  the parallelogram law of addition.  
+       Eg. displacement, velocity, acceleration , momentum, force, 
+       angular velocity, torque, angular momentum etc.  
+2.When two vectors are said to be equal? 
+Two vectors A and B are said to be equal if, and only if, they have the 
+same magnitude and the same direction. 
+    
+ 
+        
+ 
+3.What do you mean by null vectors or zero vector? 
+A Null vector or  Zero vector  is a vector having zero magnitude and is 
+represented by O or Ō . The result of adding two equal and opposite 
+vectors will be a Zero vector 
+Eg: When a body returns to its initial position its displacement will be a 
+zero vector. 
+4.What are unit vectors? 
+A unit vector is a vector of unit magnitude and points in a particular 
+direction. 
+It has no dimension and unit. It is used to specify a direction only. 
+                                                퐀
+̂
+=
+퐀
+̅
+|
+퐀
+|
+          
+5.The position vector of a particle P located in an x-y plane is shown in 
+figure.  
+                                       
+a)Redraw the figure by showing the rectangular components. 
+b)Write the position vector in terms of rectangular components. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+        a) 
+                                  
+        b)        푟̅=푟cos휃푖̂+ 푟sin휃푗̂     
+6.State triangle law of vector addition. 
+If two vectors are represented  in magnitude and direction by the two 
+sides of a triangle taken in order ,then their resultant is given by the third 
+side of the triangle taken in reverse order.  
+     
+7.State parallelogram law of vector addition 
+If two vectors are represented  in magnitude and direction by the  
+adjacent sides of a parallelogram ,then their resultant is given by the 
+diagonal of the parallelogram. 
+ 
+8.Two vectors A and B are given below. 
+                                    
+Redraw the figure and show the vector sum 
+using parallelogram method. 
+ 
+                                                                           
+9.Write the equation to find the magnitude of resultant of two vectors A 
+and B 
+                             R=
+√
+A
+2
++B
+2
++2ABcosθ  
+10.Derive the expression for magnitude of resultant of two vectors by 
+analytical method. Write the expression for direction of resultant  vector. 
+ 
+ 
+ 
+ 
+                                                                            
+                                                                                                     SNP , cos θ = PN / PS                         sin θ = SN /PS                    
+                                                                                                               cos θ  = PN / B                           sin θ = SN / B 
+                                                                                                                    PN = B cos θ                              SN = B   sin θ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+From the geometry of the figure, 
+                                                  OS 
+2
+ = ON 
+2
+ + SN
+ 2 
+                                                  OS 
+2
+ = (OP + PN) 
+2
+ + SN
+ 2 
+                                                  OS 
+2
+ = (A + B cos θ ) 
+2 
++ (B sin θ ) 
+2
+ 
+                                              R 
+2
+ = A 
+2
+ +2AB  cos θ + B
+ 2
+ cos 
+2
+θ  +B 
+2
+sin
+2
+ θ 
+                                              R 
+2
+ = A 
+2
+ + B
+ 2 
++ 2AB cos θ 
+                                                퐑=
+√
+퐀
+ퟐ
++퐁
+ퟐ
++ퟐ퐀퐁퐜퐨퐬훉  
+ 
+                     Direction ,          tan휶=
+푺푵
+푶푵
+ 
+                                                 tan훂=
+퐁퐬퐢퐧훉
+퐀+퐁퐜퐨퐬훉
+ 
+ 
+11.What is the trajectory(path) followed by a projectile?  
+                                       Parabola  
+12. Draw the trajectory of a projectile 
+                                      
+13.A stone is thrown up with a velocity u , which makes an angle 훉 with  
+      the  horizontal. 
+a)What are the magnitudes of horizontal and vertical components of 
+velocity? 
+b)How do these components vary with time? 
+a)       Horizontal component - u cos θ and     
+            vertical component - u sin θ  
+        b) Horizontal component- u cos θ remains constant with time. 
+            vertical component first deceases, becomes zero at the highest 
+             point of projection and then increases in reverse direction. 
+ 
+14.What are the values of  these components  at the highest point of 
+projection? 
+                At the highest point,Horizontal component= u cos θ  
+                                                            Vertical component = zero  
+15. A projectile has an acceleration of ......... in vertical direction and.........  
+acceleration in horizontal direction 
+                                  -9.8m 푠
+−2
+  ,    zero   
+                 (vertical component , a
+y 
+= -g = -9.8m/푠
+2
+    and  
+                  Horizontal component a
+x
+ = 0) 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+16. Show that the path of the projectile is a parabola .  
+               Displacement of the projectile after a time t 
+                            x= ucosθ t 
+                            t =
+x
+ucosθ
+ 
+                            y= u sinθ t− 
+1
+2
+ g t
+2
+ 
+                            y= u sinθ 
+(
+x
+ucosθ
+)
+− 
+1
+2
+ g 
+(
+x
+ucosθ
+)
+2
+ 
+                            y=  tanθ x−  
+g
+2 u
+2
+cos
+2
+θ
+ x
+2
+ 
+      
+17. Derive the equation for Time of flight, Horizontal range and Maximum 
+height of a projectile. 
+                                  
+Time of  Flight of  a  projectile (T) 
+           Consider the motion in vertical direction, 
+                                      s =  ut +½ at
+2
+ 
+                                                                       s=0,   u = u sin θ ,    a =-g  ,   t = T 
+                                     0 =  u sin θ T -  ½ gT
+2
+ 
+                           
+½ gT
+2 
+=u sin θ T   
+                                
+  T=  
+ퟐ 퐮 퐬퐢퐧 훉
+퐠
+                        
+ 
+Horizontal range of a projectile (R) 
+Horizontal range  = Horizontal component of velocity x  Time of flight 
+                                  R = u cos θ   x   
+2 u sin θ
+g
+   
+                                  R = 
+u
+2
+  x 2 sinθ cos θ
+g
+ 
+                                  R =  
+퐮
+ퟐ
+ 퐬퐢퐧 ퟐ훉
+퐠
+                   
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+Maximum height of a projectile (H) 
+Consider the motion in vertical direction to the highest point 
+                                v
+2
+ – u
+2
+ = 2as 
+                                                                    u = u sin θ,     v = 0 ,   a = -g ,  s = H 
+                    0 -   u
+2
+ sin
+ 2
+θ = -2 g H 
+                                  H = 
+퐮
+ퟐ
+ 퐬퐢퐧
+ퟐ
+훉
+ퟐ퐠
+   
+18.What is the angle of projection for maximum horizontal range  
+                                          ퟒퟓ
+ퟎ
+ 
+19.  What is the maximum  value of horizontal range 
+                 Range is maximum when  θ=45
+0
+                                                             
+                              R =  
+u
+2
+ sin 90
+g
+ 
+                           R
+max
+ =  
+u
+2
+ 
+g
+ 
+20. Find the angle of projection for which the range will be same  as  that 
+in  case  of   θ=ퟑퟎ
+ퟎ
+ for a given velocity of projection. 
+       For a given velocity of projection range will be same 
+       for angles   휽 and ( 90-휽 ) 
+                                       Here  θ=30
+0
+ 
+                                          90-휽 =90-30 =60
+0
+ 
+The range will be same for  30
+0
+and 60
+0
+ ,for a given velocity of projection. 
+21.A cricket ball is thrown at a speed of 28 m s 
+–1
+ in a direction 30° above 
+the  horizontal. Calculate (a) the maximum height, (b) the time taken by 
+the ball to return  to the same level, and (c) the distance from the thrower 
+to the point where the ball  returns to the same level. 
+ (a)    H = u
+2
+ sin
+ 2
+θ 
+                           2g 
+            H = 28
+2 
+sin
+2
+ 30   
+                     2 x 9.8 
+           H = 10 m 
+  (b)  T =  2 u sin θ 
+                      g       
+         T = 2x 28 sin30   
+                      9.8 
+         T = 2.9 s 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+ (c)  R =   u
+2  
+ sin 2θ                      
+                         g 
+        R = 28
+2 
+ sin60 
+                    9.8 
+         R =  69 m     
+ 
+22.What do you mean by uniform circular motion? 
+When an object follows a circular path at a constant speed, the motion of 
+the object is  called uniform circular motion.  
+Note:- 
+▪ The speed is constant in uniform circular motion. 
+▪ The velocity is not constant in uniform circular motion.  
+▪ The acceleration is not  constant in uniform circular motion. 
+  
+23.Give an example for a motion in which speed is constant, but velocity 
+varying. 
+                 Uniform circular motion       
+ 
+24.Give an example for a motion in which speed is constant, still 
+accelerating. 
+               Uniform circular motion 
+ 
+25.What is period in uniform circular motion 
+The time taken by an object to make one revolution is known as its time 
+period T.                  Unit-second 
+ 
+26.What is Frequency in uniform circular motion 
+The number of revolutions made in one second is called its frequency. 
+                                             υ = 
+1
+푇
+                
+                                     unit - hertz (Hz)                                  
+ 
+27.Define Angular velocity    
+Angular velocity is the time rate of change of angular displacement 
+            ω = 
+Δ θ
+Δ푡
+     or     ω = 
+d θ
+d푡
+        or     ω = 
+2π
+푇
+      or        ω = 2π υ     
+                                           Unit is rad/s 
+28.Write the relation connecting  angular velocity and linear velocity 
+                                   v = r ω 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+29.Derive the relation connecting  angular velocity and linear velocity 
+ 
+ 
+ 
+ 
+ 
+ 
+                               
+ 
+                                        
+                                       angle = 
+arc
+radius
+        
+                                           Δ θ = 
+Δ r
+r
+ 
+                                           Δ r = r  Δ θ 
+                                            
+Δ r
+Δ푡
+ = r 
+Δ θ
+Δ푡
+                  
+                                        v = r ω 
+ 
+30.Define angular acceleration 
+The rate of change of angular velocity is called angular acceleration. 
+                                         α   = 
+d ω
+dt
+  
+                                                      ω = 
+d θ
+d푡
+        
+                                          α = 
+d 
+dt
+(
+d θ
+푑푡
+)
+ 
+                                     α = 
+푑
+2
+휃
+푑푡
+2
+ 
+31.Define Centripetal acceleration 
+ A body in uniform circular motion experiences an  acceleration , which is 
+directed  towards the centre along its radius .This is s called centripetal 
+acceleration . 
+32.Derive the expression for centripetal acceleration. 
+               
+ 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+ 
+                                                 
+Δ v
+v
+ = 
+Δ r
+r
+ 
+                                         Δ v = 
+v Δ r
+r
+ 
+                                          
+Δ v
+Δ t
+ = 
+v Δ r
+r Δt
+ 
+                                             a = 
+v
+r
+x r                                
+                                           a =  
+퐯
+ퟐ
+퐫
+ 
+33.An insect trapped in a circular groove of radius 12 cm moves along the 
+groove  steadily and completes 7 revolutions in 100 s. 
+(a) What is the angular speed, and the   linear speed of the motion? 
+(b) Is the acceleration vector a constant vector ? What is  its magnitude ? 
+                    Period,    T=
+100
+7
+ s 
+(a) The angular speed ω is given by 
+ 
+                                ω = 
+2π
+푇
+ = 
+2π
+100
+7
+ = 
+2π x7
+100
+ =0.44 rad/s 
+                The linear speed v is : 
+                                 v =ω R = 0.44  × 0.12  = 5.3 x 10
+ -2
+ m s
+ -1
+ 
+ 
+(b) The direction of velocity v is along the tangent to the circle at every 
+point. The  acceleration is directed towards the centre of the circle. 
+Since this  direction changes  continuously, acceleration here is not a 
+constant vector. 
+                         a = ω 
+2
+ R = (0.44 ) 
+2 
+x0.12 = 2.3x10
+ -2
+ m s 
+-2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                 Chapter 4 
+                                           Laws of Motion 
+1.State Galileo’s Law Inertia 
+If the net external force is zero, a body at rest continues to remain at rest 
+and a body in motion continues to move with a uniform velocity. 
+ 
+2.What do you mean by inertia of a body? 
+If the net external force is zero, a body at rest continues to remain at rest 
+and a body in motion continues to move with a uniform velocity. 
+This property of the body is called inertia. 
+ 
+3. The word inertia means ........................ . resistance to change.  
+4. What are different types of inertia? 
+• Inertia of rest-The tendency of a body to remain in the state of rest. 
+Eg-A person is standing in a stationary gets thrown backward when 
+the bus starts suddenly.  
+• Inertia of motion - The tendency of a body to remain in the state of 
+uniform motion.  
+Eg-The a person  standing in a moving bus gets thrown forward 
+when the bus suddenly stops . 
+• Inertia of direction - The tendency of a body to remain in a particular 
+direction. 
+Eg- When a shopping cart makes a sudden turning, the things in it 
+tumble down. 
+5.State Newton’s first law of motion (Law of inertia) 
+Every body continues to be in its state of rest or of uniform motion in a 
+straight line unless compelled by some external force to change that state.  
+ 
+6.Newton’s first law of motion describes ................... Inertia 
+7.Define momentum 
+ Momentum, P of a body is defined to be the product of its mass m and 
+velocity v, and is denoted by p.  
+                                                 p = m v 
+8.State Newton’s Second Law f Motion. Write its mathematical expression. 
+ 
+                                                 F ∝ 
+∆p
+∆t
+                                                  
+                                                 F= 
+∆p
+∆t
+  or    F= 
+dp
+dt
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+9.Why a seasoned cricketer draws his hands backwards during a catch? 
+              By Newton's second law of motion , 
+                                               F=
+∆p
+∆t
+ 
+      When he draws his hands backwards, the time interval (∆t) to stop the 
+       ball increases .Then force decreases and it does not hurt his hands.  
+ 
+10. Derive  of Equation of force from Newton's second law of motion  
+      By Newton's second law of motion , 
+                                
+11.Define newton 
+                               
+12. A bullet of mass 0.04 kg moving with a speed of 90 m/s enters a heavy 
+wooden block and is stopped after a distance of 60 cm. What is the 
+average resistive force exerted by the block on the bullet? 
+                            
+                          
+The negative sign shows that the force is retarding. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+13.Show that Newton’s  second Law is consistent  with the first law. ( or 
+starting from Newton’s  second Law arrive at Newton’s  first law) 
+                          
+Zero acceleration implies the state of rest or uniform linear motion . i.e, 
+when there is no external force , the body will remain in its state of rest or 
+of uniform motion in a straight line. This is Newtons first law of motion. 
+14.Define Impulse 
+Impulse is the the product of force and time duration, which is the change 
+in momentum of the body. 
+                          Impulse = Force × time duration  
+                                        I = F x t 
+                                   Unit = kg m s
+−1
+ 
+15. Define Impulsive force. 
+ A large force acting for a short time to produce a finite change in 
+momentum is called an impulsive force.  
+                   Eg: A cricket ball hitting a bat 
+16. Using Newtons second law of motion arrive at Impulse momentum 
+Principle  
+Impulse is equal to the change in momentum of the body. 
+ By Newton's second law of motion, 
+                                         F=
+dp
+dt
+ 
+                               F x dt = dp  
+                                        I = dp  
+                          Impulse = change in momentum 
+17.A batsman hits back a ball straight in the direction of the bowler 
+without changing its initial speed of 12 m 퐬
+−ퟏ
+. If the mass of the ball is 
+0.15 kg, determine the impulse imparted to the ball. 
+                            Impulse = change of momentum  
+ Change in momentum = final momentum – initial momentum 
+ Change in momentum = 0.15 × 12–(0.15×-12) 
+                            Impulse = 3.6 N s 
+18.Eventhough action and reaction are equal and opposite  they do not 
+cancel each other .Why? 
+Action and reaction forces act on different bodies, not on the same body. 
+So they do not cancel each other , eventhough they are equal and opposite. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+19.A man of mass70 kg stands on a weighing scale in a lift whichis moving, 
+ (a) upwards with a uniform speed of 10 m 퐬
+−ퟏ
+ 
+ (b) downwards with a uniform acceleration of 5 m 퐬
+−ퟐ
+ 
+ (c) upwards with a uniform acceleration of 5 m 퐬
+−ퟐ
+  
+What would be the readings on the scale in each case?  
+(d) What would be the reading if the lift mechanism  failed and it falls 
+down freely under gravity? Take  g=10 m 퐬
+−ퟐ
+  
+         (a)When lift moves with uniform speed , a=0  
+                             R= mg = 70 x 10=700 N 
+                                    Reading= 700/ 10= 70 kg 
+        (b)Acceleration a = 5m s
+-2
+ downwards 
+                                         R= m(g-a) =70 ( 10-5)= 70x5= 350N 
+                                              Reading = 350/ 10 = 35 kg  
+        (c) Acceleration a = 5m s
+-2
+ upwards 
+                              R= m(g+a) = 70(10+5) = 70x 15= 1050N  
+                                     Reading = 1050/ 10 = 105 kg 
+        (d) when lift falls freely a=g  
+                               R= m(g-g) = 0  
+                                    Reading = 0  
+20.State the Law of Conservation of Momentum 
+ The total momentum of an isolated system of interacting particles is 
+conserved.                                                Or  
+When there is no external force acting on a system of particles ,their total 
+momentum remains constant. 
+21.Prove law of conservation of momentum Using Newton’s second law of 
+motion 
+By Newton's second law of motion ,  F=
+dp
+dt
+ 
+                                                         When F = 0  
+                                                                   
+dp
+dt
+=0  
+                                                                  dp = 0 , 
+                                                             p=constant 
+Thus when there is no external force acting on a system of particles, their 
+total momentum remains constant.  
+ 
+ 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+22. Prove law of conservation of momentum Using Newton’s third law of 
+motion 
+                      
+                      
+                      Total Final momentum = Total initial momentum 
+i.e. , the total final momentum of the isolated system equals its total initial 
+momentum. 
+23.Explain the recoil of gun using law of conservation of linear momentum 
+By the law of conservation of momentum,as the system is isolated, the 
+momentum remains constant 
+            
+              If p
+b
+ and p
+g
+ are the momenta of the bullet and gun  after firing 
+                                                 p
+b
+ + p
+g
+= 0 
+                                                          p
+b
+ = - p
+g
+  
+               The negative sign shows that  gun recoils  to conserve momentum. 
+24.Obtain the expression for Recoil velocity and muzzle velocity 
+                Momentum of bullet after firing , p
+b
+=mv 
+Recoil momentum of the gun after firing , p
+g
+=MV 
+                                                                 p
+b
+ = - p
+g
+  
+mv=−MV 
+                               Recoil velocity of gun ,  V= 
+−mv
+M
+ 
+                          Muzzle velocity of bullet ,  v= 
+−MV
+  m
+ 
+                                    M= mass of gun, V= recoil velocity of bullet 
+                                        m= mass of bullet, v=muzzle velocity of bullet 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+25.A shell of mass 0.020kg is fired by a gun of mass 100kg. If the muzzle 
+speed of the shell is   80 m/s, what is the recoil speed of the gun? 
+                                   V= 
+푚푣
+푀
+ =
+0.020 푥 80
+100
+ =0.016m/s 
+26.Write the condition for equilibrium  when two forces F
+1 
+and F
+2  
+act on  a 
+particle 
+                   
+27.Write the condition for equilibrium  when three forces F
+1 ,
+ F
+2 
+and
+  
+F
+3 
+act 
+on  a particle. 
+            
+                                                   
+28. The maximun value of limiting friction is called ................... 
+      Limiting friction or Limiting static friction. 
+29.State the law of static friction 
+     The law of static friction may thus be written as ,   fs ≤ μ
+s
+N   
+                      where μ
+s
+ the coefficient of static friction, 
+30.State the Law of Kinetic Friction 
+                                 f
+k
+=μ
+k
+N  
+                      where μ
+k
+ the coefficient of kinetic friction, 
+31.Write the characteristics of static friction 
+▪ The maximum value of static friction is  ( f
+s
+)
+max
+ 
+▪ The limiting value of static friction ( f
+s
+)
+max
+,   is independent of the 
+area of contact. 
+▪ The limiting value of static friction  ( f
+s
+)
+max
+,  varies with the normal 
+force(N)  
+ ( f
+s
+)
+max
+ αN 
+ 
+(
+ 퐟
+퐬
+)
+퐦퐚퐱
+=훍
+퐬
+퐍 
+32.Write the characteristics of kinetic friction 
+▪ Kinetic friction is  independent of the area of contact.  
+▪ Kinetic friction is  independent of the velocity of sliding. 
+▪ Kinetic friction , f
+k
+ varies with the normal force(N) 
+f
+k
+ αN 
+f
+k
+=μ
+k
+N 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+33.Show that 훍
+퐬
+=퐭퐚퐧 훉 (the coefficient of static friction is equal to the 
+tangent of angle of friction) when a body just begins to slide on an  
+inclined surface 
+                     
+The forces acting on a block of mass m When it just begins to slide are 
+(i) the weight, mg  
+(ii) the normal force, N  
+(iii) the  maximum static frictional force  
+(
+ f
+s
+)
+max
+  
+In equilibrium, the resultant of these forces must be zero. 
+                           m g sin θ =  
+(
+ f
+s
+)
+max
+ 
+                                                                                                    But  
+(
+ f
+s
+)
+max
+=μ
+s
+N 
+                            mg sin θ= μ
+s
+N------------(1) 
+                                          mg cos θ = N-------------(2) 
+          
+               Eqn
+(
+1
+)
+(
+2
+)
+  -------- 
+mg sin θ
+m g cos θ
+=
+ μ
+s
+N
+N
+ 
+                                                    μ
+s
+=tan θ  
+34.Disadvantages of friction 
+In a machine with different moving parts, friction opposes relative motion 
+and thereby dissipates power in the form of heat, etc. Friction produces 
+wear and tear. 
+35.Advantages of friction(Friction is a necessary evil) 
+ Kinetic friction  is made use of by brakes in machines and automobiles.  
+ We are able to walk because of static friction.  
+The friction between the tyres and the road provides the necessary 
+external force to accelerate the car. 
+36.Methods to reduce friction 
+(1)Lubricants are a way of reducing kinetic friction in a machine.  
+(2)Another way is to use ball bearings between two moving parts of a 
+machine. 
+(3) A thin cushion of air maintained between solid surfaces in relative 
+motion is another effective way of reducing friction. 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+37.A car moving on a curved level road. What are the various forces acting 
+on the car? 
+(i) The weight of the car, mg  
+(ii)  Normal reaction, N  
+(iii)  Frictional force, f
+s
+ 
+ 
+38.Derive the expression for maximum safe speed  on a curved level road 
+                      
+              N= mg 
+The static friction  provides the centripetal acceleration 
+                                    f
+s
+ = 
+mv
+2
+R
+  
+                           But , f
+s
+≤ μ
+s
+N 
+                                 
+mv
+2
+R
+ ≤ μ
+s
+mg     (N=mg) 
+                                  v
+2
+ ≤ μ
+s
+Rg              
+                               퐯
+퐦퐚퐱
+=
+√
+훍
+퐬
+퐑퐠 
+39. a) What do you mean by banking of curved roads?                                                                
+      b) Obtain the expression for maximum permissible speed of a vehicle  
+             on a banked road. 
+       c)Write the expression for optimum speed (without considering  
+       frictional force)       
+ a)Raising the outer edge of a curved road above the inner edge is  
+          called banking of curved roads. 
+b) 
+                     
+                                
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                             N cos θ = mg +f sin θ 
+                             N cos θ - f sin θ =mg --------------(1) 
+ 
+The centripetal force is provided by the horizontal components of N andf
+s
+. 
+                             N sin θ + f cos θ = 
+mv
+2
+R
+ -------------(2) 
+               
+Eqn(1)
+Eqn(2)
+ ----- 
+N cos θ − f sin θ
+N sin θ + f cos θ
+ =   
+mg
+ 
+mv
+2
+R
+ 
+Dividing throughout by N cos θ 
+                                             
+1 −
+f
+N
+ tan θ
+tan θ + 
+f
+N
+ =   
+Rg
+ v
+2
+ 
+                                             
+1 −μ
+s
+ tan θ
+tan θ + μ
+s
+ =   
+Rg
+ v
+2
+  
+                                                          v
+2
+=
+Rg(μ
+s
++tan θ )
+1 −μ
+s
+ tan θ
+ 
+                                                      v
+max
+=
+√
+Rg(μ
+s
++tan θ )
+1 −μ
+s
+ tan θ
+                
+c)If  friction is absent, μ
+s
+ = 0 
+  Then  Optimum speed,    v
+optimum
+= 
+√
+Rg tan θ  
+ 
+40.A circular racetrack of ra dius 300 m is banked at an angle of 15°. If the 
+coefficient of friction between the wheels of a race-car and the road is 0.2, 
+what is the 
+ (a) optimum speed of the race car to avoid wear and tear on its tyres, and 
+ (b) maximum permissible speed to avoid slipping ? 
+(a)                                                             (b) 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+             Chapter 5                 
+                                       Work ,Energy and Power 
+ 
+1.Define scalar product or Dot Product  two vectors 퐀
+⃗⃗ 
+ and 퐁
+⃗⃗ 
+.       
+                                       A
+⃗⃗ 
+⋅B
+⃗⃗ 
+=AB cosθ 
+ 
+2.Some properties of dot product. 
+          푖̂⋅푖̂=푗̂⋅푗̂=푘
+̂
+⋅푘
+̂
+=1  
+          푖̂⋅푗̂=푗̂⋅푘
+̂
+=푘
+̂
+⋅푖̂=0   
+          A
+⃗⃗ 
+⋅A
+⃗⃗ 
+   = A
+2
+ 
+ 
+3.If two vectors  퐀
+⃗⃗ 
+ 퐚퐧퐝 퐁
+⃗⃗ 
+ are perpendicular, then their dot product will 
+be.............. 
+zero            ( A
+⃗⃗ 
+⋅B
+⃗⃗ 
+=A Bcos90=0) 
+                   
+4.Define work. 
+The work done by the force is defined to be the product of component of 
+the force in the direction of the displacement and the magnitude of this 
+displacement. 
+                                            W = F
+⃗ 
+⋅d
+⃗ 
+ 
+5.Write the situations in which work done by a body is zero 
+(i) when the displacement is zero . 
+(ii )when the force is zero.  
+(iii) the force and displacement are mutually perpendicular 
+           W=Fd cos 90 = 0.  
+ 
+6.Give an example for  zero  Work. 
+When you push hard against a rigid brick wall, the force you exert on the 
+wall does no work. 
+A weightlifter holding a 150 kg mass steadily on his shoulder for 30 s    
+does no work on the load during this time. 
+  
+7.Give an example for  Positive  Work 
+    Workdone by Gravitational force on a freely falling body is positive 
+ 
+8.Give an example of Negative work 
+The the work done by friction is negative (cos 180 
+o
+ = –1). 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+9.Find out the sign of the workdone in following cases. 
+a)Workdone by a man in lifting a bucket out of a well. 
+               Positive 
+b)Workdone by friction on a body sliding down an inclined plane 
+               Negative 
+c)Workdone by an applied force on a  body moving on a rough horizontal 
+surface 
+               Positive 
+d)Workdone by the resistive force on air on a vibrating pendulum 
+                   Negative 
+e)Workdone gravitational force during the motion of an object on a 
+horizontal surface. 
+                   Zero 
+ 
+10. What is the work done by centripetal force on a body moving in 
+circular path 
+            Zero.                Here θ = 90 
+o
+ , W =Fd cos 90 = 0.  
+11. 1 horse power,1HP= -----------Watt.       
+                 746W 
+2. 1 kilowatt-hour,     1kWh = ------------------ J      
+               3.6 × 10
+6
+ J 
+13. Kilowatt-hour is the unit of -------------     
+               Energy 
+14.Find the workdone by a force 퐅
+ 
+ = (ퟑ퐢
+̂
++ ퟒ퐣
+̂
+ - ퟓ퐤
+̂
+)  N , if the  displacement 
+Produced is 
+ 퐝
+ 
+ = (ퟓ퐢
+̂
++ ퟒ퐣
+̂
+ + 3퐤
+̂
+)  m.  
+                                               W =F
+⃗ 
+.d
+⃗ 
+ 
+                                         푊=퐹
+푥
+푑
+푥
++ 퐹
+푦
+푑
+푦
++퐹
+푧
+푑
+푧
+   
+                                                    = (3 x 5 )+ (4x4 ) + (-5 x3)     
+                                          W= 16 J 
+15. The energy possessed by a body by virtue of its motion is called--------- 
+                                       Kinetic energy 
+16. The energy stored  by virtue of the position or configuration of a 
+body(state of strain) is called-------------           
+                                      Potential Energy. 
+17. Calculate the work done in lifting a body of mass 10kg to a height of 
+10m above the ground 
+                                       W= F x d  = mg x h =10 x 9.8 x10 =980J 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+18. Two bodies of masses 퐦
+ퟏ
+퐚퐧퐝 퐦
+ퟐ
+ have same momenta. What is the 
+ratio of their kinetic energies? 
+                                    KE,   K =
+1
+2
+mv
+2
+=
+p
+2
+2m
+ 
+                                          K
+1
+ =
+p
+2
+2 m
+1
+                  K
+2
+ =
+p
+2
+2 m
+2
+ 
+                                                   K
+1
+/ K
+2
+= m
+2
+/m
+1
+  
+                                                    K
+1
+: K
+2
+= m
+2
+:m
+1
+  
+19. A light body and heavy body have same momenta, Which one has 
+greater kinetic energy? 
+                                            KE,  K =
+p
+2
+2m
+ 
+                                                    K  ∝
+1
+m
+ 
+             Lighter body will have more Kinetic energy. 
+19. A light body and heavy body have same KE, Which one has greater 
+momentum?                             푝=
+√
+2푚퐾 
+                                                     p  ∝
+√
+푚  
+                      Heavier body will have more momentum.                        
+20.Power is the scalar product of force and ------------- 
+                              Velocity      ( P= F .v) 
+21.Write the characteristics of conservative forces.  
+▪ A conservative force can be derived from a scalar quantity. 
+                                         F=
+−푑V
+   dx
+  where V is a scalar 
+▪ The work done by a conservative force depends only upon initial and 
+final positions of the body  
+▪ The work done by a conservative force in a cyclic process is zero  
+22.Give two examples for conservative forces 
+Eg: Gravitational force, Spring force.  
+ 
+23.Give two examples for non conservative forces. 
+Frictional force , air resistance are non conservative forces. 
+ 
+24. State and prove the law of conservation of mechanical energy for a 
+freely falling body. 
+The total mechanical energy of a system is conserved if the forces, doing 
+work on it, are conservative. 
+Consider a body of mass m falling freely  from a height h 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+At Point A 
+    PE = mgh 
+    KE = 0       (since v=0) 
+     TE= mgh + 0 
+     TE= mgh-----------(1) 
+  At Point B 
+ PE = mg (h-x) 
+      KE = ½ mv
+2
+                                        
+                                                                        v
+2
+=u
+2
+ + 2as                                                    
+                                                                      u=0, a=g , s= x 
+                                                               v
+2
+ =  2gx                                                                         
+KE = ½ m x 2gx =mgx                                                         
+TE =  mg (h-x) + mgx           
+TE = mgh--------------(2) 
+At Point C                
+   PE = 0   (Since h=0    
+   KE = ½ mv
+2
+ 
+                                                                v
+2
+=u
+2
+ + 2as 
+                                                                                                                                                                  u=0, a=g , s= h 
+                                                                                                                                                               v
+2
+=  2gh 
+                                                                                   KE = ½ m x 2gh=mgh 
+                                                                         TE =  0 + mgh 
+                                              TE = mgh--------------(3) 
+From eqns (1), (2) and (3), it is clear that the total mechanical energy is 
+conserved during the free fall. 
+                                                    
+25.Show that the gravitational potential energy of the object at height h, is 
+completely converted to kinetic energy on reaching the ground.  
+     PE at a height h,          V = mgh 
+     When the object is released from a height it gains KE 
+                                           K = ½ mv
+2
+ 
+                                                                                            v
+2
+=u
+2
+ + 2as 
+                                                                                                   u=0, a=g , s=h 
+                                                                                         v
+2
+=  2gh 
+                                           K = ½ m x 2gh 
+                                            K= mgh                                               
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+26.The energy possessed by a body by  virtue of its motion is 
+called .................                                                          Kinetic energy 
+27.The eneegy possessed by a body by virtue of the position or 
+configuration of a body is called .......................  Potential energy. 
+ 
+28.A body at a height h above the surface of earth possesses ..................... 
+due to its position.                                         Potential energy. 
+ 
+29.A Stretched or compressed spring possesses ..................... due to its 
+state of strain.                                     potential energy 
+ 
+30.State and prove work-energy theorem 
+The work-energy  theorem  can be  stated as :The change in kinetic energy 
+of a particle is equal to the work done on it by the net force. 
+     Proof 
+         For uniformly accelerated  motion  
+                                                    v 
+2
+ − u
+ 2
+ = 2 as 
+       Multiplying both sides by 
+1
+2
+푚, we have 
+                                       
+1
+2
+mv
+2
+−
+1
+2
+mu
+2
+=mas=Fs  
+                                                         K
+f 
+-K
+i 
+= W 
+                                         Change in KE = Work                   
+ 
+31.In a ballistics demonstration a police officer fires a bullet of mass 50.0 g 
+with speed 200 m s
+-1
+ on soft plywood of thickness 2.00 cm. The bullet 
+emerges with only 10% of its initial kinetic energy. What is the emergent 
+speed of the bullet ? 
+ 
+ 
+ 
+ 
+ 
+                                              
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+32.State Hooke’s law for a spring 
+Hooke’s law states that ,for an ideal spring, the spring force F is 
+proportional displacement x of the block from the equilibrium position.  
+                                          F = − kx  
+The constant k is called the spring constant. Its unit is N푚
+−1
+   
+ 
+33.Derive the expression for potential energy of a spring                           
+ 
+                  
+  
+     Then the spring force              F = − kx 
+  The work done by the spring force is   
+                                                           W=
+∫
+F dx
+x
+0
+  
+ W=−
+∫
+ kx dx
+x
+0
+ 
+                                                           W=−
+1
+2
+kx
+2
+  
+This work is stored as potential energy of spring 
+                                                         PE=
+1
+2
+kx
+2
+  
+34.Draw the graphical variation of  kinetic Energy and potential of a spring 
+                       
+35.Write Einstein’s mass energy relation. 
+                                                  E = m 퐜
+ퟐ
+   
+ 
+36.Find the amount of energy is associated with 1 kilogram of matter 
+                                             E = m c
+2
+   
+                                             E = 1×(3×10
+8
+)
+2
+ J  
+                                             E= 9 × 10
+16
+ J.  
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+37.Write the expression for instantaneous power in dot product form 
+                                                          P = 
+dW
+dt
+ 
+                                                                          The work done, dW = F. dr.  
+                                                          P =F.
+dr
+dt
+ 
+                                                           P= F . v 
+Instantaneous power  is the dot product of force and velocity. 
+ 
+38.An elevator can carry a maximum load of 1800 kg (elevator + 
+passengers) is moving up with a constant speed of 2 m s–1. The frictional 
+force opposing the motion is 4000 N. Determine the minimum power 
+delivered by the motor to the elevator in watts as well as in horse power. 
+  The downward force on the elevator is F = m g + Frictional Force 
+                                                                    = (1800 × 10) + 4000  
+                                                                    = 22000 N 
+                                                     Power, P = F. v  
+                                                                    = 22000 × 2  
+                        = 44000 W  
+                             In horse power,   power = 44000/746 
+                        =59 hp 
+ 
+39.Differentiate Elastic  and inelastic collisions.Give examples for each. 
+The collisions in which both linear momentum and kinetic energy are 
+conserved are called elastic collisions. 
+             Eg: Collision between sub atomic particles 
+The collisions in which  linear momentum  is conserved, but  kinetic 
+energy is not conserved are called inelastic collisions. . Part of the initial 
+kinetic energy is transformed into other forms of energy such as 
+heat,sound etc.. 
+           Eg: Collision between macroscopic objects 
+ 
+40.For elastic collisions in one dimension show that the relative velocity 
+before collision is numerically equal to relative velocity after collision.   
+                   
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+By the conservation of momentum 
+                                            m
+1
+u
+1
++m
+2
+u
+2
+=m
+1
+v
+1
++m
+2
+v
+2
+ --------------(1) 
+                                             m
+1
+u
+1
+−m
+1
+v
+1
+=m
+2
+v
+2
+−m
+2
+u
+2
+   
+                                               m
+1
+(u
+1
+−v
+1
+)=m
+2
+(v
+2
+−u
+2
+)----------------(2) 
+ 
+By the conservation of kinetic energy 
+                                       
+1
+2
+m
+1
+u
+1
+2
++
+1
+2
+m
+2
+u
+2
+2
+=
+1
+2
+m
+1
+v
+1
+2
++
+1
+2
+m
+2
+v
+2
+2
+-----------(3) 
+                                       
+1
+2
+m
+1
+u
+1
+2
+−
+1
+2
+m
+1
+v
+1
+2
+=
+1
+2
+m
+2
+v
+2
+2
+−
+1
+2
+m
+2
+u
+2
+2
+   
+                                           
+1
+2
+m
+1
+ (u
+1
+2
+−v
+1
+2
+)=
+1
+2
+m
+2
+(v
+2
+2
+−u
+2
+2
+) 
+                                             m
+1
+ (u
+1
+2
+−v
+1
+2
+)=m
+2
+(v
+2
+2
+−u
+2
+2
+)     -------------(4)  
+              Eqn 
+(4)
+(2)
+     ------------  
+m
+1
+ (u
+1
+2
+−v
+1
+2
+)
+m
+1
+(u
+1
+−v
+1
+)
+= 
+m
+2
+(v
+2
+2
+−u
+2
+2
+) 
+m
+2
+(v
+2
+−u
+2
+)
+ 
+                                        
+(u
+1
++v
+1
+) (u
+1
+−v
+1
+)
+(u
+1
+−v
+1
+)
+=
+(
+v
+2
++u
+2
+)
+(v
+2
+−u
+2
+)
+(v
+2
+−u
+2
+)
+                                    
+                                          u
+1
++v
+1
+=v
+2
++u
+2
+    -------------(5)    
+                                         u
+1
+−u
+2
+=−(v
+1
+−v
+2
+)--------(6) 
+i.e., relative velocity before collision is numerically equal to relative 
+velocity after collision.   
+41.For elastic collisions  of a moving mass 퐦
+ퟏ
+ with the stationary mass 퐦
+ퟐ
+ 
+write the expression for momentum conservation and kinetic energy 
+conservation 
+               
+Equation for  conservation of momentum in x direction 
+                                    m
+1
+u
+1
+=m
+1
+v
+1
+cosθ
+1
++m
+2
+v
+2
+cosθ
+2
+ 
+Equation for  conservation of momentum in y direction 
+                                            0=m
+1
+v
+1
+sinθ
+1
+−m
+2
+v
+2
+sin θ
+2
+ 
+Equation for  conservation of kinetic energy,(KE is a scalar quantity) 
+               
+1
+2
+m
+1
+u
+1
+2
+=
+1
+2
+m
+1
+v
+1
+2
++
+1
+2
+m
+2
+v
+2
+2
+           
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                       퐂퐡퐚퐩퐭퐞퐫 ퟔ   
+                        퐒퐲퐬퐭퐞퐦퐬 퐨퐟 퐏퐚퐫퐭퐢퐜퐥퐞퐬 퐚퐧퐝 퐑퐨퐭퐚퐭퐢퐨퐧퐚퐥 퐌퐨퐭퐢퐨퐧 
+ 
+1.Define centre of mass 
+The centre of is a hypothetical point where the entire mass of an object 
+may be assumed to be concentrated to visualise its motion. 
+2.Write the expression for position vector of centre of mass of an n 
+particle system 
+                              R
+⃗⃗ 
+=
+m
+1
+r
+⃗ 
+1
++m
+2
+r
+⃗ 
+2
++⋯........+m
+n
+r
+⃗ 
+n
+M
+      
+                                                                                  where  M =m
+1
++m
+2
++.......+m
+n
+ 
+3.Write the expression for velocity of centre of mass of an n particle 
+system 
+                              V
+⃗⃗ 
+= 
+m
+1
+v
+⃗⃗ 
+1
++m
+2
+v
+⃗⃗ 
+2
++⋯........+m
+n
+v
+⃗⃗ 
+n
+M
+   --------------(2) 
+                                                                                  where  M =m
+1
++m
+2
++.......+m
+n
+ 
+4.Write the expression for acceleration of centre of mass of an n particle 
+system 
+                             A
+⃗⃗⃗ 
+= 
+m
+1
+a
+⃗ 
+1
++m
+2
+a
+⃗ 
+2
++⋯........+m
+n
+a
+⃗ 
+n
+M
+ ..................(3) 
+                                                                                where  M =m
+1
++m
+2
++.......+m
+n
+ 
+5.When the total external force on the system is zero the velocity of the 
+centre  of mass remains constant or the CM of the system is 
+in........................                               uniform motion. 
+6.Define vector product  or cross product of two vectors 퐀
+⃗⃗ 
+ and 퐁
+⃗⃗ 
+ 
+               Vector product of two vectors A
+⃗⃗ 
+ and B
+⃗⃗ 
+ is defined as  
+                                A
+⃗⃗ 
+  x B
+⃗⃗ 
+ = AB 퐬퐢퐧 휽 n̂  
+                                                         where A and B are magnitudes of A
+⃗⃗ 
+ and B
+⃗⃗ 
+  
+                                                         휽 is the angle between A
+⃗⃗ 
+ and B
+⃗⃗ 
+  
+                  푛̂ is the unit vector perpendicular to the plane containing A
+⃗⃗ 
+ and B
+⃗⃗ 
+ 
+7.Some properties of vector product 
+▪ A
+⃗⃗ 
+  x A
+⃗⃗ 
+ = 0
+⃗ 
+ 
+▪ 푖̂×푖̂=0 ,     푗̂ × 푗̂=0 ,      푘
+̂
+×푘
+̂
+=0  
+▪ 푖̂×푗̂=푘
+̂
+ ,     푗̂ × 푘
+̂
+=푖̂,       푘
+̂
+×푖̂=푗̂  
+▪ 푗̂×푖̂=−푘
+̂
+ ,         푘
+̂
+ × 푗̂=−푖̂,          푖̂×푘
+̂
+=−푗̂ 
+ퟖ..퐖퐫퐢퐭퐞 퐭퐡퐞 퐫퐞퐥퐚퐭퐢퐨퐧 퐜퐨퐧퐧퐞퐜퐭퐢퐧퐠 퐚퐧퐠퐮퐥퐚퐫 퐯퐞퐥퐨퐜퐢퐭퐲 퐚퐧퐝 퐢퐭퐬 퐥퐢퐧퐞퐚퐫 퐯퐞퐥퐨퐜퐢퐭퐲.  
+                                      v 
+⃗⃗ 
+ = ω⃗⃗  ×  r   
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+ ퟗ.  퐃퐞퐟퐢퐧퐞 퐀퐧퐠퐮퐥퐚퐫 퐚퐜퐜퐞퐥퐞퐫퐚퐭퐢퐨퐧  
+Angular acceleration α⃗⃗   is defined as the time rate of change of angular 
+velocity. 
+                                           훼 =
+푑휔
+⃗⃗⃗ 
+푑푡
+          unit rad/푠
+2
+   or   rad 푠
+−2
+ 
+10.The rotational analogue of force is ---------------- 
+                  Torque  or  Moment of force 
+11.Write the  equation for torque or moment of force 
+                                        휏  = 푟  x F 
+⃗⃗ 
+ 
+12.The handle of the door is always fixed at the edge of the door which is 
+located at a maximum possible distance away from hinges. Give reason. 
+                                      휏  = 푟  x F 
+⃗⃗ 
+=rF sin휃 
+                       When r is maximum ,torque will be maximum. 
+     The handle is fixed at the edge to increase r and hence to make torque 
+maximum.         
+13.Find the torque of a force ퟕ퐢
+̂
++ퟑ퐉
+̂
+−ퟓ퐤
+̂
+ about the origin. The force acts 
+on a particle whose position vector is 퐢
+̂
+−퐉
+̂
++퐤
+̂
+. 
+                           휏  = 푟  x F 
+⃗⃗ 
+ 
+                           휏  = (î−J
+̂
++k
+̂
+) x(7î+3J
+̂
+−5k
+̂
+) 
+                             
+                                       +      -       + 
+                              휏   =|
+î퐽
+̂
+푘
+̂
+1−11
+73−5
+|  
+           τ⃗   = î [
+(
+−1 x −5
+)
+−(3 x 1) ]   - J
+̂
+ [(1x-5)- (7x1)]    +  k
+̂
+ [(1x3) -(7x-1)] 
+            τ⃗   = î [5 - 3]   - J
+̂
+ [-5 – 7]    +  k
+̂
+ [3 – -7] 
+            τ⃗   = 2î  +12 J
+̂
+ + 10k
+̂
+  
+14.Angular momentum is the rotational analogue of  --------------- 
+                                linear momentum. 
+15. Write the relation connecting angular momentum and linear 
+momentum. 
+                           푙
+ 
+=r ×p⃗   
+16.The moment of linear momentum is called --------------- 
+                             Angular momentum 
+ 
+17.Write the relation connecting torque and angular momentum 
+                                        휏 =
+푑푙
+ 
+푑푡
+    
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+18. Deduce the relation connecting torque and angular momentum 
+(or) Show that the time rate of change of the angular momentum of a  
+particle is equal to the torque acting on it. 
+                                       푙
+ 
+=푟 ×푝     
+      Differentiating              
+푑푙
+ 
+푑푡
+=
+d
+dt
+( r ×p⃗  )    
+                                     
+푑푙
+ 
+푑푡
+=
+dr
+⃗ 
+dt
+ ×p⃗   +   r  x 
+dp
+⃗⃗ 
+dt
+ 
+                                                                                         p⃗  = mv⃗    , 
+dr
+⃗ 
+dt
+=v⃗  , 
+dp
+⃗⃗ 
+dt
+=F 
+⃗⃗ 
+ 
+                                     
+푑푙
+ 
+푑푡
+=v⃗  ×mv⃗   +   r  x F 
+⃗⃗ 
+    
+                                                                                        v⃗  ×v⃗ =0 ,   (r  x F 
+⃗⃗ 
+ =τ⃗  )               
+                                     
+푑푙
+ 
+푑푡
+=0  +  휏                          
+                                                   흉⃗ =
+풅풍
+ 
+풅풕
+    
+19.The time rate of change of the angular momentum of a particle is equal 
+to the --------------- acting on it.                  Torque 
+20.State and prove the law of conservation of angular momentum 
+If the total external torque on a system of particles is zero, then the total 
+angular momentum of the system is conserved i.e, remains constant. 
+                                                     τ⃗ 
+ext
+ =
+dL
+⃗⃗ 
+dt
+ 
+              If  external torque,  τ⃗ 
+ext
+=0 , 
+                                                       
+dL
+⃗⃗ 
+dt
+ =0 
+                                                         L
+⃗ 
+=constant 
+21.Write an example of a motion in which angular momentum remains 
+constant 
+                       Motion of planets around sun. 
+ 
+22.What do you mean by equilibrium of a rigid body? 
+A rigid body is said to be in mechanical equilibrium, if it is in  both 
+translational equilibrium and rotational equilibrium.  
+ 
+23.What is translational equilibrium? 
+When the total  external force on the rigid body is zero, then the total 
+linear momentum of the body does not change with  time and the body 
+will be in  translational equilibrium . 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+24.What is rotational  equilibrium?  
+ When the total external torque  on the rigid body is zero, the total  
+angular momentum of the body does not change with time and the body 
+will be in rotational equilibrium . 
+25.What is partial equilibrium? 
+A body may be in partial equilibrium, i.e., it may be in translational 
+equilibrium and not in rotational equilibrium, or it may be in rotational 
+equilibrium and not in translational equilibrium. 
+ 
+26.Define a couple. 
+A pair of equal and opposite forces with different lines of action is known 
+as a couple. A couple produces rotation without translation. 
+27.State the principle of moments. 
+                                 
+                 The lever is a system in mechanical equilibrium. 
+ For rotational equilibrium  the sum of moments must be zero, 
+                                                 d
+1
+F
+1
+−d
+2
+F
+2
+ = 0 
+                                                  퐝
+ퟏ
+퐅
+ퟏ
+=퐝
+ퟐ
+퐅
+ퟐ
+  
+28.What is centre of gravity of a body? 
+The Centre of gravity  of a body is the point where the total gravitational 
+torque on the body is zero. 
+ 
+29. Moment of Inertia is the  rotational analogue of ------------  
+                                  Mass.   
+ 
+30.The  rotational analogue of mass is called---------------------  
+                                  Moment of Inertia 
+31. Mass is a measure of ------------------ and moment of inertia is a 
+measure of ------------------------- 
+                                  Inertia  ,  Rotational inertia 
+32. Writ the expression for moment of inertia of a particle of mass m 
+rotating about an axis  
+                                   I =mr
+2
+ 
+33. Write the equation for rotational kinetic energy. 
+                                  Rotational kE=
+1
+2
+Iω
+2
+  
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+34. What do you mean by radius of gyration ? 
+The radius of gyration can be defined as the distance of a mass point from 
+the axis of roatation whose mass is equal to the whole mass of the body 
+and whose moment of inertia is equal to moment of inertia of the whole 
+body about the axis. 
+                                  I =Mk
+2
+ 
+                                  k=
+√
+I
+M
+  
+ 
+35.The moment of inertia of a disc of mass ‘M’ and radius R about an axis 
+passing through its centre and perpendicular to its plane is 
+퐌퐑
+ퟐ
+ퟐ
+ . 
+What is the radius of gyration of this case. 
+                                 k=
+√
+I
+M
+  
+                                 k=
+√
+MR
+2
+2
+ 
+M
+ =
+√
+R
+2
+2
+ =
+푅
+√
+2
+ 
+ 
+36.What is a flywheel? 
+A disc with a large moment of inertia is called a flywheel. It is used in 
+machines,  that produce rotational motion.                                        
+37.Write the rotational analogue of the following equations  in 
+translational motion 
+    
+ 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+38.A cord of negligible mass is wound round the rim of a flywheel 
+mounted on a horizontal axle as shown in figure.                                     
+Calculate the angular acceleration of the wheel if steady 
+pull of 25N is applied on the cord. Moment of inertia of 
+flywheel about its axis=
+푴푹
+ퟐ
+ퟐ
+ 
+                        I=
+MR
+2
+2
+  =
+20 x 0.2
+2
+2
+=0.4 kgm
+2
+ 
+                                         Torque , τ=force xperpendicular distance 
+                                                          τ=25 x0.2=5Nm  
+                                                          τ=I∝  
+                                                          ∝=
+ τ
+I
+ =
+ 5
+0.4
+=12.5rad/s
+2 
+39.A girl rotates on a swivel chairas shown below.
+ 
+   a)what happens to her angular speed when she 
+stretches her arms 
+b) what happens to her angular speed when she 
+folds her arms 
+c)Name and state the conservation law applied 
+for your justification 
+ 
+a)When she stretches her arms, the moment of inertia increases and 
+hence the angular speed decreases.  
+b)When she folds her arms, the moment of inertia decreases and hence 
+the angular speed increases.  
+c) Law of conservation of angular momentum. 
+If the total external torque on a system of particles is zero, then the total 
+angular momentum of the system is conserved i.e, remains constant. 
+        (  If    τ⃗ 
+ext
+=0 ,     L
+⃗ 
+=퐼휔⃗⃗ =constant .When I increases 휔⃗⃗  decreases 
+and vice versa) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                 Chapter 7 
+                                               Gravitation 
+1.State Kepler’s first law of planetary motion(Law of orbits ) 
+All planets move in elliptical orbits with the Sun situated at one of the foci 
+of the ellipse. 
+2.State Kepler’s second law of planetary motion(Law of areas)  
+ The line that joins any planet to the sun sweeps equal areas in equal 
+intervals of time. i.e, areal velocity  
+ΔA
+⃗⃗ 
+Δt
+  is constant 
+3.Kepler’s second law (law of areas) is a consequence of conservation of 
+............................   angular momentum. 
+4.Prove Kepler’s second law of planetary mtion. 
+The area swept out by the planet of 
+mass m in time interval Δt is 
+            ΔA
+⃗⃗ 
+=
+1 
+2
+ (r ×v⃗ Δt)  
+                                                      p⃗ =mv⃗  , 
+                                                       v⃗ = 
+p
+⃗⃗ 
+m
+                                                                  
+           
+ΔA
+⃗⃗ 
+Δt
+=
+1 
+2
+ (r ×
+p
+⃗⃗ 
+m
+)  
+                                                                                                          L
+⃗ 
+=r ×p⃗           
+                                                                                     
+ΔA
+⃗⃗ 
+Δt
+  = 
+L
+⃗⃗ 
+2m
+ 
+                                                  Here  angular momentum,L
+⃗⃗⃗ 
+ is a constant.  
+                  
+ΔA
+⃗⃗ 
+Δt
+  = constant 
+                                                         This is the law of areas. 
+5.State Kepler’s third law of planetary motion(Law of periods) 
+The square of the time period of revolution of a planet is proportional to 
+the cube of the semi- major axis of the ellipse traced out by the planet. 
+                                        T
+2
+∝a
+3
+ 
+6.Prove Kepler’s third law of planetary mtion. 
+Period of a satellite,          T= 2π
+√
+ (R+h)
+3
+GM
+ 
+                                                     T
+2
+= 4π
+2
+ (R+h)
+3
+GM
+ 
+                                                     T
+2
+= 
+  4π
+2
+GM
+(R+h)
+3
+ 
+                                                   T
+2
+∝(R+h)
+3
+   
+                                                   T
+2
+∝a
+3
+  
+                             Which is Kepler’s Law of Periods. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+7.State Universal Law of Gravitation 
+Every body in the universe attracts every other body with a force which is 
+directly proportional to the product of their masses and inversely 
+proportional to the square of the distance between them   . 
+                                           퐅=퐆
+퐦
+ퟏ
+퐦
+ퟐ
+퐫
+ퟐ
+  
+8. The value of Gravitational Constant. 
+                 G = 6.67×10
+−11
+ N m
+2
+/kg
+2
+ 
+9.Define acceleration due to gravity of the Earth  
+The acceleration gained by a body due to the gravitational force of 
+earth is called acceleration due to gravity. 
+ 
+10. Obtain the expression for acceleration due to gravity on the surface of 
+the earth    (or)    Obtain the relation connecting g and G. 
+Consider a body of mass m on the surface of earth of mass M and radius R.  
+The gravitational force between body and earth is given by 
+                          F=
+GMm
+R
+2
+   -----------(1) 
+         By Newton’s second law 
+                              F=mg    
+                                 where g is acceleration due to gravity 
+                              From Eq (1) and (2) 
+                        mg =
+GMm
+R
+2
+ 
+                                         g=
+퐆퐌
+퐑
+ퟐ
+ 
+11.The average value of g on the surface of earth is -------. 9.8ms
+−2
+. 
+12. Acceleration due to gravity is independent of------------( mass of the 
+body/mass of earth). 
+                                        mass of the body 
+13.A man can lift a mass of 15kg on earth.What will be the maximum mass 
+that can be lifted by him by applying the same force on moon. 
+                                        6x15 =90kg 
+(Acceleration due to gravity on the surface of moon is 
+1
+6
+ times that on 
+earth. So he can lift  6 times massive  objects on the surface of moon) 
+ 
+14.A mass of 30kg is taken from earth to moon. What will be its mass and 
+weight on the surface of moon 
+                           Mass on the moon=30kg    (mass remains the same) 
+                      Weight on the moon =
+30 푥9.8
+6
+  =49N 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+15.Obtain the expression for Acceleration due to gravity at a height h 
+above the surface of the earth. 
+On the surface of earth 
+                g = 
+GM
+R
+2
+ ------------(1) 
+At a height above  the surface of earth      
+              g
+h
+=
+GM
+(R+h)
+2
+   ----------(2) 
+                                  For , h << R                                                                    
+             g
+h
+=
+GM
+R
+2
+(1+
+h
+R
+)
+2
+  
+             g
+h
+=
+GM 
+R
+2
+(1+
+h
+R
+)
+−2
+  
+Substituting from eq(1) 
+                                                         g
+h
+=g(1+
+h
+R
+)
+−2
+ 
+Using binomial expression and neglecting higher order terms. 
+                                                          g
+h
+≅g (1−
+2h
+R
+) 
+16.Derive the expression for acceleration due to gravity at a depth d 
+below the surface of the earth 
+We assume that the entire earth is of uniform density. Then  mass 
+of earth 
+Acceleration due to gravity on the surface of 
+earth 
+            g=
+GM
+R
+2
+ -------------(1)  
+                                But M= 
+4
+3
+πR
+3
+ρ  
+           g=
+G
+R
+2
+(
+4
+3
+πR
+3
+ρ) 
+          g=
+4
+3
+πRρG ---------------(2) 
+Acceleration due to gravity at a depth d below the surface of earth 
+                                                  g
+d
+=
+4
+3
+π(R−d)ρG ---------(3) 
+                          
+eq(3)
+eq(2)
+ ------     
+g
+d
+g
+=
+4
+3
+π(R−d)ρG
+4
+3
+πRρG 
+ 
+                                                    
+g
+d
+g
+=
+(R−d)
+R 
+  
+                                                 g
+d
+=g(1−
+d
+R 
+ ) 
+17.The acceleration due gravity ---------------(decreases/increases) , as we 
+go above  earth’s surface and ---------------(decreases/increases) ,as we go 
+down below earth’s surface. 
+                                     Decreases   ,Decreases. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+18.The acceleration due gravity is ---------------------at the centre of earth. 
+                                                         Zero 
+19.At what height the value of acceleration due to gravity will be half of  
+       that on surface of earth. (Given the radius of earth R =6400km) 
+.                 g
+h
+=g(1+
+h
+R
+)
+−2
+  
+                      g
+h
+=
+g
+2
+  
+             
+g
+2
+=g(1+
+h
+R
+)
+−2
+         
+             
+1
+2
+=(1+
+h
+R
+)
+−2
+  
+            2=(1+
+h
+R
+)
+2
+  
+          
+√
+2 =1+
+h
+R
+ 
+           
+h
+R
+=
+√
+2-1 
+           h = (
+√
+2-1) R = (1.414 -1) 6400 = 2650 km 
+20.Calculate the value of acceleration due to gravity at a height equal to  
+      half of the radius of earth. 
+                       g
+h
+=
+GM
+(R+h)
+2
+   
+                         h=
+R
+2
+   
+                       g
+h
+=
+GM
+(
+R+
+R
+2
+)
+2
+  =
+GM
+(
+3
+2
+R
+)
+2
+ 
+                                      =
+GM
+9
+4 
+R
+2
+ =
+4
+9
+GM
+R
+2
+   = 
+4
+9
+ 푔 
+21.Obtain the expression for gravitational potential energy at a point. 
+Gravitational potential energy at point is defined as the work done in 
+displacing the particle from infinity to that point without acceleration. 
+                         
+Gravitational force on a mass m at a distance x 
+                              F=
+GMm
+x
+2
+ 
+The work done to give a displacement dx to the mass 
+                            dW=Fdx        
+                            dW= 
+ GMm
+x
+2
+dx 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+Total work done to move the mass from ∞ to r 
+                             W =
+∫
+GMm
+x
+2
+dx
+r
+∞
+ 
+                             W = GMm
+∫
+1
+x
+2
+dx
+r
+∞
+ 
+                             W=
+−GMm 
+r
+ 
+This work is is stored as gravitational PE in the body. 
+                             U= 
+−퐆퐌퐦 
+퐫
+ 
+22.Define gravitational potential at a point on earth. Obtain the expression 
+for gravitational potential 
+The gravitational potential at a point is defined as the potential energy of a 
+particle of unit mass at that point. 
+The gravitational Potential energy  of a body of mass m at a distance r 
+                                               U= 
+−GMm 
+r
+ 
+                    For unit mass m=1 
+So gravitational potential,       V= 
+−퐆퐌 
+퐫
+ 
+23.What is escape speed(escape velocity)? 
+The minimum speed required for an object to reach infinity i.e. to escape 
+from the earth’s gravitational pull  is called escape speed. 
+ 
+24.Derive the expression for escape speed. 
+                          
+1
+2
+mv
+i
+2
+  - 
+GMm 
+r
+=0 
+                                        
+1
+2
+mv
+i
+2
+= 
+GMm 
+R
+  
+                                               v
+i
+2
+= 
+2GM 
+R
+  
+                                               v
+e
+=
+√
+2GM 
+R
+       or       v
+e
+=
+√
+2gR  
+25.퐄퐬퐜ape velocity is independent of ...............(mass of the body/mass of 
+the earth)                                   Mass of the body. 
+26.Write thevalue of e퐬퐜퐚퐩퐞 퐬퐩퐞퐞퐝 (퐨퐫 퐞퐬퐜퐚퐩퐞 퐯퐞퐥퐨퐜퐢퐭퐲) on the surface 
+of earth .                                  11.2km/s 
+ 
+27.Moon has no atmosphere. Why? 
+The escape speed of moon is about 2.3 km/s. which is less than the 
+average speed of gas molecules of moon. Thus gas molecules escape from 
+surface of moon and it has no atmosphere. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+28.What are sarth Satellites? 
+Earth satellites are objects which revolve around the earth.  
+29................. is the natural satellite of earth .     Moon 
+30.What are the uses of artificial satellites?  
+Artificial satellites are used for telecommunication, geophysics and 
+meteorology etc. 
+31.Derive the expression for orbital speed of a satellite 
+The speed with which a satellites revolves around earth is called orbital 
+speed.  
+Consider a satellite  of mass m in a circular orbit of a distance (R + h) from 
+the centre of the earth.  
+                                 F
+centripetal
+=F
+gravitational
+  
+                                               
+mv
+2
+R+h
+=
+GMm
+(R+h)
+2
+   
+                                                 v
+2
+=
+GM
+(R+h)
+  
+                                               푣
+표
+=
+√
+GM
+(R+h)
+  
+        If the satellite is very close to earth (R+h) ≈R  
+                                               풗
+풐
+=
+√
+퐆퐌
+퐑
+      or     풗
+풐
+=
+√
+품푹     
+32.Write the relation connecting escape velocity and orbital velocity 
+Orbital Velocity ,v
+0
+=
+√
+GM 
+R
+     
+Escape Velocity ,v
+e
+=
+√
+2GM 
+R
+     
+                               퐯
+퐞
+=
+√
+ퟐ 퐯
+퐨
+  
+                 Escape Velocity = 
+√
+2  x  Orbital Velocity 
+33.Derive the expression for period of a satellite  
+Period of a satellite is the time required for a satellite to complete one 
+revolution around the earth in a fixed orbit. 
+                              Period T= 
+circumference of the orbit
+표푟푏푖푡푎푙 푠푝푒푒푑
+ 
+                                           T= 
+2휋 (푅+ℎ)
+√
+GM
+(R+h)
+ 
+                                         T=ퟐ흅
+√
+ (푹+풉)
+ퟑ
+퐆퐌
+  
+If the satellite is very close to earth (R+h) ≈R 
+                                        T=ퟐ흅
+√
+ 푹
+ퟑ
+퐆퐌
+  
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                      Chapter 8 
+                                  Mechanical Properties of Solids 
+1.Define Elasticity 
+The property of a body, by virtue of which it tends to regain its original 
+size and shape when the applied force is removed, is known as elasticity 
+and such substances are called elastic . 
+                          Eg: Steel, Rubber 
+2.Which is more elastic, steel or rubber?     
+             Steel 
+3.Define plasticity 
+Substances have no  tendency to regain their previous shape on the 
+removal of deforming force are called plastic and this property is called 
+plasticity.                        Eg:Putty and mud 
+4.Define Stress 
+The restoring force per unit area is known as stress.  
+                                         Stress =
+퐹
+퐴
+ 
+                             The SI unit of stress is N 푚
+−2
+ or pascal (Pa) 
+5.Define Strain 
+ Strain is defined as the  fractional change in dimension. 
+                                  Strain =
+퐶ℎ푎푛푔푒 푖푛 푑푖푚푒푛푠푖표푛 
+푂푟푖푔푖푛푎푙 푑푖푚푒푛푠푖표푛
+ 
+                               Strain has no unit and dimension. 
+6.Wrte three types of stress and strain. 
+1. Longitudinal Stress        and      Longitudinal Strain 
+2. Shearing Stress               and      Shearing Strain 
+3. Hydraulic Stress             and      Hydraulic Strain (Volume Strain) 
+7.Define longitudinal stress 
+Longitudinal stress is defined as the restoring force per unit area when 
+force is applied normal to the cross-sectional area of a cylinder. 
+                                     Longitudinal stress= 
+푭
+푨
+ 
+8. Define Longitudinal strain 
+Longitudinal strain is defined as the ratio of change in length(ΔL) to 
+original length(L) of the body . 
+                                  Longitudinal strain =
+Change in length
+Original length
+ 
+                                  Longitudinal strain =
+횫퐋
+푳
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+9.Define shearing stress. 
+Shearing stress is defined as the restoring force per unit area  when a  
+tangential force is applied on the cylinder. 
+                                       Shearing stress=
+퐅
+퐀
+ 
+10.Define Shearing strain.  
+                                               
+Shearing strain  is defined as the ratio of relative displacement of the faces 
+Δx to the length of the cylinder L 
+                                      Shearing strain  = 
+횫퐱
+푳
+ =tanθ  = θ 
+ 
+11.Define hydraulic stress or volume stress 
+The restoring force per unit area of solid sphere, placed in the fluid is 
+called hydraulic stress. 
+                                   Hydraulic stress=
+F
+A
+ = -P (pressure) 
+12.Define volume strain (hydraulic strain) 
+Volume strain(hydraulic strain) is defined as the ratio of change in volume 
+(ΔV) to the original volume (V). 
+                                         Volume strain=
+Change in volume 
+Original volume
+ 
+                                         Volume strain=
+횫퐕
+퐕
+ 
+13.State Hooke’s Law 
+For small deformations the stress is directly proportional to strain. This is 
+known as Hooke’s law. 
+                                             Stress ∝ Strain 
+                                        
+퐒퐭퐫퐞퐬퐬 
+퐬퐭퐫퐚퐢퐧 
+=풌  
+             The constant k is called Modulus of Elasticity. 
+The SI unit of modulus of elasticity is N 푚
+−2
+ or pascal (Pa)  
+ 
+14.Define modulus of elasticity. Write its unit. 
+                Modulus of elasticity =
+Stress 
+strain 
+ 
+                                                Unit =N 푚
+−2
+ or pascal (Pa)  
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+15.The stress-strain curve for a metal is given in figure. Mark  
+1)Elastic limt (or) yield point    2) Fracture point      3) Proportional 
+limit       4)Elastic region     5) Plastic region     6)permanent set 
+ 7) yield strength (푺
+풚
+) 8) ultimate tensile strength (푺
+풖
+ ) 
+ 
+                       
+16.Define young’s eodulus(Y) 
+The ratio of  longitudinal stress to longitudinal strain  is defined as 
+Young’s modulus of the material . 
+                                     Y=
+longitudinal stress
+ longitudinal strain  
+ 
+                                     Y=
+퐹
+퐴
+ΔL
+퐿
+  
+ 
+                                    Y=
+푭푳
+  퐀 횫퐋
+ 
+17.Youngs modulus of steel is .........................(greater/less) than that of 
+rubber 
+                                     Greater than 
+18.Define shear modulus or rigidity modulus(G)  
+The ratio of shearing stress to the corresponding shearing strain is called 
+the shear modulus or Rigidity modulus of the material . 
+                                  G=
+Shearing stress
+ Shearing strain  
+ 
+                                 G=
+퐹
+퐴
+Δx
+퐿
+  
+ = 
+퐹
+퐴
+휃  
+ 
+                                 G= 
+푭
+  퐀 휽
+ 
+ 
+19.Define bulk modulus(B) 
+The ratio of hydraulic stress to the corresponding hydraulic strain is 
+called bulk modulus.  
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                 B=
+Hydraulic  stress
+ Hydraulic strain  
+ 
+                                 B=
+퐹
+퐴
+ΔV
+푉
+  
+  =  
+−푃
+  
+ΔV
+푉
+ 
+                                B= 
+−푷푽
+  횫퐕
+                
+20.Define compressibility(k) 
+The reciprocal of the bulk modulus is called compressibility. 
+                                        k= 
+1
+퐵
+ 
+                                        k= 
+−ퟏ
+퐏
+ 
+횫퐕
+퐕
+ 
+▪ The compressibility is the least for solids and the most for gases. 
+▪ The bulk modulus is the least for gases and the most for solids. 
+21.Why steel is preferred in heavy-duty machines and in structural 
+designs? 
+Young’s modulus of steel is greater  than  that of copper, brass and 
+aluminium. So steel is more elastic than copper, brass and aluminium. So 
+steel is preferred in heavy-duty machines and in structural designs 
+22.The stress-strain graphs for materials A and B are shown in Figure. 
+                           
+(a) Which of the materials has the greater Young’s modulus? 
+(b) Which of the two is the stronger material? 
+(c)      Which of the two materials is more ductile? 
+(a)   Young’s modulus Y=
+ stress
+  strain  
+ = slpoe of the graph. 
+                 Slope of  graph for material A  is greater than that of B. 
+              So materials  A has the greater Young’s modulus. 
+(b) Strength of a material is determined by the amount of stress 
+required to cause fracture. 
+The fracture point is greater for material A. 
+ So material A is stronger than B 
+(c) The fracture point is far apart for material  A than B. 
+So material A is more ductile than B. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+23..The stress-strain graph for three materials A B and C are shown below                    
+Which is more elastic A ,B or C. Justify your 
+answer. 
+ 
+ 
+                  
+    Material A is more elastic 
+        Modulus  of elasticity =
+ stress
+  strain  
+ = slpoe of the graph 
+        Slope of  graph for material A  is greater than that of B and C 
+   So material  A is more elstic.  
+24.A structural steel rod has a radius of 10 mm and a length of 1.0 m. A 
+100 kN force stretches it along its length. Calculate (a) stress, (b) 
+elongation, and (c) strain on the rod. Young’s modulus, of structural steel 
+is 2.0 × ퟏퟎ
+ퟏퟏ
+ N 풎
+−ퟐ
+ 
+(a)                     stress=  
+퐹
+퐴
+  = 
+퐹
+휋푟
+2
+ 
+                                            = 
+100 푥 10
+3
+3.14 푥 (10 푥 10
+−3
+)
+2
+ =
+100 푥 10
+3
+3.14 푥 10
+−4
+ 
+                                                 =3.18 x10
+8
+ N푚
+−2
+ 
+(b)                                Y=
+퐹퐿
+  A ΔL
+ 
+                                      ΔL = 
+(
+퐹
+퐴
+)퐿
+  Y 
+ =
+3.18 x10
+8
+ 푥 1
+ 2× 10
+11
+ 
+                                                  = 1.59 x10
+−3
+ m 
+                                                  = 1.59 mm 
+    (c)                          Strain =  
+ΔL
+퐿
+ 
+                                            = 
+1.59 x10
+−3
+1
+  
+                                                  = 1.59 x10
+−3
+ m 
+25.A square lead slab of side 50 cm and thickness 10 cm is subject to a 
+shearing force (on its narrow face) of 9.0 × ퟏퟎ
+ퟒ
+ N. The lower edge is 
+riveted to the floor. How much will the upper edge be displaced? Given 
+shear modulus, G =ퟓ.ퟔ × ퟏퟎ
+ퟗ
+퐍퐦
+−ퟐ
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+ . 
+    
+ 
+                  
+                             
+                              
+                             Stress= 
+퐹
+  A 
+ =
+9.0 × 10
+4
+  0.5 x0.1  
+=
+9.0 × 10
+4
+ 0.05  
+ 
+                                        = 1.80 × 10
+6
+ N 푚
+−2
+ 
+                                    G = 
+stress
+ 
+Δx
+퐿
+ 
+ 
+                                  Δx=
+푠푡푟푒푠푠 푥 퐿
+  G 
+   
+                                        = 
+1.80 × 10
+6
+ 푥 0.5
+ 5.6 × 10
+9
+  = 1.6 × 10
+−4
+ m = 0.16 mm 
+ 
+26.The average depth of Indian Ocean is about 3000 m. Calculate the 
+fractional compression, ΔV/V, of water at the bottom of the ocean, given 
+that the bulk modulus of water is 2.2 × ퟏퟎ
+ퟗ
+ N 풎
+−ퟐ
+. (Take g = 10 m 풔
+−ퟐ
+) 
+                                   G = 
+−푃
+  
+ΔV
+푉
+ 
+                                 
+ΔV
+푉
+=
+P
+퐺
+  
+                                                      P=hρg=3000 x1000 푥10 =3푥10
+7 
+N 푚
+−2
+  
+                                 
+ΔV
+푉
+=
+3푥10
+7 
+2.2 × 10
+9
+ = 1.36 × 10
+−2 
+ 
+27.Define Poisson’s ratio 
+The ratio of lateral strain to longitudinal strain is called Poisson’s ratio. 
+                      Poisson’s Ratio 휎=
+퐿푎푡푒푟푎푙 푆푡푟푎푖푛
+퐿표푛푔푖푡푢푑푛푎푙 푆푡푟푎푖푛
+ 
+                                                    휎=
+∆푑
+푑
+∆퐿
+퐿
+  
+                                                    휎=
+∆푑
+∆퐿
+ 푥
+퐿
+푑
+   
+푃표푖푠푠표푛
+′
+푠 푟푎푡푖표 ℎ푎푠 푛표 푢푛푖푡 푎푛푑 푑푖푚푒푛푠푖표푛.  
+28.Cranes used for lifting and moving heavy loads have a thick metal rope 
+. Why? 
+This is due to the fact that  metals have greater youngs modulus. 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+29.The metal ropes used in cranes are always made of a number of thin 
+wires braided together.Why? 
+In cranes thicker rope of radius about 3 cm is recommended. A single wire 
+of this radius would practically be a rigid rod. So the ropes are always 
+made of a number of thin wires braided together, like in pigtails, for ease 
+in manufacture, flexibility and strength. 
+30.The maximum height of a mountain on earth is ~10 km. Why? 
+ The height  of mountain is limited by  the elastic properties of rocks. 
+31.Write the expression for bending δ produced in the beam shown 
+below. How can we reduce bending? 
+                           
+                                  δ = 
+퐖 풍
+ퟑ
+ퟒ풃풅
+ퟑ
+풀
+                      (W=mg) 
+The bending  reduces by 
+▪ Using a material with a large Young’s modulus Y  
+▪ Increasing  the breadth b of the beam 
+▪ Increasing depth d of the beam. 
+32.What is buckling? 
+The sidewise bending of a deep bar is called buckling. 
+                                     
+33.Why beams with cross-sectional shape of I is used for construction of 
+bridges? 
+                                              
+▪ This sections prevents buckling of beams 
+▪ This section provides a large load bearing surface and enough depth 
+to prevent bending.  
+▪ This shape reduces the weight of the beam without sacrificing the 
+strength This shape reduces the cost.                           
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                Chapter 9 
+                                 Mechanical Properties Of Fluids 
+ 
+1.Write two basic difference between Liquids and Gases 
+▪ A liquid is incompressible whereas  gas is compressible  
+▪ A liquid has a free surface of its own ,but gas has no free surface. 
+2.Define pressure. 
+The normal force(F) exerted by a fluid on an area A is called pressure. 
+                                            Pressure,  P =
+F
+A
+ 
+                                  Pressure is a scalar quantity. 
+ 
+3.What do you mean by atmospheric pressure? 
+The pressure exerted by the atmosphere at sea level. 
+                                    1 atm = 1.013 × 10
+5
+ Pa. 
+ 
+4.Define density? 
+Density ρ for a fluid of mass m occupying volume V is given by 
+                                              ρ = 
+m
+V
+                     
+5.Define relative density 
+The relative density of a substance is the ratio of its density to the density 
+of water at 4
+0
+C. 
+                                Relative density=
+Density of substance
+Density of water at 4
+0
+C
+ 
+                        It is a dimensionless positive scalar quantity. 
+6.Write the expression for absolute pressure P, at depth below the surface 
+of a liquid open to the atmosphere. 
+                       Absolute Pressure, P = P
+a
+ + ρ gh 
+7.Write the expreassion for gauge pressure 
+                      Gauge pressure,  P - P
+a
+ = ρ gh 
+8.What is the pressure on a swimmer 10 m below the surface of a lake? 
+             h = 10 m  
+             ρ = 1000 kg m
+−3 
+           Take g = 10 m s
+−2
+  
+                                              P = P
+a
+ + ρ gh  
+                                                 = 1.01 × 10
+5
+  + 1000  × 10  × 10  
+                                                 = 1.01 × 10
+5
+  + 1 × 10
+5
+ 
+                                                 = 2.01 × 10
+5
+ Pa   ≈ 2 atm  
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+9.At a depth of 1000 m in an ocean  
+(a) what is the absolute pressure?  
+(b) What is the gauge pressure?  
+(The density of sea water is 1.03 × ퟏퟎ
+ퟑ
+ kg 퐦
+−ퟑ
+, g = 10m 퐬
+−ퟐ
+) 
+            h = 1000 m     ,      ρ = 1.03 × ퟏퟎ
+ퟑ
+ kg 퐦
+−ퟑ
+ 
+(a)  Absolute pressure,    P = P
+a
+ + ρgh  
+                                                 = 1.01 × 10
+5
+  + 1.03 × 10
+3
+× 10 × 1000  
+                                                 = 1.01 × 10
+5
+  + 103 × 10
+5
+ 
+                                                 = 104.01 × 10
+5
+ Pa ≈ 104 atm 
+(b) Gauge pressure ,        P −P
+a
+ = ρgh  
+                                                         =  1.03 × 10
+3
+ × 10 × 1000  
+                                                         = 103 × 10
+5
+ Pa  ≈ 103 atm  
+10.The device used to measure Atmospheric Pressure. 
+Mercury barometer  is used to  measure Atmospheric Pressure. 
+11.The device used to measure Guage pressure or pressure differences 
+An open-tube manometer is a used  for measuring Guage pressure or 
+pressure differences. 
+12.State Pascal’s law for transmission of fluid pressure. 
+Whenever external pressure is applied on any part of a fluid contained in a 
+vessel, it is transmitted undiminished and equally in all directions. 
+13.Briefly explain the working of hydraulic lift. 
+                 
+The pressure on smaller piston 
+                                                 P = 
+F
+1
+A
+1
+--------------(1) 
+This pressure is transmitted equally  to the larger cylinder  with a larger 
+piston of area A
+2
+ producing an upward force F
+2
+. 
+                                                 P = 
+F
+2
+A
+2
+--------------(2)   
+        From eq(1) and (2)       
+F
+1
+A
+1
+=
+F
+2
+A
+2
+ 
+                                               퐅
+ퟐ
+=퐅
+ퟏ 
+퐀
+ퟐ
+퐀
+ퟏ
+   
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+14. A hydraulic automobile lift is designed to lift cars with a maximum 
+mass of 3000kg. The area of cross section of the piston carrying  425 c풎
+ퟐ
+. 
+What maximum pressure would the smaller piston have to bear? 
+                   Pressure on two two pistons will be same. 
+                                         P= 
+F
+1
+A
+1
+=
+F
+2
+A
+2
+ 
+                                        P = 
+F
+2
+A
+2
+ =
+mg
+A
+2
+ 
+                                                     =
+2000 푥 9.8
+425 x10
+−4
+ =6.92 x10
+5
+ N푚
+−2
+ or Pa 
+15.Two syringes of diffrent cross sections (without needles) filled with 
+water are connected with a tightly fitted rubber tube filled with water. 
+Diameters of the smaller piston and larger piston are 1.0 cm and 3.0 cm 
+respectively. Find the force exerted on the larger piston when a force of 10 
+N is applied to the smaller piston. 
+                   F
+2
+=F
+1 
+A
+2
+A
+1
+  
+                        F
+2
+=10 x
+π x (1.5 x 10
+−2
+)
+2
+π x 
+(
+0.5 x 10
+−2
+)
+2
+  
+                                    =10 x9  =90 N 
+16.What do you mean by streamline flow (Steady Flow)? 
+The flow of the fluid is said to be  steady if at any given point, the velocity 
+of each passing fluid particle remains constant in time. 
+17.What is turbulent flow? 
+Beyond a limiting speed  called critical speed, the flow of fluid loses 
+steadiness and is called turbulent flow. 
+ 
+18.Obtain the expression for equation of continuity for streamline flow of 
+a fluid. 
+                                
+                                
+               The mass of liquid flowing out  = The mass of liquid  flowing in 
+                                                       ρ
+P
+A
+P
+v
+P
+Δt=ρ
+Q
+A
+Q
+v
+Q
+Δt=ρ
+R
+A
+R
+v
+R
+Δt  
+              If the fluid is incompressible ρ
+P
+=ρ
+Q
+=ρ
+R
+ 
+                                                                A
+P
+v
+P
+=A
+Q
+v
+Q
+=A
+R
+v
+R
+  
+                                                                   Av = constant 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+19.The equation of continuity and it is a statement of conservation of 
+................ in flow of incompressible fluids. 
+                                                           mass 
+20. State and prove Bernoulli’s Principle 
+Bernoulli’s principle states that as we move along a streamline, the sum of 
+the pressure , the kinetic energy per unit volume  and the potential energy 
+per unit volume remains a constant. 
+                                퐏 +
+ퟏ
+ퟐ
+훒퐯
+ퟐ
+ + 훒퐠퐡= constant 
+      Proof 
+            
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+The total work done on the fluid is  
+                             W
+1
++W
+2
+=P
+1
+ΔV - P
+2
+ΔV 
+                            퐖
+ퟏ
++퐖
+ퟐ
+=(퐏
+ퟏ
+ - 퐏
+ퟐ
+)ΔV-----------------(1) 
+ 
+The change in its kinetic energy is 
+                                        ΔK =.
+ퟏ
+ퟐ
+퐦(퐯
+ퟐ
+ퟐ
+−퐯
+ퟏ
+ퟐ
+) ---------------(2)                    
+ 
+The change in gravitational potential energy is  
+                                         ΔU= mg(퐡
+ퟐ
+-퐡
+ퟏ
+)------------------(3) 
+By work – energy theorem 
+                                   W
+1
++W
+2
+= ΔK  + ΔU  
+                                (퐏
+ퟏ
+ - 퐏
+ퟐ
+)ΔV = 
+ퟏ
+ퟐ
+퐦(퐯
+ퟐ
+ퟐ
+−퐯
+ퟏ
+ퟐ
+)+ 퐦퐠(퐡
+ퟐ
+-퐡
+ퟏ
+)-------------(4) 
+Divide each term by ΔV to obtain                                                ( 
+푚
+ΔV
+=ρ) 
+                                        P
+1
+ - P
+2
+ = 
+1
+2
+ρ
+(
+v
+2
+2
+−v
+1
+2
+)
++ ρg(h
+2
+-h
+1
+)                              
+                                       P
+1
+ – P
+2
+ = 
+1
+2
+ρv
+2
+2
+−
+1
+2
+ρv
+1
+2
++ ρgh
+2−
+ρgh
+1
+ 
+                                    P
+1
+ +
+1
+2
+ρv
+1
+2
+ + ρgh
+1
+= P
+2
++ 
+1
+2
+ρv
+2
+2
++ ρgh
+2
+  
+                              퐏 +
+ퟏ
+ퟐ
+훒퐯
+ퟐ
+ + 훒퐠퐡= constant     
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+21.State Torricelli’s law of speed of efflux of  fluid 
+Torricelli’s law states that the speed of efflux of fluid through a small hole 
+at a depth h of an open tank is equal to the speed of a freely falling body 
+i.e, 
+√
+2gh  
+ 
+22.Prove Torricelli’s law of speed of efflux of  fluid. 
+                                                         
+According to  Bernoulli principle  
+                                            P
+1
+ +
+1
+2
+ρv
+1
+2
+ + ρgh
+1
+= P
+2
++ 
+1
+2
+ρv
+2
+2
++ ρgh
+2
+  
+퐻푒푟푒 v
+2
+ = 0.  
+                                            P
+a
+ +
+1
+2
+ρv
+1
+2
+ + ρgy
+1
+= P+ ρgy
+2
+  
+                                                           
+1
+2
+ρv
+1
+2
+=  ρg(y
+2
+−y
+1
+) + P−P
+a
+ 
+                                                                                                                 y
+2
+−y
+1
+=h  
+                                                           
+1
+2
+ρv
+1
+2
+=  ρgh + P−P
+a
+ 
+                                                                v
+1
+2
+= 2gh + 
+2(P−P
+a
+)
+ρ
+ 
+                                                    v
+1
+=
+√
+ 2gh + 
+2(P−P
+a
+)
+ρ
+  
+If the tank is open to the atmosphere, then P = P
+a
+ 
+                                                 v
+1
+=
+√
+ 2gh  
+ 
+23.Explain Magnus Effect. 
+                                        
+The relative  velocity of air above the ball  is larger and below it is smaller. 
+This difference in the velocities of air results in the pressure difference 
+between the lower and upper faces and there is a net upward force on the 
+ball. This dynamic lift due to spining is called Magnus effect. 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+24.What is an aerofoil and how a dynamic lift is produced on aircraft wing 
+                                            
+Aerofoil  is a solid piece shaped to provide an upward dynamic lift when it 
+moves horizontally through air. When the aerofoil moves against the 
+wind, the flow speed of air on top is higher than that below it. There is an 
+upward force resulting in a dynamic lift of the wings and this balances the 
+weight of the plane. 
+25.Define viscosity 
+The internal frictional  force that acts when there is relative motion 
+between layers of the liquid is called viscosity. 
+26.Obtain the expression for Coefficient of viscosity( 훈) 
+                                          
+The coefficient of viscosity( η)for a fluid is defined as the ratio of shearing 
+stress to the strain rate. 
+                                                                       η=
+Shearing stress 
+Strain rate
+   =  
+F
+A
+푣
+푙
+  
+                                                                      훈=
+퐅풍
+퐯퐀
+             
+27.The viscosity of liquids ...................... with temperature while the 
+viscosity of gases .................... in the case of gases. 
+                           Decreases,                 increases 
+28.State Stokes’ Law 
+Stokes’ law states that the viscous drag force F on a sphere of radius a 
+moving with velocity v through a fluid of coefficient of viscosity η is, 
+                                                             F =  6πηav 
+29.What terminal velocity? 
+For an object falls through a viscous medium, when viscous force plus 
+buoyant force becomes equal to the weight of the body, the net force and  
+acceleration become zero. Then the object  descends with a constant 
+velocity called terminal velocity. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+30.Obtain expression for terminal velocity. 
+                                       
+Consider a raindrop in air. The forces acting on the drop are 
+1. Weight  acting downwards ,F
+G
+=
+4
+3
+πa
+3 
+ρg                 (mg) 
+2. Buoyant force acting upwards, F
+B
+=
+4
+3
+πa
+3
+σg 
+3. Viscous force, F
+V
+ =  6πηav 
+In equilibrium, 
+                           6πηav + 
+4
+3
+πa
+3
+σg = 
+4
+3
+πa
+3 
+gρ 
+                                             6πηav  = 
+4
+3
+πa
+3 
+(ρ −σ)g 
+                       Terminal velocity ,     퐯
+퐭
+ = 
+ퟐ퐚
+ퟐ 
+(훒 −훔)퐠
+ퟗ훈
+ 
+31.The terminal velocity of a copper ball of radius 2.0 mm falling through 
+a tank of oil at ퟐퟎ
+ퟎ
+C is 6.5 cm 퐬
+−ퟏ
+. Compute the viscosity of the oil at ퟐퟎ
+ퟎ
+C. 
+Density of oil is 1.5 × ퟏퟎ
+ퟑ
+ kg 퐦
+−ퟑ
+, density of copper is 8.9 × ퟏퟎ
+ퟑ
+ kg 퐦
+−ퟑ
+. 
+              v
+t
+ = 6.5 × 10
+−2
+ ms
+−1
+           ρ = 8.9 × 10
+3
+ kg m
+−3
+ 
+               a = 2 × 10
+−3
+ m                     σ =1.5 ×10
+3
+ kg m
+−3
+ 
+                g = 9.8m s
+−2
+, 
+                                                       v
+t
+ = 
+2a
+2 
+(ρ −σ)g
+9η
+ 
+                                                         η = 
+2a
+2 
+(ρ −σ)g
+9v
+t
+ 
+                                                         η = 
+2 x (2 × 10
+−3
+)
+2 
+(8.9 × 10
+3
+ −1.5 ×10
+3
+)x9.8
+9 x 6.5 × 10
+−2
+ 
+                                         η =9.9 × 10
+−1
+ kg m
+−1
+s
+−1
+ 
+32.Write the Reynolds Number.   
+                                                       퐑
+퐞
+=
+훒퐯퐝
+훈
+  
+                  R
+e
+ <1000 – The flow is streamline or laminar. 
+                  R
+e
+> 2000− The flow is turbulent . 
+                  R
+e
+ between 1000 and 2000-The flow becomes unsteady .  
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+33.Define surface tension 
+Surface tension is a force per unit length (or surface energy per unit area) 
+acting in the plane of the interface between the plane of the liquid and any 
+other substance.  
+                                          Surface Tension, S= 
+퐅퐨퐫퐜퐞
+퐋퐞퐧퐠퐭퐡
+  
+▪ The SI Unit is Nm
+−1
+ 
+▪ Dimensional formula is MT
+−2
+. 
+34.The surface tension of a liquid .......................... with temperature. 
+                                    decreases 
+35.Show that surface tension is equal to surface energy per unit area. 
+                             
+ 
+Inorder to keep the bar in its original position some work has to be done 
+against this inward full. 
+                                                      W = F x d----------(1) 
+If the surface energy of the film is S per unit area, the extra area is 2d푙 
+(film has two sides),  
+                 The extra  surface energy = S x 2d푙 ------------(2) 
+                  The extra surface energy =  work done  
+                                                      S x2d푙 =Fd 
+                                                     S = 
+F
+2푙
+ = surface tension 
+36.Some effects of surface Tension 
+▪ Oil and water do not mix. 
+▪ Water wets you and me but not ducks. 
+▪ Mercury does not wet glass but water sticks to it. 
+▪ Oil rises up a cotton wick, inspite of gravity. 
+▪ Sap and water rise up to the top of the leaves of the tree.  
+▪ Hairs of a paint brush do not cling together when dry and even when 
+dipped in water but form a fine tip when taken out of it. 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+37.Define angle of contact 
+The angle between tangent to the liquid surface at the point of contact and 
+solid surface inside the liquid is termed as angle of contact(θ)      
+▪ Angle of contact is obtuse for Water on a waxy or oily surface, 
+Mercury on any surface. 
+▪ Angle of contact is acute for Water on glass or on plastic,  Kerosene 
+oil on virtually anything . 
+ 
+38.Draw the angle of contact when 
+a) the liquid wets the solid. 
+b) the liquid does not wet the solid. 
+         
+           a) 
+                               When  angle of contact, θ is an obtuse 
+angle(greater than 90)  
+ 
+ 
+          b) 
+ When angle of contact,θ is an  
+   acute angle (less than 90). 
+ 
+39.Why are small drops and bubbles spherical? 
+Due to surface tension ,liquid surface has the tendency  to reduce surface 
+area. For a given volume sphere has minimum surface area. So small drops 
+and bubbles  are spherical. 
+ 
+40.Why are large drops and bubbles not spherical, but flattened? 
+For large drops the effect of gravity predominates that of surface tension 
+and they get flattened. 
+41.Derive the expression for excess pressure inside a spherical drop 
+  
+                                                             
+             
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+   Work done in expansion= Force x Displacement 
+                                                              = Excess pressure x Area x Displacement 
+                                                         W = (P
+i
+- P
+o
+) x 4πr
+2
+ x Δr ------------------(1) 
+ 
+This workdone is equal to the increase in surface energy 
+                                   Extra Surface energy = Surface tension x Increase in 
+surface area                   
+                                  Extra surface energy = S x 8πrΔr     ------------------(2) 
+                                              The workdone =  extra surface energy 
+                                  (P
+i
+- P
+o
+) x 4πr
+2
+ xΔr    = 8πrΔr S --------------(3) 
+                                             (퐏
+퐢
+- 퐏
+퐨
+)   = 
+ퟐ퐒
+퐫
+   
+42.Write the expression for excess pressure inside a liquid bubble 
+A bubble has two free surfaces. 
+                                                         (P
+i
+- P
+o
+)   = 2x 
+2S
+r
+   
+                                               (퐏
+퐢
+- 퐏
+퐨
+)   =  
+ퟒ퐒
+퐫
+   
+43.What is capillary rise? What is the phenomenon responsible for it? 
+Water rises up in a capillary tube dipped in a liquid in spite of gravity. This 
+is called capillary rise. 
+               Surfacetesion is  responsible for capillary rise. 
+44.Obtain an expression for capillary rise 
+                                   
+The excess pressure on the concave meniscus 
+                                                             (P
+i
+- P
+o
+)   = 
+2S
+r
+   
+                                                                                                          cosθ=
+a
+r
+   ,   r=
+a
+cosθ
+ 
+                                                             (P
+i
+- P
+o
+)   = 
+2S
+a
+cosθ
+   
+                                                             (P
+i
+- P
+o
+)   = 
+2Scosθ
+a
+ ----------------(1) 
+Consider  two points A and B in the same horizontal level i.e, the points 
+are at the same pressure. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                   Pressure at A = P
+i
+ 
+                                                   Pressure at B = P
+o
+ + h ρ g 
+                                                                         P
+i
+ =P
+o
+ + h ρ g 
+                                                                 P
+i
+ - P
+o
+ = h ρ g----------------(2) 
+From eq(1) and (2) 
+                                                                    h ρ g= 
+2Scosθ
+a
+  
+                                                              h = 
+ퟐ퐒퐜퐨퐬훉
+훒 퐠퐚
+  
+ 
+44.What is capillary depression?           
+When  liquid level lower in the capillary tube dipped in a liquid ,it  is called 
+capillary fall or capillary depression. 
+ 
+45.Why mercury shows capillary depression?         
+For mercury, angle of contact θ will be obtuse . Then cos θ is negative and 
+hence value of h will be negative. So mercury shows capillary depression. 
+ 
+46.Find the capillary rise when a capillary tube of radius 0.05 cm is dipped 
+vertically in water. Surface tension for water is 0.073N풎
+−ퟏ
+ .Density of 
+water is 1000 kg풎
+−ퟑ
+. 
+                                       h = 
+2Scosθ
+ρ ga
+ 
+For water-glass angle of contact θ=0, cos 0 =1 
+                                            h = 
+2S
+ρ ga
+ 
+                                            h = 
+2푥 0.073 
+1000 푥 9.8 푥 0.05 푥10
+−3
+ 
+ 
+                                            h = 2.98 × 10
+−2
+  m = 2.98 cm. 
+ 
+47.How soaps and detergents helps to remove dirts from clothes  
+The molecules of detergents produce a water-oil interface  which reduces  
+the surface tension  (water-oil) and dirt can be removed by running water. 
+ 
+ 
+ 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                         Chapter 10 
+                               Thermal Properties of Matter 
+1.Write the relation connecting temperature on Fahrenheit scale and 
+Celsius scales .  
+                                               
+t
+F
+−32
+180
+=
+t
+C
+100
+  
+2.Write the relation connecting temperature on Kelvin and Celsius scales .  
+                                            T = t
+C
+ + 273.1 
+ 
+3.Temperature of a normal human body is 98.6
+0
+F. What is the 
+corresponding temperature in Celsius scale? 
+                                   
+98.6−32
+180
+=
+t
+C
+100
+  
+ 
+                                            t
+C
+= 
+(
+98.6−32
+)
+x100
+180
+ = 37
+0
+C 
+ 
+4.State Boyle’s law 
+At  constant temperature , the pressure of a quantity of gas is inversely 
+proportional to volume. 
+                                                            P∝
+1
+V
+  
+                                                         PV = constant.  
+5.State Charles’ law 
+At constant  pressure , the volume of a quantity of  gas is directly 
+proportional to temperature . 
+                                                          V∝T  
+                                                         
+퐕 
+퐓
+ = constant 
+ 
+6.Write Ideal gas equation 
+                                                       퐏퐕= 훍퐑퐓 
+where, μ is the number of moles in the sample of gas. 
+R is called universal gas constant: R = 8.31 J mol
+−1
+ K
+−1
+ 
+ 
+7.What do you mean by absolute zero temperature or zero kelvin (OK) 
+The  minimum temperature for an ideal gas is called Absolute 
+temperature or zero kelvin(OK). This temperature is found to be – 273.15 
+°C 
+8.What is thermal expansion 
+The increase in the dimensions of a body due to the increase in its 
+temperature is called thermal expansion. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+9.Write the expression for coefficient of linear expansion 
+                                                훼
+푙
+=
+Δl
+푙 ΔT
+   
+10.Write the expression for coefficient of area expansion 
+                                               α
+a
+=
+ΔA
+A ΔT
+  
+11.Write the expression for coefficient of volume expansion 
+                                              α
+v
+=
+ΔV
+VΔT
+  
+12. Obtain the relation between 훂
+퐥
+ and 훂
+퐚
+ 
+                                           α
+a
+=
+ΔA
+A ΔT
+  
+                                                                                  ΔA= 
+(
+푙+훥푙
+)
+2
+ -  푙
+2
+   
+                                                                                  ΔA  =2  l Δl           (Neglecting  term (Δl)
+2
+  ) 
+                                                                                      A= 푙
+2
+ 
+                                       훼
+푎
+=
+2 푙 훥푙
+푙
+2
+훥푇
+                    
+                                       훼
+푎
+=2 
+  훥푙
+푙 훥푇
+  
+                                                             
+훥푙
+푙 훥푇
+=훼
+푙
+     
+                                      휶
+풂
+=ퟐ 휶
+풍
+  
+13.Relation between 훂
+퐥
+ and 훂
+퐯
+ 
+                                      α
+v
+=
+ΔV
+VΔT
+ 
+                                                                ΔV= 
+(
+푙+Δl
+)
+3
+ -  푙
+3
+ 
+                                                                         ΔV = 3 푙
+2
+ Δl (Neglecting  terms (Δl)
+2
+and (Δl)
+3
+)  
+                                                                            V = 푙
+3
+ 
+                                    훼
+푣
+=
+3  푙
+2
+ 훥푙
+푙
+3
+훥푇
+  
+                                훼
+푣
+=3 
+  훥푙
+푙 훥푇
+  
+                                                        
+훥푙
+푙 훥푇
+ = 훼
+푙
+ 
+                             휶
+풗
+=ퟑ 휶
+풍
+  
+ 
+14.What is the ratio of    훂
+퐥
+ ,훂
+퐚
+ 퐚퐧퐝 훂
+퐯
+  
+                      α
+l
+:α
+a
+:α
+v
+=1:2:3                                                           
+ 
+ 
+ 
+ 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+15.Based on the graph given below explain the anomalous expansion of 
+water. 
+ 
+Water exhibits an anomalous behavour; it contracts on heating from 0 °C  
+to 4 °C. When it is heated after 4 °C ,it expands like other liquids.  
+This means that water has minimum volume and hence  maximum density 
+at 4 °C . 
+16.Why the bodies of water, such as lakes and ponds, freeze at the top 
+first? 
+This is due to anomalous expansion of water. water has minimum volume 
+and hence  maximum density at 4 °C . 
+ As a lake cools toward 4 °C, water near the surface becomes denser, and 
+sinks. Then  the warmer, less dense water near the bottom rises. When  
+this layer cools to 0 °C, it freezes, and being less dense, remain at the 
+surfaces. 
+17.Define heat capacity 
+Heat capacity (S) of a substance is the amount of heat required to raise the 
+temperature of the substance by one unit. 
+                                                      S = 
+ΔQ
+ΔT
+ 
+                                                      Unit  is JK
+−1
+ 
+18.Define specific heat capacity 
+Specific heat capacity (s) of a substance is the amount of heat required to 
+raise the temperature of unit mass  of the substance by one unit.                  
+                                                    s = 
+1
+m
+  
+ΔQ
+ΔT
+  
+                                                      Unit  is Jkg
+−1
+K
+−1
+ 
+19.Define molar specific heat capacity 
+Molar Specific heat capacity (C) of a substance is the amount of heat 
+required to raise the temperature of one mole  of the substance by one 
+unit. 
+                                                         C= 
+1
+μ
+  
+ΔQ
+ΔT
+              Unit  is  Jmol
+−1
+K
+−1
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+20.Why gases have two specific heat capacities ? 
+As gas is compressible, heat transfer can be achieved by keeping either 
+pressure or volume constant. So gases have two types of molar specific 
+heat capacities,C
+p
+   and  C
+v
+ 
+ 
+21.efine molar specific heat capacity at constant pressure 퐂
+퐩
+ 
+Molar specific heat capacity at constant pressure   of a substance is the 
+amount of heat required to raise the temperature of one mole  of the 
+substance by one unit keeping its pressure constant. 
+                                                    C
+p
+= 
+1
+μ
+  
+(
+ΔQ
+ΔT
+)
+p
+ 
+22.Define molar specific heat capacity at constant  volume  퐂
+퐯
+ 
+Molar specific heat capacity at constant volume   of a substance is the 
+amount of heat required to raise the temperature of one mole  of the 
+substance by one unit keeping its volume constant. 
+                                                   C
+v
+= 
+1
+μ
+  
+(
+ΔQ
+ΔT
+)
+v
+ 
+23.Write the specific heat capacity of water. 
+                                                 4186 is Jkg
+−1
+K
+−1
+ 
+24.Water is used as a coolant in automobile radiators as well as a heater in 
+hot water bags.Why?  
+Specific heat capacity of water is  very high equal to 4186 is Jkg
+−1
+K
+−1
+. 
+ 
+25.Measurement of heat is called.................. 
+                                     Calorimetry 
+26.A device in which heat measurement can be made is called a 
+.......................                 Calorimeter. 
+27.Write the names of following phase trasitions. 
+Change of state 
+Solid to Liquid Melting 
+Liquid to Solid Fusion 
+Liquid to Gas Vaporisation 
+Gas to Liquid Condensation 
+Solid to Gas Sublimation 
+ 
+28.The temperature at which the solid and the liquid states of the 
+substance coexist in thermal equilibrium with each other is called its ------
+------- 
+                                   melting point. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+29.Melting point ------------ with increase in pressure . 
+                                  decreases 
+ 
+30.The temperature at which the liquid and the vapour states of the 
+substance coexist in thermal equilibrium is called its--------------- 
+                                boiling point. 
+31. The boiling point increases with increase in pressure and decreases 
+with decreases in pressure. 
+32 .Cooking is difficult on hills. Give reason. 
+The boiling point decreases with decreases in pressure.  At high altitudes, 
+atmospheric pressure is lower, boiling point of water decreases as 
+compared to that at sea level. So cooking is difficult. 
+ 
+33.Cooking is faster using a pressure cooker. Give reason 
+The boiling point increases with increase in pressure. 
+Boiling point is increased inside a pressure cooker by increasing the 
+pressure. Hence cooking is faster. 
+ 
+34.Define Sublimation. Give an example of  a substance that sublime. 
+The change from solid state to vapour state without passing through the 
+liquid state is called sublimation. 
+                    Eg: Dry ice (solid CO
+2
+) , Iodine ,Camphor 
+35.Define Latent Heat  
+The amount of heat per unit mass transferred during change of state of the 
+substance is called latent heat of the substance for the process. 
+                                     L = 
+Q
+m
+ 
+                            SI unit of Latent Heat  is J k푔
+−1
+ 
+36.Define Latent Heat of Fusion (퐋
+퐟
+) 
+The latent heat for a solid -liquid state change is called the latent heat of 
+fusion (L
+f
+ ) or simply heat of fusion. 
+                               L
+f
+  of water = 3.33 × 10
+5
+ J k푔
+−1
+. 
+37.Define Latent Heat of Vaporisation (퐋
+퐯
+ ) 
+The latent heat for a liquid-gas state change is called the latent heat of 
+vaporisation  
+(L
+v
+ )  or  heat of vaporisation. 
+                              L
+v
+  of water= 22.6 × 10
+5
+ J k푔
+−1
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+38. Calculate the amount of heat energy required to convert10kg of water 
+at ퟏퟎퟎ
+ퟎ 
+C to steam at ퟏퟎퟎ
+ퟎ 
+C. 
+                                 L
+v
+ = 
+Q
+m
+ 
+                                   Q =L
+v
+m 
+                                   Q =22.6 × 10
+5
+ x 10 
+                                   Q =22.6 × 10
+6
+ 퐽 
+39.Why burns from steam are usually more serious than those from 
+boiling water? 
+For water, the latent heat of  vaporisation is L
+v
+ = 22.6 × 10
+5
+ J k푔
+−1
+.  
+So, steam at 100 °C  carries  22.6 × 10
+5
+J k푔
+−1
+more heat than water at 100 
+°C. This is why burns from steam are usually more serious than those from 
+boiling water. 
+40.The graph given below represents the temperature versus heat for 
+water at 1 atm pressure. Answer the following questions. 
+                 
+(i)Fill up the table  
+Graph Process Phase(state) 
+BC ------------  Ans:Melting ------------- Ans: solid + liquid 
+DE ------------ Ans: Vaporisation -------------Ans: liquid + gas 
+ 
+Graph Phase 
+AB ----------  Ans: Solid (ice) 
+CD ----------  Ans: Liquid(water) 
+EF ----------  Ans: Gas(steam) 
+ 
+(ii)The heat energy corresponding to BC is called ------------ 
+                                Latent heat of fusion 
+(iii)The heat energy corresponding to DE is called ------------ 
+                               Latent heat of Vaporisation 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+(iv)The slope of AB and CD are different.Why? 
+Different slopes indicates that specific heat capacity of ice and water are 
+different.  
+▪ When slope of graph is less, it indicates a high specific heat capacity . 
+▪ Slope of CD is less than that of AB ,i.e., specific heat capacity of water 
+is greater than that of ice. 
+                
+41 a).Write different modes of heat transfer. 
+                   conduction, convection and radiation. 
+      b)Identify the modes of heat transfer and ,B and C. 
+   
+42.What is conduction? 
+Conduction is the mechanism of transfer of heat between two adjacent 
+parts of a body because of their temperature difference. 
+43.Write the expression for rate of flow of heat if one end of a metallic rod 
+is heated  
+                                    
+                                                   H=K A
+T
+c
+−T
+D
+L
+  
+The constant of proportionality K is called the thermal conductivity of the 
+material.  
+44.Some cooking pots have copper coating on the bottom. Give reason. 
+Thermal conductivity  of copper is high and it promotes the distribution of 
+heat over the bottom of a pot for uniform cooking. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+ 45.Why a brass tumbler feels much colder than a wooden tray on a chilly 
+day? 
+ Thermal conductivity of brass(metal) is greater than that of wood.  
+46.Houses made of concrete roofs get very hot during summer days.Why? 
+Thermal conductivity of concrete is moderately high.  
+47.What is convection? 
+Convection is a mode of heat transfer by actual motion of matter. It is 
+possible only in fluids. 
+48.Give examples for natural convection 
+Sea breeze,  Land breeze,  Trade wind 
+49.Explain sea breeze. 
+Sea breeze is due to natural convection. 
+During the day, the ground heats up more quickly than  large water 
+bodies. This is due to greater specific heat capacity of water. The air in 
+contact with the warm ground is heated . It expands, becomes less dense 
+and rises . Then cold air above sea  moves to fill this space  and is called as 
+sea breeze . 
+50.Explain land breeze 
+Land breeze is due to natural convection. 
+At night, the ground loses its heat more quickly, and the water surface is 
+warmer than the land. The air in contact with water is heated. It expands, 
+becomes less dense and rises . Then cold air  above the ground moves to 
+fill this space  and is called as land breeze .                           
+51.Give examples for forced convection. 
+              Forced-air heating systems in home 
+              The human circulatory system 
+              The cooling system of an automobile engine.  
+52.What is radiation? 
+The mechanism for heat transfer which does not require a  medium is 
+called radiation.  
+53.Heat is transferred to the earth from the sun through empty space as 
+.....................                                  Radiation.  
+54.We wear white or light coloured clothes in summer.Why? 
+ White colour absorb the least heat from the sun. 
+55.During winter, we use dark coloured clothes .Why? 
+Dark colours  absorb heat from the sun and keep our body warm.  
+56.The bottoms of the utensils for cooking food are blackened .Why? 
+Black colour absorbs maximum heat from the fire and give it to the 
+vegetables to be cooked. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+57.Explain the principle of thermo bottles. 
+It consists of a double-walled glass vessel with the inner and outer walls 
+coated with silver. Radiation from the inner wall is reflected back into the 
+contents of the bottle. The outer wall similarly reflects back any incoming 
+radiation.  
+58.What is a black body? 
+An object that absorbs  all radiations falling on it at all wavelength is 
+called a blackbody. A blackbody, also  emits radiations of all possible 
+wavelength. 
+59.What are blackbody radiation? 
+The radiations emitted by blackbody are called blackbody radiations.                            
+60.State Wien’s displacement law. 
+The wavelength λ
+m
+ for which energy emitted by a blackbody is the 
+maximum , is inversely roportional to the temperarure.This  is known as 
+Wien’s Displacement Law. 
+                                                           λ
+m
+  α 
+1
+T
+ 
+                                             훌
+퐦
+ 퐓= constant 
+        The constant is called Wien’s constant and its value is 2.9 x 10
+−3
+mK. 
+61.State Stefan-Boltzmann law 
+The energy emitted by a  radiator (black body) per unit time is given by                
+                                                    H=AeσT
+4
+     
+           where A - the area of the body,  T - temperature of bod 
+ E -  the emissivity, σ= Stefan-Boltzmann constant =5.67 x10
+−8
+Wm
+−2
+K
+−4
+  
+62.State Newton’s law of cooling 
+Newton’s Law of Cooling says that the rate of  loss of heat(rate of cooling) 
+of a body is proportional the difference of temperature of the body and the 
+surroundings.                   −
+퐝퐐
+퐝퐭
+=퐤
+(
+퐓
+ퟐ
+−퐓
+ퟏ
+)
+  
+                 Where T
+1
+ is the temperature of the surrounding medium  
+                               T
+2
+ is the temperature of the body 
+k is a positive constant depending upon the area and nature of the surface 
+of the body 
+63.Draw the curve showing cooling of hot water with time 
+                                      
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                  Chapter 11 
+                                     Thermodynamics 
+1.What do you mean by thermal equilibrium? 
+A system is said to be in thermal equilibrium with itself if the temperature 
+of the system remains constant. 
+ 
+2.State Zeroth law of thermodynamics 
+Zeroth Law of Thermodynamics states that  ‘two systems in thermal 
+equilibrium with a third system separately are in thermal equilibrium 
+with each other’. 
+                              i.e,If    T
+A
+= T
+C
+  and  T
+B
+= T
+C
+     then    T
+A
+= T
+B
+  
+3..State first law of Thermodynamics 
+The heat  supplied to the system is partly  used to increase the internal 
+energy of the system and the rest  is used to do work on the environment . 
+                                           ΔQ = ΔU + ΔW 
+4.First law of thermodynamics is in accordance with law of conservation 
+    of----------------------.  
+                                          Energy 
+5.Derive the relation connecting 퐂
+퐩
+ and 퐂
+퐯
+  or Derve  Mayer’s relation 
+Molar specific heat capacity at constant volume,   
+                                                               C
+v
+=
+(
+ΔQ
+ΔT
+)
+v
+        
+                                                                                                                   ΔQ = ΔU 
+             
+                                                              C
+v
+=
+ΔU
+ΔT
+ ---------(1) 
+Molar specific heat capacity at constant pressure 
+                                                             C
+p
+=
+(
+ΔQ
+ΔT
+)
+p
+   
+                                                                                                                 ΔQ = ΔU + P ΔV 
+                                                            C
+p
+=
+(
+ΔU
+ΔT
+)
+p
++ 
+(
+P
+ΔV
+ΔT
+)
+p
+     
+                                                           C
+p
+=
+ΔU
+ΔT
++ 
+(
+P
+ΔV
+ΔT
+)
+p
+ ------------(2)                                     
+                                                                                                                            PV = RT 
+                                                                                                                                                                            P (
+ΔV
+ΔT
+)
+p
+= R 
+                                                            C
+p
+=
+ΔU
+ΔT
++ R 
+   Substituting from eq(1)           C
+p
+=C
+v
++R 
+                                                            퐂
+퐩
+−퐂
+퐯
+= 퐑 
+                                   This is called Mayer’s relation. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+ퟔ.퐂
+퐩 
+퐢퐬 퐚퐥퐰퐚퐲퐬 퐠퐫퐞퐚퐭퐞퐫 퐭퐡퐚퐧 퐂
+퐯
+ . Why 
+When  gas is heated at constant volume, the entire heat is used  to increase 
+the internal energy of the gas.  But when the gas is heated at constant 
+pressure, the heat is used to increase the internal energy  and  also to do  
+external work during expansion. Hence C
+p
+ is greater than C
+v
+. 
+7.What are thermodynamic state variables? 
+Every equilibrium state of a thermodynamic system is completely 
+described by specific values of some macroscopic variables. These are  
+called thermodynamic state variables. 
+Eg: pressure, volume, temperature, mass , composition,Entropy, Enthalpy 
+8.What do you mean by equation of state? 
+The connection between the state variables  is called the equation of state. 
+9.Write the e quation of statefor an ideal gas 
+                                                           P V = μ R T 
+10.What are extensive  variables? 
+The thermodynamic variables which indicate the ‘size’ of the system are 
+called extensive variables.  Eg:Internal energy,  Volume , Mass 
+11.What are intensive  variables? 
+The thermodynamic variables which do not indicate the ‘size’ of the 
+system are called intensive variables.  Eg:
+ 
+Pressure, Temperature , Density 
+12.What is a quasi-static process? 
+The name quasi-static means nearly static. 
+A quasi-static process is an infinitely slow process such that the system 
+remains in thermal and mechanical equilibrium with the surroundings 
+throughout.  
+Eg: Processes that are sufficiently slow and do not involve accelerated 
+motion of the piston, large temperature gradient, etc.  
+13.Different thermodynamic processes 
+ 
+14.Write the equation of state for an isothermal process. 
+                                          PV = constant 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+15.Write the equation of state for an adiabatic process. 
+                                          PV
+γ
+= constant 
+16.Derive the expression for work done by an ideal gas during an 
+isothermal process.  
+                                W =
+∫
+P dV
+v
+2
+v
+1
+                                 
+                                                                   P V =  μ R T   
+                                                                                 P=
+ μR T
+V
+ 
+                               W =
+∫
+ μR T
+V
+ dV
+v
+2
+v
+1
+ 
+                               W =μ R T 
+∫
+1
+V
+ dV
+v
+2
+v
+1
+ 
+                              W = μR T 
+[
+lnV
+]
+v
+1
+v
+2
+ 
+                               W = μR T [lnV
+2
+ −lnV
+1
+]  
+                               W = μRT ln [
+V
+2
+V
+1
+] 
+17.Derive the expression for workdone by an Ideal gas during an adiabatic 
+process 
+                                          W =
+∫
+P dV
+v
+2
+v
+1
+ 
+                                                                                                PV
+γ
+= k 
+                             P=
+k
+V
+γ
+=k V
+−γ
+ 
+         W = k
+∫
+V
+−γ
+ dV
+v
+2
+v
+1
+ 
+                                        W = k[
+V
+−γ+1
+−γ+1
+]
+v
+1
+v
+2
+ 
+                                        W = 
+k
+1−γ
+[
+v
+2
+1−γ
+−v
+1
+1−γ
+ 
+]
+ 
+                                        W = 
+1
+1−γ
+[ 
+k
+v
+2
+γ−1
+−
+k
+v
+1
+γ−1
+ ] 
+                                                                                                                PV
+γ
+= k 
+                                                                                                             P
+1
+V
+1
+γ
+= P
+2
+V
+2
+γ
+=k 
+                                    W = 
+1
+1−γ
+[ 
+P
+2
+V
+2
+γ
+v
+2
+γ−1
+−
+P
+1
+V
+1
+γ
+v
+1
+γ−1
+ ]                             
+                                    W = 
+1
+1−γ
+[
+ P
+2
+V
+2
+− P
+1
+V
+1
+ 
+]
+         (or)        W = 
+μ R
+1−γ
+[
+  T
+2
+− T
+1
+ 
+]
+ 
+18.Workdone in an isochoric process is ------------   Zero 
+19.Work done by the gas in an Isobaric process 
+                                 Δ W=P ΔV 
+                                   W = P (V
+2
+− V
+1
+)  
+20.What is a cyclic process?  
+In a cyclic process, the system returns to its initial state.  
+Since internal energy is a state variable, ΔU = 0 for a cyclic process 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+21.State Kelvin-Planck statement  of second law of thermodynamics 
+No process is possible whose sole result is the absorption of heat from a 
+reservoir and the complete conversion of the heat into work. 
+22.State Clausius statement  of second law of thermodynamics  
+No process is possible whose sole result is the transfer of heat from a 
+colder object to a hotter object.  
+23.What is a reversible processes? 
+A thermodynamic process is reversible if the process can be turned back 
+such that both the system and the surroundings return to their original 
+states, with no other change anywhere else in the universe. 
+Eg: A quasi-static isothermal expansion of an ideal gas in a cylinder   
+fitted  with a frictionless movable piston is a reversible process. 
+24.What is an irreversible processes? 
+A thermodynamic process is irreversible if the process cannot be turned 
+back such that both the system and the surroundings return to their 
+original states, with no other change anywhere else in the universe. 
+The spontaneous processes of nature are irreversible. 
+▪ Eg:The free expansion of a gas  
+▪ The combustion reaction of a mixture of petrol and air ignited by a 
+spark . 
+▪ Cooking gas leaking from a gas cylinder in the kitchen diffuses to the 
+entire room. The diffusion process will not spontaneously reverse 
+and bring the gas back to the cylinder. 
+25.What is the working substance of the Carnot engine. 
+                                         Ideal gas. 
+26.Draw P-V diagram for a Carnot cycle .Also write different 
+thermodynamic processes  involved in a Carnot cycle.                             
+   
+    The four processes involved in 
+carnot cycle are 
+  1.Isothermal Expansion 
+  2. Adiabatic Expansion 
+  3. Isothermal Compression 
+  4. Adiabatic Compression 
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+27.Write the expression for efficiency of Carnot engine 
+                                         η=
+T
+1
+− T
+2
+T
+1
+       or        η=1−
+T
+2
+T
+1
+                            
+28.Obtain  the expression for in a Carnot cycle 
+(a)Step1→2  Isothermal expansion of the gas  from (P
+1
+, V
+1
+, T
+1
+) to (P
+2
+, V
+2
+, T
+1
+). 
+                            W
+1→2
+=Q
+1
+= μ RT
+1
+ ln⌊
+V
+2
+V
+1
+⌋ ------------(1) 
+(b) Step 2→ 3 Adiabatic expansion of the gas from (P
+2
+,V
+2
+,T
+1
+) to (P
+3
+, V
+3
+, T
+2
+). 
+                             W
+2→3
+ =
+μ R
+γ−1
+[
+ T
+1
+− T
+2
+ 
+]
+   ------------------(2) 
+(c)Step 3→4 Isothermal compression of the gas from(P
+3
+,V
+3
+,T
+2
+) to (P
+4
+,V
+4
+,T
+2
+). 
+                             W
+3→4
+=Q
+2
+=− μ RT
+2
+ ln⌊
+V
+3
+V
+4
+⌋ -----------(3)      
+(d) Step 4 → 1 Adiabatic compression of the gas from (P
+4
+,V
+4
+,T
+2
+) to (P
+1
+,V
+1
+, T
+1
+) 
+                             W
+4→1
+ =−
+μ R
+γ−1
+[
+T
+1
+− T
+2
+]
+ -----------------(4) 
+        Total work done by the gas in one complete cycle is 
+                W= W
+1→2
++ W
+2→3
+ + W
+3→4
+ + W
+4→1
+ 
+               W= μ RT
+1
+ ln⌊
+V
+2
+V
+1
+⌋ +
+μ R
+γ−1
+[
+ T
+1
+− T
+2
+ 
+]
+− μ RT
+2
+ ln⌊
+V
+3
+V
+4
+⌋ −
+μ R
+γ−1
+[
+ T
+1
+− T
+2
+ 
+]
+ 
+              W= μ RT
+1
+ ln⌊
+V
+2
+V
+1
+⌋ − μ RT
+2
+ ln⌊
+V
+3
+V
+4
+⌋ -------------(5) 
+                Efficiency,             η=1−
+Q
+2
+Q
+1
+ 
+η=1−
+ μ RT
+2
+ ln⌊
+V
+3
+V
+4
+⌋ 
+μ RT
+1
+ ln⌊
+V
+2
+V
+1
+⌋
+ 
+                                                                                                                but  
+V
+3
+V
+4
+ =
+V
+2
+V
+1
+ 
+                                                     η=1−
+T
+2
+T
+1
+  
+29.What is the efficiency of a Carnot engine working between 
+       233K and 373K. 
+                                                      Or 
+      What is the efficiency of a heat engine working between ice  point   
+       ퟎ
+ퟎ
+퐂 and steam point ퟏퟎퟎ
+ퟎ
+퐂 . 
+                                       η=
+T
+1
+− T
+2
+T
+1
+  
+                                                                        T
+1
+=100+273=373
+0
+C 
+                                                                        T
+2
+=0+273=273
+0
+C 
+                                      η=
+373− 273
+373
+     
+                                      η=0.268=26.8% 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                   Chapter 12 
+                                                Kinetic Theory 
+1.Real gases approach ideal gas behaviour at ............................................... 
+                      Low pressures and high temperatures. 
+2.State Dalton’s law of partial pressures 
+The total pressure of a mixture of ideal gases is the sum of partial 
+pressures. This is Dalton’s law of partial pressures. 
+3.Write any four postulates of kinetic theory of an Ideal Gas 
+• A given amount of gas is a collection of a large number of molecules  
+that are in random motion. 
+• At ordinary pressure and temperature, the average distance between 
+molecules is  very large compared to the size of a molecule (2 Å). 
+• The interaction between the molecules is negligible. 
+• The molecules  make elastic collisions with each other and also with 
+the walls  of the container . 
+• As the collisions are elastic , total kinetic energy and total 
+momentum are conserved . 
+• The average kinetic energy of a molecule is proportional to the 
+absolute temperature of the gas. 
+4.Derive the expression for pressure of an ideal gas 
+                                              
+    The change in momentum of the molecule = −mv
+x
+−mv
+x
+ 
+                                                                                      = −2 mv
+x
+ 
+Momentum imparted to wall in the collision = 2mv
+x
+   
+                                                                                       Distance travelled by the molecule in time Δt = v
+x
+ Δt 
+                                                                                                                                                                Volume covered by the molecule = Av
+x
+ Δt 
+                                                                                                                                                                           No of molecules in this volume = n Av
+x
+ Δt 
+                                                                                                                                                                  (n is number density of molecules) 
+                                                                                                                                                           Only half of these molecules move in +x direction   
+                                                                                                                                                                                                So no of molecules =
+1
+2
+ nA v
+x
+ Δt  
+The number of molecules with velocity v
+x
+  hitting the wall in time Δt 
+                                                                      = 
+1
+2
+ nA v
+x
+ Δt   
+The total momentum transferred to the wall                       
+                                                                  Q = (2mv
+x
+) ( 
+1
+2
+ nA v
+x
+ Δt ) 
+                                                                  Q = nmAv
+x
+2
+ Δt 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                     The force on the wall,  F = 
+Q
+Δt
+                                           
+                                                                  F = nmAv
+x
+2
+ 
+                                              Pressure, P = 
+F
+A
+ 
+                                                                 P = nmv
+x
+2
+ 
+All molecules in a gas do not have the same velocity; so average velocity is 
+to be taken 
+                                                               P= nmv
+x
+2
+̅̅̅
+ 
+                                                                         v
+x
+2
+̅̅̅
+ =
+1
+3
+v
+2
+̅̅̅
+        
+                                                               P= 
+1
+3
+ nmv
+2
+̅̅̅
+                                                                          
+5.Show that the average kinetic energy of a molecule is proportional to the 
+absolute temperature of the gas.         
+                                                          P=
+1
+3
+ nmv
+2
+̅̅̅
+ 
+                                                                                              n=
+N
+V
+  ,   N=nV 
+                                                     PV=
+1
+3
+ Nmv
+2
+̅̅̅
+          
+where N is the number of molecules in the sample. 
+                                                     PV= 
+2
+3
+  (N  
+1
+2
+ mv
+2
+̅̅̅
+) 
+                                                     PV= 
+2
+3
+  E---------------------(1) 
+             Ideal gas equation,   PV =Nk
+B
+T -------------------(2) 
+From eq(1)and (2)             
+2
+3
+  E = Nk
+B
+T  
+                                                     E=
+3
+2
+Nk
+B
+T 
+                                                E/N = 
+3
+2
+k
+B
+T 
+The average kinetic energy of a molecule is proportional to the absolute 
+temperature 
+6.Obtain the expression for Root Mean Square (rms) Speed of a molecule 
+of an ideal gas 
+                                             E/N = 
+3
+2
+k
+B
+T 
+                                     
+1
+2
+mv
+2
+̅̅̅
+ = 
+3
+2
+k
+B
+T 
+                                           v
+2
+̅̅̅
+ = 
+3k
+B
+ T
+m
+ 
+                                      퐯
+퐫퐦퐬
+=  
+√
+ퟑ퐤
+퐁
+ 퐓
+퐦
+          
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+7.Estimate the average thermal energy of helium atom at a temperature of 
+ퟐퟕ
+ퟎ
+퐂.  (Boltzmann constant is 1.38 x ퟏퟎ
+−ퟐퟑ
+퐉퐊) 
+     Average thermal energy(average kinetic energy) = 
+3
+2
+k
+B
+T 
+                                                                                                           (T=27+273=300K) 
+                                       Average thermal energy = 
+3
+2
+ x 1.38 x 10
+−23
+x 300 
+                                                                                      =6.21 x 10
+−21
+J                               
+8.Define degrees of freedom of a gas molecule? 
+The total number of independent ways in which a system can possess 
+energy is called degree of freedom. 
+          A  molecule has one degree of freedom for motion in a line. 
+                                 Two degrees of freedom for motion in a plane.  
+                                 Three degrees of freedom for motion in space. 
+9.State law of equipartition of energy 
+Law of Equipartition of Energy states that, in equilibrium, the total energy 
+is equally distributed in all possible energy modes, with each mode having 
+an average energy equal to 
+ퟏ
+ퟐ
+퐤
+퐁
+T 
+10.By using law of equipartiotion of energy obtain the values of specific 
+heat capacities of  monoatomic gases. Also find the value of 후 
+         The molecule of a monatomic gas has only 3 translational degrees of 
+freedom. 
+             Average energy of one molecule =3  푥  
+1
+2
+k
+B
+T =
+3
+2
+k
+B
+ T 
+           The total internal energy of one mole , 
+                                                                       U=
+3
+2
+k
+B
+ T x N
+A
+ 
+                                                                                                     k
+B
+N
+A
+ =R 
+                                                                      U =
+3
+2
+ RT 
+                                                                  C
+v
+ = 
+dU
+dt
+ 
+                                                                        = 
+d
+dT
+ 
+(
+3
+2
+ RT
+)
+ 
+                                                                 퐂
+퐕
+ = 
+ퟑ
+ퟐ
+ R 
+                   
+                   Mayer’s relation, C
+P
+ – C
+V
+ = R      
+                                                              C
+P
+ = C
+V
+ + R 
+                                                                    = 
+3
+2
+ R +R  
+                                                             퐂
+퐏 
+= 
+ퟓ
+ퟐ
+ R 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+The ratio of specific heats   
+                                                      
+C
+P
+C
+P
+= γ =
+5
+2
+ R
+3
+2
+ R
+  
+                   Adiabatic constant  ,      휸=
+ퟓ
+ퟑ
+  
+ 
+11.By using law of equipartition of energy obtain the values of specific 
+heat capacities of  rigid diatomic molecule. Also find the value of 후 
+  A diatomic rigid rotator has , 3 translational and 2 rotational degrees of 
+freedom. 
+             Average energy of one molecule = 5  x 
+1
+2
+k
+B
+T  
+                                                                            = 
+5
+2
+k
+B
+ T 
+The total internal energy of one mole, 
+                                                                        U= 
+5
+2
+k
+B
+ T x N
+A
+ 
+                                                                                                     k
+B
+N
+A
+ =R 
+                                                                       U = 
+5
+2
+ RT 
+                                                                    C
+v
+ = 
+dU
+dt
+ 
+                                                                         = 
+d
+dT
+ 
+(
+5
+2
+ RT
+)
+ 
+                                                         퐂
+퐕
+ = 
+ퟓ
+ퟐ
+ R 
+                     
+                       Mayer’s relation, C
+P
+ – C
+V
+ = R  
+                                                                  C
+P
+ = C
+V
+ + R 
+                                                                        = 
+5
+2
+ R +R  
+                                                                  퐂
+퐏
+= 
+ퟕ
+ ퟐ
+ R 
+The ratio of specific heats   
+                                                          
+C
+P
+C
+P
+=γ =
+7
+2
+ R
+5
+2
+ R
+         
+                       Adiabatic constant  ,   후=
+ퟕ
+ퟓ
+  
+ 
+12.By using law of equipartition of energy obtain the values of specific 
+heat capacities of  non rigid diatomic molecule. Also find the value of 후 
+ A non rigid diatomic  molecule has , 3 translational , 2 rotational and 1 
+vibrational degrees of freedom. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+(Each vibrational degree of freedom contributes ,2x  
+1
+2
+k
+B
+T =k
+B
+T) 
+             Average energy of one molecule = 
+5
+2
+k
+B
+T   + k
+B
+ T  
+                                                                            = 
+7
+2
+k
+B
+T    
+The total internal energy of one mole , 
+                                                                       U= 
+7
+2
+k
+B
+ T x N
+A
+ 
+                                                                                                     k
+B
+N
+A
+ =R 
+                                                                     U = 
+7
+2
+ RT 
+Specific heat capacity at constant volume   
+                                                                  C
+v
+ = 
+dU
+dt
+ 
+                                                                       = 
+d
+dT
+ 
+(
+7
+2
+ RT
+)
+ 
+                                                                퐂
+퐕
+ = 
+ퟕ
+ퟐ
+ R 
+                       
+                     Mayer’s relation, C
+P
+ – C
+V
+ = R  
+                                                                C
+P
+ = C
+V
+ + R 
+                                                                      = 
+7
+2
+ R +R  
+                                                        퐂
+퐏
+= 
+ퟗ
+ퟐ
+ R 
+The ratio of specific heats   
+                                                                
+C
+P
+C
+P
+= γ=
+9
+2
+ R
+7
+2
+ R
+  
+                  Adiabatic constant  ,      후=
+ퟗ
+ퟕ
+  
+ 
+13.By using law of equipartition of energy obtain the values of specific 
+heat capacities of  Polyatomic Gases. Also find the value of 후 
+A polyatomic molecule has 3 translational, 3 rotational degrees of freedom 
+and a certain number ( f ) of vibrational modes. 
+                  Average energy of a molecule = 
+3
+2
+k
+B
+T  + 
+3
+2
+k
+B
+T  +f k
+B
+T  
+The total internal energy of a mole of such a gas is, 
+                                                                       U=
+(
+3
+2
+k
+B
+T  + 
+3
+2
+k
+B
+T +f k
+B
+T 
+)
+N
+A
+    
+                                                                       U=
+(
+ 3 +f 
+)
+k
+B
+TN
+A
+ 
+ 
+                                                                                                                                 ( k
+B
+N
+A
+ =R) 
+                                                                       U=
+(
+ 3 +f 
+)
+RT 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+Specific heat capacity at constant volume   
+                                                                   C
+v
+ = 
+dU
+dt
+ 
+                                                                  퐂
+퐕
+ =
+(
+ ퟑ +퐟 
+)
+퐑 
+Specific heat capacity at constant pressure,    
+                                                                  C
+P
+ = C
+V
+ + R 
+                                                                        =
+(
+ 3 +f 
+)
+R +R  
+                                                                   퐂
+퐏
+=
+(
+ ퟒ+퐟 
+)
+퐑 
+The ratio of specific heats   
+                                                                  γ=  
+C
+P
+C
+P
+=
+(
+ 4+f 
+)
+R
+(
+ 3 +f 
+)
+R
+                 
+                   Adiabatic constant  ,      후=
+(
+ ퟒ+퐟 
+)
+(
+ퟑ +퐟 
+)
+  
+ 
+14.By using law of equipartition of energy obtain the values of specific 
+heat capacity of   of solids 
+Consider a solid of N atoms, each vibrating about its mean position. 
+ A vibration  in one dimension has average energy  =  2x  
+1
+2
+k
+B
+T  
+                                                                                                    = k
+B
+T 
+                     In three dimensions, the average energy = 3k
+B
+T 
+The total internal energy of one mole of solid is, 
+                                                                          U =3k
+B
+T x N
+A
+ 
+                                                                                                           k
+B
+N
+A
+ =R 
+                                                                         U =3RT 
+                      Specific heat capacity         C = 
+dU
+dt
+ 
+                                                                            =
+d
+dT
+ 
+(
+3 RT
+)
+ 
+                                                                        퐂 = ퟑ퐑                                                  
+ 
+15.Define mean free path of a gas molecule. 
+The mean free path 푙 is the average distance covered by a molecule 
+between two successive collisions. 
+                                               풍 = 
+ퟏ
+√
+ퟐ퐧훑퐝
+ퟐ
+ 
+      
+ 
+  
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                 Chapter 13 
+                                                 Oscillations 
+1.What is non periodic motion? 
+The motion  which is non-repetitive . 
+ e.g. rectilinear motion , motion of a projectile. 
+2.What is periodic motion? 
+A motion that repeats itself at regular intervals of time is called periodic 
+motion. 
+e.g. uniform circular motion , orbital motion of planets in solar system. 
+3.What is oscillatory motion? 
+Periodic to and fro motion is called oscillatory motion. 
+e.g.  motion of a  cradle , motion of a swing,  motion of the pendulum of a 
+wall clock. 
+Every oscillatory motion is periodic, but every periodic motion need not 
+be oscillatory. 
+4.What is the difference between oscillations and vibration? 
+▪ When the frequency is small, we call it oscillation. 
+          e.g.The oscillation of a branch of a tree 
+▪ When the frequency is high, we call it vibration. 
+         e.g. The vibration of a string of a musical instrument. 
+5.What is period of oscillation? 
+The period T is the time required for one complete oscillation, or cycle. 
+                    Its SI unit is second. 
+6.What is frequency of oscillation? 
+The frequency ν of periodic or oscillatory motion is the number of 
+oscillations per unit time. It is the reciprocal of period . 
+                                      훎=
+ퟏ
+퐓
+              The SI unit of ν is  hertz ( Hz). 
+7.Define amplitude of oscillation. 
+The maximum displacement from the mean poition is  called amplitude 
+(A) of oscillation 
+8.Define Simple Harmonic Motion(SHM) 
+Simple harmonic motion is the motion executed by a particle subject to a 
+force, which is proportional to the displacement of the particle and is 
+directed towards the mean position. 
+9.Write a mathematical expression for  an SHM. Explain the terms. 
+                                         x (t) = A cos (ωt + 훟) 
+                          x (t) =displacement,   A=amplitude , ω =angular frequency, 
+                        (ωt + φ) = phase ,   φ=phase constant or initial phase angle 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+10.Write the expression for angular frequency 
+           ω =
+2휋
+푇
+    or   ω =2휋휈 
+                                                     Unit of  ω is rad/s 
+                                                      Angular frequency is a scalar quantity 
+11.An SHM is given by x = 8 sin(10흅풕+
+흅
+ퟒ
+) m 
+    Find the (i) aplitude  (ii)Angular frequency  (iii)period 
+                   (iv)frequency(v) initial phase angle or phase constant                             
+                                                    x = 8 sin(10휋푡+
+휋
+4
+) 
+Comparing with general expression for SHM 
+                                             x (t) = A cos (ωt + φ) 
+     (i)Amplitude  ,  A=8 m 
+     (ii)Angular frequency ,  ω =  10휋 rad/s 
+     (iii)ω =
+2휋
+푇
+ 
+                  Period , T = 
+2휋
+ω
+ = 
+2휋
+10휋
+ =1/5 s 
+     (iv)Frequency   , 휈 =
+1
+T
+  = 
+5
+1
+ =5Hz 
+     (v)Initial phase angle, φ= 
+휋
+4
+ rad 
+12.Write the expression for velocity  in Simple Harmonic Motion. 
+                                            v = – ωA sin (ωt + φ) 
+13.Write the expression for acceleration in SHM 
+                                           a =– 훚
+ퟐ
+x 
+In SHM, the acceleration is proportional to the displacement and is always 
+directed towards the mean position.                    
+14.Obtain the expression for force for Simple Harmonic Motion 
+                                                           F = ma 
+                                                                              a=– ω
+2
+x  
+                                                          F = –m ω
+2
+x  
+                                                          F = –kx  -------------(4)    
+                                                                                                                where k= m ω
+2
+  ;      ω=
+√
+k
+m
+  
+The force in SHM is proportional to the displacement and  its direction  is  
+opposite  to the direction of displacement. Therefore, it is a restoring 
+force. 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+15.Derive the expression for kinetic energy in Simple Harmonic Motion 
+                                                           K =
+1
+2
+mv
+2
+ 
+                                                          K =
+1
+2
+mv
+2
+ 
+                                                                                               v= – ω
+√
+A
+2
+−x
+2
+ 
+                                                                                            v
+2
+= ω
+2
+(A
+2
+−x
+2
+) 
+                                                         K =
+1
+2
+mω
+2
+(A
+2
+−x
+2
+) ----------------(5) 
+▪ At mean position,(x= 0),       K = 
+1
+2
+mω
+2
+A
+2
+ 
+                                         KE is maximum At Mean position 
+▪ At extreme position,(x= A),   K= 0. 
+                                       KE is minimum At extreme positions. 
+16.Obtain the expression for potential energy in simple harmonic motion 
+                                                   U =
+1
+2
+kx
+2
+ 
+                                                                           k= m ω
+2
+ 
+                                                  U =
+1
+2
+mω
+2
+x
+2
+ ----------------(6) 
+ 
+▪ At Mean position,   x= 0 ,   U = 0 
+                                   PE is minimum At Mean position 
+▪ At Extreme position, x = A ,   U  = 
+1
+2
+mω
+2
+A
+2
+ 
+                                   PE is maximum At extreme positions. 
+17.Derive the expression for total energy in SHM 
+                                    E = U + K 
+                                    E = 
+1
+2
+mω
+2
+x
+2
+ + 
+1
+2
+mω
+2
+(A
+2
+−x
+2
+) 
+                                    E = 
+1
+2
+mω
+2
+x
+2
+ + 
+1
+2
+mω
+2
+A
+2
+−
+1
+2
+mω
+2
+x
+2
+ 
+                               E = 
+ퟏ
+ퟐ
+ m훚
+ퟐ
+퐀
+ퟐ
+  
+The total mechanical energy of a harmonic oscillator  is a constant or 
+independent of time. 
+18.Draw the variation of potential energy , kinetic energy k and the total 
+energy e with time t for a linear harmonic oscillator 
+                               
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+19.At what position the KE of a simple harmonic oscillator becomes equal 
+to its potential energy? 
+                                                                          KE =PE 
+                                                 
+1
+2
+mω
+2
+(
+A
+2
+−x
+2
+)
+=
+1
+2
+mω
+2
+x
+2
+ 
+                                                                 A
+2
+−x
+2
+=x
+2
+  
+                                                                          A
+2
+=2x
+2
+  
+                                                                           x
+2
+= 
+A
+2
+2
+ 
+                                                                 x= 
+퐀
+√
+ퟐ
+ 
+20.Give examples of systems executing simple harmonic motion 
+▪ Oscillations due to a Spring 
+▪ Oscillations of a simple pendulum 
+21.Define spring constant of a spring. 
+The restoring force per unit displacement  of the spring is called spring 
+constant. 
+                                                      k=
+F
+푥
+  =
+mg
+푥
+       
+                A stiff spring has large k and a soft spring has small k.  
+22.Derive the expression for period of oscillations of a spring 
+                            
+                                 Restoring force,        F  = –k x 
+                                                                                           where k= mω
+2
+ 
+                                                                                                    ω
+2
+=
+k
+m
+ ,       ω=
+√
+k
+m
+  
+                                                       Period,  T=
+2π
+ω
+  = 
+2π
+√
+k
+m
+ 
+                                                                      T = ퟐ훑
+√
+퐦
+퐤
+ 
+23.A 5 kg collar is attached to a spring of spring constant 500 N 풎
+−ퟏ
+. It 
+slides without friction over a horizontal rod. The collar is displaced from 
+its equilibrium position by 10.0 cm and released. Calculate  
+ (a) the period of oscillation, 
+ (b) the maximum speed and 
+ (c) maximum acceleration of the collar. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+  (a) The period of oscillation as given by 
+                                                                T = 2π
+√
+m
+k
+ 
+                                                               T = 2π
+√
+5
+500
+ 
+                                                               T = 2x 3.14 x
+1
+10
+  = 0.63 s 
+  
+  (b) The velocity of the collar executing SHM is 
+                                                             v = – ω
+√
+A
+2
+−x
+2
+    
+                        Maximum speed,    v= Aω         (at  mean position ,x=0) 
+                                                              ω=
+√
+k
+m
+  
+                                                              v=A
+√
+k
+m
+  
+                                                                                 A=10cm = 0.1m 
+                                                             v=0.1 x
+√
+500
+5
+  
+                                                             v= 0.1 x10 =1 m/s 
+(c) Acceleration in SHM 
+                                                             a=– ω
+2
+x  
+              Maximum acceleration,  a= ω
+2
+A       (at extreme position) 
+                                                                              ω
+2
+=
+k
+m
+  
+                                                             a= 
+k
+m
+ A        
+                                                            a= 
+500
+5
+x 0.1 
+                                                            a=10m/s
+2
+        
+24.Derive the expression for period of oscillations of a simple pendulum 
+                     
+                                              τ = –L (mg sinθ ) --------------(1) 
+For rotational motion we have,  
+                                             τ = I α -----------------(2) 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+From eqn (1) and (2)   
+                                          I α = –L mg sinθ  
+                                           α =
+–mgL
+I
+ θ ---------------(3)           (since θ is very small,  sinθ≈θ)    
+Acceleration of SHM ,    a=– ω
+2
+x -------------------(4) 
+Comparing eqns (3) and (4) 
+                                      ω
+2
+= 
+mgL
+I
+  
+                                                                            I =mL
+2
+ 
+                                       ω
+2
+= 
+mgL
+mL
+2
+ =
+g
+L
+  
+                                         ω=
+√
+g
+L
+  
+                    Period,        T=
+2π
+ω
+  =
+2π
+√
+g
+L
+ 
+                                        T = ퟐ훑
+√
+퐋
+퐠
+ 
+ 
+25.A girlis swinging on a swing in sitting position with period T. What will 
+happen to the period of oscillation when she stands up? 
+                                  T = 2π
+√
+L
+g
+  
+When she stands up ,the length of the pendulum decreases and hence 
+period of oscillation decreases. 
+26.What is a seconds pendulum? 
+A simple pendulum of period T = 2 second is called a seconds pendulum. 
+27.What is the length of a simple pendulum, which ticks seconds? Or  
+What is the length of a seconds pendulum ? 
+A simple pendulum of period T = 2 second is called a seconds pendulum. 
+                                          T = 2π
+√
+L
+g
+ 
+                                       T
+2
+ = 4π
+2
+l
+g
+ 
+                                         L = 
+T
+2
+g
+4π
+2
+ 
+     For seconds pendulum  ,T = 2s 
+                                       L = 
+2
+2
+ x 9.8
+4 x 3.14
+2
+ =0.994≈ 1m 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                 Chapter 14 
+                                                    Waves 
+1.The waves governed by Newton’s laws, and require a material medium 
+for their propagation are called .......................... 
+                                      Mechanical waves  
+                  E.g, water waves, sound waves, seismic waves, etc.  
+2.The waves which not require any medium for their propagation and 
+travel through vacuum at speed of light  are ..................... 
+                                     Electromagnetic waves 
+     Eg- visible light, ultraviolet light, radio waves, microwaves, x-rays etc.  
+3.The waves  associated with moving electrons, protons, neutrons and 
+other fundamental particles are called.............. 
+                                   Matter waves. 
+4.Write the characteristics of transverse waves 
+▪ In transverse waves, the constituents of the medium oscillate 
+perpendicular to the direction of wave propagation. 
+                                  
+▪ They travel in the form of crests and troughs. 
+▪ Transverse waves can be propagated only in  solids and strings, and 
+not in fluids. 
+▪ E.g, Waves on a stretched string,  
+5.Write the characteristics of longitudinal waves  
+▪ In longitudinal waves the constituents of the medium oscillate along 
+the direction of wave propagation. 
+                           
+▪ They travel in the form of compressions and rarefactions. 
+▪ Longitudinal waves can propagate in all elastic 
+media,i.e,solids,liquids nd gases. 
+▪ E.g, sound waves, vibrations in a spring. 
+6.Given below are some examples of wave motion. State in each case if the 
+wave motion is transverse, longitudinal or a combination of both: 
+(a)Motion of a kink(particle) in a longitudinal spring produced  
+      by displacing one end of the spring sideways.  
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+(b)Waves produced in a cylinder containing a liquid by moving 
+       its piston back and forth. 
+(c) Waves produced by a motorboat sailing in water.  
+(d) Ultrasonic waves in air produced by a vibrating quartz crystal. 
+(e) The waves in an ocean. 
+Answer:-    (a) Transverse and longitudinal  
+ (b) Longitudinal 
+ (c) Transverse and longitudinal  
+ (d) Longitudinal 
+ (e) Transverse and longitudinal 
+7.What is a travelling wave or progressive wave? 
+A wave, transverse or longitudinal, is said to be travelling or progressive if 
+it travels from one point of the medium to another. 
+ 
+8.Write the displacement relation for a progressive wave travelling  along 
+the positive direction of the x-axis and explain the terms. 
+                                          y (x, t ) = a sin (kx – ωt + 훟) 
+                                                       y (x, t ) = displacement 
+                                                                   a=amplitude 
+                                          (kx – ωt + φ) =phase,     
+                                                                k=wave number or propagation constant 
+                                                                  ω=angular frequency 
+                                                                 Φ =initial phase angle or phase constant 
+ 
+9.Write the displacement relation for a  progressive wave travelling along 
+the negative direction of the x-axis  
+                                          y (x, t ) = a sin (kx +ωt + 훟)                    
+10.Write the equation for propagation constant  or angular wave number 
+                                                         k=
+ퟐ흅
+흀
+ 
+                                    Its SI unit is radian per metre or rad 푚
+−1
+ 
+11.Write the equation for angular frequency 
+                                                         ω =
+ퟐ훑
+퐓
+ = ퟐ훑흂 
+                                                        Its SI unit is rad s
+−1
+ 
+                                                                     
+ 
+12.A wave travelling along a string is described by, 
+ y(x, t) = 0.005 sin (80.0 x – 3.0 t), in which the numerical constants are in  
+SI units (0.005 m, 80.0 rad 푚
+−1
+, and 3.0 rad 푠
+−1
+). Calculate 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+(a) the amplitude, 
+(b)  the wavelength, 
+(c)  the period and frequency of the wave. 
+(d) Calculate the displacement y of the wave at a distance 
+ x = 30.0 cm and time t = 20 s ? 
+Answer 
+              y(x, t) = 0.005 sin (80.0 x – 3.0 t) 
+          The  general expression for a travelling wave is 
+                           y (x,t ) = a sin (kx – ωt + φ) 
+         Comparing these equations 
+(a) Amplitude , a=0.005m 
+ 
+(b) k=80 rad 푚
+−1
+ 
+                                  but , k=
+2휋
+휆
+ 
+                              
+2휋
+휆
+=80 
+                               휆=
+2휋
+80
+ =0.0785 m 
+                               휆=7.85 푐푚 
+ 
+(c)      ω=3 
+                           but,  ω=
+2휋
+푇
+   
+                              
+2휋
+푇
+= 3 
+    푇=
+2휋
+3
+ =2.09 s   
+                      Frequency, 휈 = 1/T   
+                                                =1/2.09  = 0.48 Hz 
+ 
+(d)  y(x, t) = 0.005 sin (80.0 x – 3.0 t)    
+                        x = 30.0 cm =0.3m 
+                         t = 20 s 
+                      y(x, t) = 0.005 sin (80.0 x 0.3 – 3.0 x20) 
+             = (0.005 m) sin (–36 ) 
+             = 5 mm 
+ 
+12.Derive the  expression for speed of a travelling wave                                 
+   Consider a wave  propagating in  positive  x direction  with  initial phase 
+φ =0 
+                                                               y (x, t ) = a sin (kx – ωt  ) 
+                                      Here,         (kx – ωt  ) = constant 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+                                                    
+푑
+푑푡
+ (kx – ωt  ) = 0 
+                                                       k
+푑푥
+푑푡
+−ω
+푑푡
+푑푡
+ =0 
+                                                            
+푑푥
+푑푡
+  = 
+ω
+푘
+  
+                                                    v = 
+훚
+풌
+  
+                                                            v = 
+2휋휈
+2휋
+휆
+  
+                                                   v = 흂흀                    
+13.Write the expression for speed of a transverse wave on stretched 
+string 
+                                                                   v=
+√
+푇
+μ
+ 
+μ - linear mass density or mass per unit length, μ=
+푚
+푙
+ 
+ T-Tension on the string. 
+ 
+14.A steel wire 0.72 m long has a mass of 5.0 ×ퟏퟎ
+−ퟑ
+kg. If the wire is under 
+a tension of 60 N. What is the speed of transverse waves on the wire ?  
+                                               v=
+√
+푇
+μ
+ 
+                                                                     μ = 
+푀
+푙
+    =
+5.0 ×10
+−3
+0.72
+  = 6.9 ×10
+−3
+ kg 푚
+−1
+ 
+                                                                          T = 60 N 
+                                            v=
+√
+60
+6.9 ×10
+−3
+  
+                                           v= 93 m 푠
+−1
+ 
+15.Asteel wire has a length of 12m and a mass of 2.1 kg. What is the 
+tension in the wire if the speed of transverse wave on the on the wire is 
+343ms
+-1 
+                                           v=
+√
+푇
+μ
+            
+                                        v
+2 
+=
+푇
+μ
+        
+                                         T= v
+2
+ μ 
+                                         T= v
+2 x
+ 
+푀
+푙
+ 
+                                       T   = 343
+2
+ x 
+2.1
+12
+ =20588.56 N =2.06 10
+4
+N 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+16.Write the expression for speed of a transverse wave on stretched 
+string. 
+                                          v=
+√
+푻
+훍
+          μ = linear mass density or mass per unit length=
+푚
+푙
+ 
+                                                                T=tension on string 
+17.Write the expression for  speed of longitudinal wave in a fluid  
+                                          v=
+√
+푩
+훒
+                          B= the bulk modulus of medium 
+                                                                               ρ=  the density of the medium  
+18.Write the expression for  speed of a longitudinal wave in a solid  bar 
+                                        v=
+√
+풀
+훒
+                      Y =Young’s modulus 
+                                                                          ρ=density of the medium,  
+19.Write Newtons Formula for speed of a longitudinal wave in an ideal gas 
+                                                v=
+√
+푷
+훒
+                P= Pressure of gas  
+                                                                           ρ= density of gas 
+20. Write Laplace correction to Newton’s formula  for speed of a 
+longitudinal wave in an ideal gas 
+                                               v=
+√
+휸 퐏
+훒
+              P= Pressure of gas 
+                                                                                  ρ= density of gas 
+                                                                                  γ = 
+퐶
+푃
+퐶
+푉
+ 
+21.Derive Newtons Formula for speed of a longitudinal wave in an ideal 
+gas 
+                                                v=
+√
+푩
+훒
+ 
+  Newton assumed that,  the pressure variations in a medium during   
+propagation of  sound are isothermal. 
+                               For isothermal process,    PV = constant 
+VΔP + PΔV = 0  
+VΔP =- PΔV  
+−VΔP
+ΔV
+ = P 
+                                                                                        B =P  
+                                             v=
+√
+푷
+훒
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+22.Derive Laplace correction to Newton’s formula  for speed of a 
+longitudinal wave in an ideal gas. 
+                                                v=
+√
+퐵
+ρ
+ 
+Laplace found that the pressure variations in a medium during   
+propagation of  sound are adiabatic and not isothermal. 
+                                              For adiabatic process,         P푉
+훾
+ = constant 
+   Δ P푉
+훾
+ =0 
+                                    P훾푉
+훾−1
+ΔV + 푉
+훾
+ Δ P =0 
+                                    P 훾푉
+훾−1
+ΔV =− 푉
+훾
+ Δ P  
+                                     훾 P =
+−푉
+훾
+ΔP
+푉
+훾−1
+ΔV
+ 
+                                           훾 P =
+−VΔP
+ΔV
+ =B 
+   B = 훾 P 
+                                               v=
+√
+휸 퐏
+훒
+ 
+23.The speed of sound in air at STP = ---------------      
+                         331.3 m 푠
+−1
+ 
+24.A progressive gets reflected at a rigid boundary . Write the 
+displacement relation for incident wave and reflected wave.       
+                      Incident wave,    푦
+푖
+(x, t) = a sin (kx – ωt) 
+                    Reflected wave,    푦
+푟
+(x, t) = a sin (kx + ωt + π)                                                             
+▪ For reflection at a rigid boundary ,the reflected wave will have a 
+phase reversal i.e, a phase difference   of  π radian or 180
+0
+. 
+▪ For reflection at a rigid boundary ,the displacement at the boundary 
+is  zero               
+25.A progressive gets reflected at a open boundary . Write the 
+displacement relation for incident wave and reflected wave.                                                                      
+                                 Incident wave,    푦
+푖
+(x, t) = a sin (kx – ωt) 
+                                  Reflected wave,   푦
+푟
+(x, t) = a sin (kx + ωt). 
+▪ The reflected wave will have same sign (no phase reversal) and 
+amplitude as the incident wave. 
+▪ There will be maximum displacement at the boundary( twice the 
+amplitude of either of the pulses) 
+26.What are standing waves? 
+The interference of two identical waves moving in opposite directions 
+produces standing waves.  
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+27.Draw standing waves in a stretched string and mark nodes and 
+antinodes. 
+                                      
+28.Obtain the expression for a standing wave and find the condition for 
+nodes and antinodes. 
+Wave travelling in +ve x-axis,           푦
+1
+(x, t) = a sin (kx – ωt) 
+Wave travelling in -ve x-axis ,            푦
+2
+(x, t) = a sin (kx + ωt) 
+            When they  superpose,        y (x, t) = 푦
+1
+(x, t)  + 푦
+2
+(x, t)  
+                                                                y (x, t) = a sin (kx – ωt) + a sin (kx + ωt) 
+                                                                 y (x, t) = (2a sin kx) cos ωt 
+                                         Amplitude of wave , A=  2a sin kx. 
+ 
+Condition for Nodes 
+The positions of zero amplitude in a staning wave are called nodes. 
+                                2a sin kx =0 
+                                      sin kx =0 
+                                             kx = nπ, for n = 0, 1, 2, 3, .. 
+                                                                         But k = 
+2π
+λ
+ 
+                                           
+2π
+λ
+ x = nπ 
+                                        x = 풏
+ 훌
+ퟐ
+  ,     for n = 0, 1, 2, 3, ..  
+ 
+Condition for Antinodes 
+The positions of maximum amplitude  are called antinodes.  
+                                 2a sin kx =maximum 
+                                       sin kx =±1 
+                                              kx = (n +
+1
+2
+ ) π, for n = 0, 1, 2, 3, .. 
+                                                                             but ,k = 
+2π
+λ
+ 
+                                           
+2π
+λ
+ x = (n +
+1
+2
+ ) π 
+                                         x = (n +
+ퟏ
+ퟐ
+ ) 
+훌
+ퟐ
+   ,   for  n = 0, 1, 2, 3, ..... 
+29.Draw the different modes of standing waves  produced in a stretched 
+string fixed at both the ends. Also obtain the frequencies of harmonics . 
+(or) Prove that the frquencies produced in a stretched string fixed at both 
+ends are in the ratio ퟏ:ퟐ:ퟑ  
+ 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+Fundamental mode or the first harmonic 
+The oscillation mode with n=1 ,  the lowest frequency is called the 
+fundamental mode or the first harmonic. 
+                               
+                             L = 
+휆
+1
+2
+ 
+                            휆
+1
+=2L   
+                                                    But  v=휈λ  
+.                             휈=
+v
+휆
+  
+                                                                            Frequency,  휈
+1
+=
+v
+휆
+1
+  
+        휈
+1
+=
+v
+2L
+   ----------(1) 
+The second harmonic 
+The second harmonic is the oscillation mode with n = 2. 
+       
+                             L = 2
+휆
+2
+2
+ =휆
+2
+ 
+                           휆
+2
+=L   
+    Frequency,  휈
+2
+=
+v
+휆
+2
+  
+                                                                                                   휈
+2
+=
+v
+L
+  
+                                                                                                   휈
+2
+=2
+v
+2L
+ -------------(2) 
+                                                                                                   휈
+2
+=2휈
+1
+  
+The Third Harmonic 
+The third harmonic is the oscillation mode with n = 3. 
+                         
+                         L = 3
+휆
+3
+2
+     
+                       휆
+3
+=
+2퐿
+3
+  
+Frequency,  휈
+3
+=
+v
+휆
+3
+  
+                                                                                                휈
+3
+=
+v
+2퐿
+3
+  
+                                                                                                휈
+3
+=3
+v
+2L
+ --------------(3) 
+                                                                                                휈
+3
+=3푣
+1
+  
+                                                                                                                    and so on 
+                                                         휈
+1
+:휈
+2
+:휈
+3
+=1:2:3  
+Thus all harmonics are possible in a stretched string fixed at both the 
+ends. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+30.Draw the different modes of standing waves  produced in a closed pipe. 
+Also obtain the frequencies of harmonics . 
+(or) Prove that the frquencies produced in a closed pipe are in the ratio 
+ퟏ:ퟑ:ퟓ (or) Show that only odd harmonics are possible in a closed pipe. 
+Eg:  Resonance Column(Air columns such as glass tubes partially filled 
+with water) . 
+Fundamental mode or the first harmonic 
+The oscillation mode with n=0 ,   fundamental mode or the first harmonic. 
+L=
+ 휆
+1
+4
+   
+                                                                                         
+                                                   휆
+1
+=4L   
+Frequency,  휈
+1
+=
+v
+휆
+1
+  
+                            
+휈
+1
+=
+v
+4L
+ ------------(1) 
+                                            
+The Third Harmonic 
+The Third harmonic is the oscillation modewith n=1  
+L=3
+ 휆
+3
+4
+                                                
+휆
+3
+=
+ 4퐿
+3
+  
+                         
+Frequency,  휈
+3
+=
+v
+휆
+3
+  
+                
+휈
+3
+=
+v
+ 4퐿
+3
+                           
+휈
+3
+=3
+v
+4L
+ --------------(2) 
+                      
+                                                                   휈
+3
+=3휈
+1
+  
+The Fifth Harmonic 
+The Fifth harmonic is the oscillation mode with n = 2                                                 
+L=5
+ 휆
+4
+4
+   
+                         
+휆
+4
+=
+ 4퐿
+5
+                   
+Frequency,  휈
+5
+=
+v
+휆
+5
+  
+                 
+휈
+5
+=
+v
+ 4퐿
+5
+  
+                 
+휈
+5
+=5
+v
+4L
+ -------------(3)                   
+                                                        휈
+5
+=5휈
+1
+             
+                                                              휈
+1
+:휈
+3
+:휈
+5
+=1:3:5  
+              Thus only odd harmonics are possible in a closed pipe. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+31.Draw the different modes of standing waves  produced in an open pipe. 
+Also obtain the frequencies of harmonics . 
+(or) Prove that the frquencies produced in an open pipe are in the ratio 
+ퟏ:ퟐ:ퟑ  
+(or) Show that all harmonics are possible in an open pipe. 
+Example for open pipe -Flute                                                                                                                                      
+Fundamental Mode or The First Harmonic 
+The oscillation mode with n=1 ,  the lowest frequency is called the 
+fundamental mode or the first harmonic.                                                                                                                                                    
+                               
+                                  L = 
+휆
+1
+2
+ 
+                  휆
+1
+=2L                               
+        Frequency,  휈
+1
+=
+v
+휆
+1
+  
+                                                                   휈
+1
+=
+v
+2L
+ ------------(1) 
+The Second Harmonic 
+The second harmonic is the oscillation mode with n = 2.                              
+                                    L = 2
+휆
+2
+2
+ 
+                                  휆
+2
+=L   
+           Frequency,  휈
+2
+=
+v
+휆
+2
+  
+                                   휈
+2
+=
+v
+L
+  
+                                                                                                     휈
+2
+=2
+v
+2L
+ ------------(2) 
+                                                                                                     휈
+2
+=2휈
+1
+  
+The Third Harmonic     
+The third harmonic is the oscillation mode with n = 3.                            
+                                  L = 3
+휆
+3
+2
+ 
+                                휆
+3
+=
+2퐿
+3
+  
+          Frequency,  휈
+3
+=
+v
+휆
+3
+  
+                                 휈
+3
+=
+v
+2퐿
+3
+  
+                                                                                                    휈
+3
+=3
+v
+2L
+ ------------(3) 
+                                                                                                    휈
+3
+=3휈
+1
+   
+                                                             휈
+1
+:휈
+2
+:휈
+3
+=1:2:3  
+                                    Thus all harmonics are possible in an open pipe. 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®
+
+ 
+32.Why open pipes are preferred over closed pipes in musical 
+instruments? 
+ All harmonics are possible in an open pipe, but in a cloed pipe only odd 
+harmonics are possible.   
+ So open pipes are preferred over closed pipes in musical instruments. 
+33.Show that the frequency of fundamental mode(first harmonic) of an 
+open pipe is twice that of a closed pipe. 
+Fundamental frequency of open pipe 
+                               
+                                  L = 
+휆
+1
+2
+ 
+                  휆
+1
+=2L                               
+        Frequency,  휈
+1
+=
+v
+휆
+1
+  
+                                                                   휈
+1
+=
+v
+2L
+ ------------(1) 
+Fundamental frequency for closed pipe, 
+The oscillation mode with n=0 ,   fundamental mode or the first harmonic. 
+                                
+L=
+ 휆
+1
+4
+                                                             
+                                                   휆
+1
+=4L   
+Frequency,  휈
+1
+=
+v
+휆
+1
+  
+                            
+휈
+1
+=
+v
+4L
+ ------------(2) 
+                                            
+From eq (1) and (2),Fundamental frequency of open pipe is twice that of a 
+closed pipe. 
+ 
+34.What are beats? 
+The waxing and waning (periodinc wavering)  of sound intensity when 
+two waves of nearly same frequencies and amplitudes travelling in the 
+same direction, are superimposed on each other is called beats. 
+If 푣
+1
+ 푎푛푑 푣
+2
+ are the frequencies of superposing waves, the beat frequency  
+                                                            흂
+풃풆풂풕
+ =흂
+ퟏ
+−흂
+ퟐ
+   
+                                
+                                                                                                                                               Seema Elizabeth  
+                                                                                                                                                  HSST Physics 
+                                                                                                                                   MARM Govt HSS Santhipuram 
+                                                                                                                                                      Thrissur 
+ 
+Join Now: https://join.hsslive.inDownloaded from https://www.hsslive.in ®

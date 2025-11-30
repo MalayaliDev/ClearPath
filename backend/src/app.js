@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
 const authRoutes = require('./routes/authRoutes');
@@ -10,6 +11,7 @@ const examRoutes = require('./routes/examRoutes');
 const studyRoutes = require('./routes/studyRoutes');
 
 const app = express();
+app.set('trust proxy', 1);
 
 app.use(cookieParser());
 app.use(express.json());
@@ -19,23 +21,18 @@ const allowedOrigins = [
   'https://clear-path-two.vercel.app',
 ];
 
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
+const corsOptions = {
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
+};
 
-  if (origin && allowedOrigins.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
-  }
-
-  res.header('Access-Control-Allow-Credentials', 'true');
-  res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,PATCH,DELETE,OPTIONS');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
-  if (req.method === 'OPTIONS') {
-    return res.sendStatus(200);
-  }
-
-  return next();
-});
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 app.get('/', (req, res) => {
   res.json({ message: 'Brototype Complaints API running' });

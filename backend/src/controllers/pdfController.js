@@ -601,7 +601,9 @@ const callGroq = async (prompt) => {
       headers: {
         Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
         'Content-Type': 'application/json',
+        'User-Agent': 'ClearPath/1.0',
       },
+      timeout: 30000,
     }
   );
 
@@ -681,25 +683,33 @@ Instructions:
 Question: ${requestedQuestion}`;
 
     let answer;
-    try {
-      answer = await callOpenRouter(prompt);
-    } catch (err) {
-      if (!shouldFallback(err)) {
-        throw err;
-      }
-
-      console.warn('OpenRouter unavailable for analyzePdf. Trying Groq.', err.response?.status);
-
+    
+    // Skip AI calls if no API keys configured - use fallback directly
+    if (!process.env.OPENROUTER_API_KEY && !process.env.GROQ_API_KEY) {
+      console.warn('No AI API keys configured. Using fallback summary.');
+      const fallback = buildFallbackSummary(snippet, requestedQuestion);
+      answer = `${fallback}${FALLBACK_NOTICE}`;
+    } else {
       try {
-        answer = await callGroq(prompt);
-      } catch (groqErr) {
-        if (!shouldFallback(groqErr)) {
-          throw groqErr;
+        answer = await callOpenRouter(prompt);
+      } catch (err) {
+        if (!shouldFallback(err)) {
+          throw err;
         }
 
-        console.warn('Groq unavailable for analyzePdf. Using fallback summary.', groqErr.response?.status);
-        const fallback = buildFallbackSummary(snippet, requestedQuestion);
-        answer = `${fallback}${FALLBACK_NOTICE}`;
+        console.warn('OpenRouter unavailable for analyzePdf. Trying Groq.', err.response?.status);
+
+        try {
+          answer = await callGroq(prompt);
+        } catch (groqErr) {
+          if (!shouldFallback(groqErr)) {
+            throw groqErr;
+          }
+
+          console.warn('Groq unavailable for analyzePdf. Using fallback summary.', groqErr.response?.status);
+          const fallback = buildFallbackSummary(snippet, requestedQuestion);
+          answer = `${fallback}${FALLBACK_NOTICE}`;
+        }
       }
     }
 
@@ -781,25 +791,33 @@ Instructions:
 Question: ${trimmedQuestion}`;
 
     let answer;
-    try {
-      answer = await callOpenRouter(prompt);
-    } catch (err) {
-      if (!shouldFallback(err)) {
-        throw err;
-      }
-
-      console.warn('OpenRouter unavailable for askPdf. Trying Groq.', err.response?.status);
-
+    
+    // Skip AI calls if no API keys configured - use fallback directly
+    if (!process.env.OPENROUTER_API_KEY && !process.env.GROQ_API_KEY) {
+      console.warn('No AI API keys configured. Using fallback answer.');
+      const fallback = buildFallbackAnswer(snippet, trimmedQuestion);
+      answer = `${fallback}${FALLBACK_NOTICE}`;
+    } else {
       try {
-        answer = await callGroq(prompt);
-      } catch (groqErr) {
-        if (!shouldFallback(groqErr)) {
-          throw groqErr;
+        answer = await callOpenRouter(prompt);
+      } catch (err) {
+        if (!shouldFallback(err)) {
+          throw err;
         }
 
-        console.warn('Groq unavailable for askPdf. Using fallback answer.', groqErr.response?.status);
-        const fallback = buildFallbackAnswer(snippet, trimmedQuestion);
-        answer = `${fallback}${FALLBACK_NOTICE}`;
+        console.warn('OpenRouter unavailable for askPdf. Trying Groq.', err.response?.status);
+
+        try {
+          answer = await callGroq(prompt);
+        } catch (groqErr) {
+          if (!shouldFallback(groqErr)) {
+            throw groqErr;
+          }
+
+          console.warn('Groq unavailable for askPdf. Using fallback answer.', groqErr.response?.status);
+          const fallback = buildFallbackAnswer(snippet, trimmedQuestion);
+          answer = `${fallback}${FALLBACK_NOTICE}`;
+        }
       }
     }
 

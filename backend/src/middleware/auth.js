@@ -2,12 +2,7 @@ const jwt = require('jsonwebtoken');
 
 function auth(requiredRoles = []) {
   return (req, res, next) => {
-    const authHeader = req.headers.authorization;
-    const headerToken = authHeader && authHeader.startsWith('Bearer ')
-      ? authHeader.split(' ')[1]
-      : null;
-    const cookieToken = req.cookies?.token;
-    const token = headerToken || cookieToken;
+    const token = req.cookies?.token;
 
     if (!token) {
       return res.status(401).json({ message: 'No token provided' });

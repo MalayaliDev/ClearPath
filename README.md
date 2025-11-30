@@ -18,40 +18,6 @@
 └── frontend  # React UI / Vite dev server
 ```
 
-## Accounts for evaluation
-
-| Role | Email | Password | Notes |
-| --- | --- | --- | --- |
-| Admin | `admin@clearpath.com` | `Adminclearpath@123` | Seeded automatically via `.env` vars |
-| Staff (create) | Register or promote via DB | — | Staff can manage tickets at `/app/staff/tickets` |
-| Student | Register via `/register` | chosen at signup | Access `/app/my-tickets` and support flows |
-
-> Change these credentials in production. For judging, the admin login above exposes all screens.
-
-## Environment configuration
-
-`backend/.env` (sample):
-```
-PORT=5000
-MONGO_URI=<atlas connection>
-JWT_SECRET=<random string>
-ADMIN_EMAIL=admin@clearpath.com
-ADMIN_PASSWORD=Adminclearpath@123
-ADMIN_NAME=Admin
-
-# Optional AI provider keys (used for placeholder macros)
-OPENROUTER_API_KEY=...
-OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
-OPENROUTER_MODEL=anthropic/claude-3-haiku
-GROQ_API_KEY=...
-GROQ_MODEL=llama3-8b-8192
-```
-
-`frontend/.env`:
-```
-VITE_API_URL=http://localhost:5000   # or deployed API URL
-```
-
 ## Running locally (judging instructions)
 
 1. **Backend**

@@ -723,10 +723,13 @@ Question: ${requestedQuestion}`;
 
     res.json({ success: true, answer: blendedAnswer, chat: persistence?.chat, entry: persistence?.entry });
   } catch (error) {
-    console.error('❌ analyzePdf error:', error.message || error);
-    if (error.response?.data) {
-      console.error('API response:', error.response.data);
-    }
+    console.error('❌ analyzePdf error:', {
+      message: error?.message,
+      code: error?.code,
+      status: error?.response?.status,
+      apiError: error?.response?.data,
+      stack: error?.stack
+    });
     res.status(500).json({ 
       success: false, 
       message: 'Failed to analyze PDF',

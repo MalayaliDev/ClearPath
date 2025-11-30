@@ -23,6 +23,8 @@ export default function StaffPdfMaintenancePage() {
   const [error, setError] = useState('');
   const [uploading, setUploading] = useState(false);
   const [deletingId, setDeletingId] = useState('');
+  const [selectedIds, setSelectedIds] = useState(new Set());
+  const [isDeleting, setIsDeleting] = useState(false);
 
   const authorizedConfig = useMemo(
     () => ({
@@ -82,11 +84,63 @@ export default function StaffPdfMaintenancePage() {
     try {
       await axios.delete(`${API_BASE}/api/pdf/admin/upload/${fileId}`, authorizedConfig);
       await refreshUploads();
+      setSelectedIds((prev) => {
+        const updated = new Set(prev);
+        updated.delete(fileId);
+        return updated;
+      });
     } catch (err) {
       console.error(err);
       setError(err.response?.data?.message || 'Failed to delete PDF.');
     } finally {
       setDeletingId('');
+    }
+  };
+
+  const toggleSelect = (fileId) => {
+    setSelectedIds((prev) => {
+      const updated = new Set(prev);
+      if (updated.has(fileId)) {
+        updated.delete(fileId);
+      } else {
+        updated.add(fileId);
+      }
+      return updated;
+    });
+  };
+
+  const toggleSelectAll = () => {
+    if (selectedIds.size === uploads.length) {
+      setSelectedIds(new Set());
+    } else {
+      setSelectedIds(new Set(uploads.map((f) => f.id || f.storedName)));
+    }
+  };
+
+  const handleDeleteSelected = async () => {
+    if (selectedIds.size === 0) {
+      setError('Please select at least one PDF to delete.');
+      return;
+    }
+
+    const confirmed = window.confirm(
+      `Remove ${selectedIds.size} PDF(s) from all students? This cannot be undone.`
+    );
+    if (!confirmed) return;
+
+    setIsDeleting(true);
+    setError('');
+    try {
+      for (const fileId of selectedIds) {
+        await axios.delete(`${API_BASE}/api/pdf/admin/upload/${fileId}`, authorizedConfig);
+      }
+      await refreshUploads();
+      setSelectedIds(new Set());
+    } catch (err) {
+      console.error(err);
+      setError(err.response?.data?.message || 'Failed to delete selected PDFs.');
+    } finally {
+      setIsDeleting(false);
     }
   };
 
@@ -146,6 +200,34 @@ export default function StaffPdfMaintenancePage() {
 
       {error && <div className="rounded-2xl border border-red-100 bg-red-50 px-4 py-2 text-sm text-red-700">{error}</div>}
 
+      {uploads.length > 0 && (
+        <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-amber-100 bg-amber-50/50 px-4 py-3">
+          <div className="flex items-center gap-3">
+            <input
+              type="checkbox"
+              checked={selectedIds.size === uploads.length && uploads.length > 0}
+              onChange={toggleSelectAll}
+              className="h-4 w-4 cursor-pointer rounded border-slate-300"
+              title="Select all PDFs"
+            />
+            <span className="text-sm font-semibold text-slate-700">
+              {selectedIds.size > 0 ? `${selectedIds.size} selected` : 'Select all'}
+            </span>
+          </div>
+          {selectedIds.size > 0 && (
+            <button
+              type="button"
+              onClick={handleDeleteSelected}
+              disabled={isDeleting}
+              className="inline-flex items-center gap-2 rounded-full border border-red-300 bg-red-50 px-4 py-1.5 text-sm font-semibold text-red-600 transition hover:border-red-400 hover:bg-red-100 disabled:opacity-50"
+            >
+              <Trash2 className={`h-4 w-4 ${isDeleting ? 'animate-pulse' : ''}`} />
+              {isDeleting ? 'Removing…' : `Remove ${selectedIds.size}`}
+            </button>
+          )}
+        </div>
+      )}
+
       <section className="space-y-3">
         {loading ? (
           <div className="rounded-2xl border border-slate-100 bg-white/80 px-4 py-6 text-center text-sm text-slate-500">Loading uploads…</div>
@@ -154,28 +236,44 @@ export default function StaffPdfMaintenancePage() {
             No PDFs found. Upload a file to get started.
           </div>
         ) : (
-          uploads.map((file) => (
-            <article
-              key={file.id || file.storedName}
-              className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-slate-100 bg-white/95 px-4 py-3 shadow-sm"
-            >
-              <div>
-                <p className="text-sm font-semibold text-slate-900">{file.originalName || file.storedName || 'PDF file'}</p>
-                <p className="text-xs text-slate-500">
-                  Uploaded {formatDate(file.uploadedAt)} · {formatBytes(file.size)} · Owner {file.studentId ? `#${file.studentId.slice(-6)}` : '—'}
-                </p>
-              </div>
-              <button
-                type="button"
-                onClick={() => handleDelete(file.id)}
-                className="inline-flex items-center gap-2 rounded-full border border-red-200 px-4 py-1.5 text-sm font-semibold text-red-600 transition hover:border-red-300"
-                disabled={deletingId === file.id}
+          uploads.map((file) => {
+            const fileId = file.id || file.storedName;
+            const isSelected = selectedIds.has(fileId);
+            return (
+              <article
+                key={fileId}
+                className={`flex flex-wrap items-center justify-between gap-3 rounded-2xl border px-4 py-3 shadow-sm transition ${
+                  isSelected
+                    ? 'border-amber-300 bg-amber-50/70'
+                    : 'border-slate-100 bg-white/95'
+                }`}
               >
-                <Trash2 className={`h-4 w-4 ${deletingId === file.id ? 'animate-pulse' : ''}`} />
-                {deletingId === file.id ? 'Removing…' : 'Remove'}
-              </button>
-            </article>
-          ))
+                <div className="flex items-center gap-3 flex-1">
+                  <input
+                    type="checkbox"
+                    checked={isSelected}
+                    onChange={() => toggleSelect(fileId)}
+                    className="h-4 w-4 cursor-pointer rounded border-slate-300"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900">{file.originalName || file.storedName || 'PDF file'}</p>
+                    <p className="text-xs text-slate-500">
+                      Uploaded {formatDate(file.uploadedAt)} · {formatBytes(file.size)} · Owner {file.studentId ? `#${file.studentId.slice(-6)}` : '—'}
+                    </p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => handleDelete(fileId)}
+                  className="inline-flex items-center gap-2 rounded-full border border-red-200 px-4 py-1.5 text-sm font-semibold text-red-600 transition hover:border-red-300"
+                  disabled={deletingId === fileId}
+                >
+                  <Trash2 className={`h-4 w-4 ${deletingId === fileId ? 'animate-pulse' : ''}`} />
+                  {deletingId === fileId ? 'Removing…' : 'Remove'}
+                </button>
+              </article>
+            );
+          })
         )}
       </section>
     </div>

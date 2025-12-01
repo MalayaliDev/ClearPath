@@ -126,19 +126,29 @@ exports.getAllUsers = async (req, res) => {
 
     console.log('Fetching all users from database...');
     const users = await User.findAll();
-    console.log('Found users:', users.length, users);
+    console.log('Found users:', users.length);
+    console.log('Raw users data:', JSON.stringify(users, null, 2));
     
-    const formattedUsers = users.map((user) => ({
-      id: user.id,
-      name: user.name || 'Unknown',
-      email: user.email || '',
-      role: user.role || 'student',
-      createdAt: user.createdAt,
-      banned: false,
-      blacklisted: false,
-    }));
+    if (!users || users.length === 0) {
+      console.warn('No users found in database');
+      return res.json({ success: true, users: [] });
+    }
+    
+    const formattedUsers = users.map((user) => {
+      const formatted = {
+        id: user.id || '',
+        name: user.name && user.name.trim() ? user.name : 'Unknown User',
+        email: user.email || '',
+        role: user.role || 'student',
+        createdAt: user.createdAt,
+        banned: false,
+        blacklisted: false,
+      };
+      console.log('Formatted user:', formatted);
+      return formatted;
+    });
 
-    console.log('Returning formatted users:', formattedUsers);
+    console.log('Returning formatted users count:', formattedUsers.length);
     res.json({ success: true, users: formattedUsers });
   } catch (error) {
     console.error('getAllUsers error', error);

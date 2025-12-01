@@ -542,7 +542,7 @@ const callOpenRouter = async (prompt) => {
       {
         role: 'system',
         content:
-          'You are a friendly study mentor. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing.',
+          'You are a friendly study mentor. IMPORTANT: Always respond in English only. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing. Do not translate or use any other language.',
       },
       {
         role: 'user',
@@ -595,7 +595,7 @@ const callGroq = async (prompt) => {
           {
             role: 'system',
             content:
-              'You are a friendly study mentor. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing.',
+              'You are a friendly study mentor. IMPORTANT: Always respond in English only. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing. Do not translate or use any other language.',
           },
           {
             role: 'user',

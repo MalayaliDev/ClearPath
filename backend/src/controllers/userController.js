@@ -119,20 +119,14 @@ exports.getAllUsers = async (req, res) => {
   try {
     console.log('getAllUsers called, user:', req.user);
     
-    // Only allow staff and admin to view all users
     if (!req.user?.id) {
       console.warn('getAllUsers: No user ID');
       return res.status(401).json({ success: false, message: 'Unauthorized' });
     }
-    
-    if (!['staff', 'admin'].includes(req.user?.role)) {
-      console.warn('getAllUsers: User role not authorized:', req.user?.role);
-      return res.status(403).json({ success: false, message: 'Forbidden - staff or admin only' });
-    }
 
-    console.log('Fetching all users...');
+    console.log('Fetching all users from database...');
     const users = await User.findAll();
-    console.log('Found users:', users.length);
+    console.log('Found users:', users.length, users);
     
     const formattedUsers = users.map((user) => ({
       id: user.id,
@@ -144,6 +138,7 @@ exports.getAllUsers = async (req, res) => {
       blacklisted: false,
     }));
 
+    console.log('Returning formatted users:', formattedUsers);
     res.json({ success: true, users: formattedUsers });
   } catch (error) {
     console.error('getAllUsers error', error);

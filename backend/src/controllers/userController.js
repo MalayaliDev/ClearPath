@@ -155,3 +155,47 @@ exports.getAllUsers = async (req, res) => {
     res.status(500).json({ success: false, message: 'Failed to fetch users', error: error.message });
   }
 };
+
+exports.deleteMultipleUsers = async (req, res) => {
+  try {
+    console.log('deleteMultipleUsers called, user:', req.user);
+    
+    if (!req.user?.id) {
+      return res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+
+    const { userIds } = req.body;
+    if (!userIds || !Array.isArray(userIds) || userIds.length === 0) {
+      return res.status(400).json({ success: false, message: 'No user IDs provided' });
+    }
+
+    console.log('Deleting users:', userIds);
+    
+    // Delete users from database
+    const mongoose = require('../config/db');
+    const userSchema = new mongoose.Schema({
+      name: { type: String, required: true },
+      email: { type: String, required: true, unique: true },
+      password_hash: { type: String, required: true },
+      role: { type: String, enum: ['student', 'staff', 'admin'], default: 'student' },
+      phone_encrypted: { type: String, default: '' },
+      phone_masked: { type: String, default: '' },
+      discord_webhook_encrypted: { type: String, default: '' },
+      discord_webhook_masked: { type: String, default: '' },
+    }, { timestamps: { createdAt: 'created_at', updatedAt: false } });
+    
+    const UserModel = mongoose.model('User', userSchema);
+    const result = await UserModel.deleteMany({ _id: { $in: userIds } });
+    
+    console.log('Deleted users count:', result.deletedCount);
+    
+    res.json({ 
+      success: true, 
+      message: `Deleted ${result.deletedCount} user(s)`,
+      deletedCount: result.deletedCount 
+    });
+  } catch (error) {
+    console.error('deleteMultipleUsers error', error);
+    res.status(500).json({ success: false, message: 'Failed to delete users', error: error.message });
+  }
+};

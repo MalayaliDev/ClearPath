@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import MainPage from './pages/MainPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import FeaturesPage from './pages/FeaturesPage.jsx';
@@ -27,6 +28,7 @@ import StaffStudentInsightsPage from './pages/staff/StaffStudentInsightsPage.jsx
 import StaffAiLimitsPage from './pages/staff/StaffAiLimitsPage.jsx';
 import StaffTicketConfigPage from './pages/staff/StaffTicketConfigPage.jsx';
 import StaffPdfMaintenancePage from './pages/staff/StaffPdfMaintenancePage.jsx';
+import BannedPage from './pages/BannedPage.jsx';
 
 function ProtectedRoute({ children, allowedRoles }) {
   const user = getStoredUser();
@@ -34,6 +36,11 @@ function ProtectedRoute({ children, allowedRoles }) {
 
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  // Check if user is banned
+  if (user.banned) {
+    return <Navigate to="/banned" replace />;
   }
 
   if (allowedRoles && !allowedRoles.includes(user.role)) {
@@ -47,64 +54,64 @@ function ProtectedRoute({ children, allowedRoles }) {
 export default function App() {
   return (
     <>
-      {/* ❌ REMOVED <Analytics /> */}
+      <Analytics />
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/features" element={<FeaturesPage />} />
-        <Route path="/stats" element={<StatsPage />} />
-        <Route path="/support" element={<SupportPage />} />
+      <Route path="/" element={<MainPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+      <Route path="/banned" element={<BannedPage />} />
+      <Route path="/about" element={<AboutPage />} />
+      <Route path="/features" element={<FeaturesPage />} />
+      <Route path="/stats" element={<StatsPage />} />
+      <Route path="/support" element={<SupportPage />} />
 
+      <Route
+        path="/app"
+        element={
+          <ProtectedRoute>
+            <Layout />
+          </ProtectedRoute>
+        }
+      >
+        <Route index element={<StudentDashboard />} />
+        <Route path="pdf-lab" element={<PdfLab />} />
+        <Route path="mentor-lab" element={<MentorLab />} />
+        <Route path="exam-lab" element={<ExamLab />} />
+        <Route path="exam-lab/:sessionId" element={<ExamQuiz />} />
+        <Route path="study-tools" element={<StudyTools />} />
+        <Route path="study-lab" element={<StudyLab />} />
+        <Route path="complaints" element={<ComplaintsPage />} />
+        <Route path="my-tickets" element={<MyTicketsPage />} />
+        <Route path="profile" element={<ProfilePage />} />
+        <Route path="tickets/:ticketId" element={<TicketDetailPage />} />
         <Route
-          path="/app"
+          path="staff"
           element={
-            <ProtectedRoute>
-              <Layout />
+            <ProtectedRoute allowedRoles={['staff', 'admin']}>
+              <StaffDashboard />
             </ProtectedRoute>
           }
         >
-          <Route index element={<StudentDashboard />} />
-          <Route path="pdf-lab" element={<PdfLab />} />
-          <Route path="mentor-lab" element={<MentorLab />} />
-          <Route path="exam-lab" element={<ExamLab />} />
-          <Route path="exam-lab/:sessionId" element={<ExamQuiz />} />
-          <Route path="study-tools" element={<StudyTools />} />
-          <Route path="study-lab" element={<StudyLab />} />
-          <Route path="complaints" element={<ComplaintsPage />} />
-          <Route path="my-tickets" element={<MyTicketsPage />} />
-          <Route path="profile" element={<ProfilePage />} />
-          <Route path="tickets/:ticketId" element={<TicketDetailPage />} />
-
-          <Route
-            path="staff"
-            element={
-              <ProtectedRoute allowedRoles={['staff', 'admin']}>
-                <StaffDashboard />
-              </ProtectedRoute>
-            }
-          >
-            <Route index element={<Navigate to="tickets" replace />} />
-            <Route path="tickets" element={<StaffTicketsPage />} />
-            <Route path="user-management" element={<StaffUserManagementPage />} />
-            <Route path="student-insights" element={<StaffStudentInsightsPage />} />
-            <Route path="ai-limits" element={<StaffAiLimitsPage />} />
-            <Route path="ticket-config" element={<StaffTicketConfigPage />} />
-            <Route path="pdf-maintenance" element={<StaffPdfMaintenancePage />} />
-          </Route>
+          <Route index element={<Navigate to="tickets" replace />} />
+          <Route path="tickets" element={<StaffTicketsPage />} />
+          <Route path="user-management" element={<StaffUserManagementPage />} />
+          <Route path="student-insights" element={<StaffStudentInsightsPage />} />
+          <Route path="ai-limits" element={<StaffAiLimitsPage />} />
+          <Route path="ticket-config" element={<StaffTicketConfigPage />} />
+          <Route path="pdf-maintenance" element={<StaffPdfMaintenancePage />} />
         </Route>
+      </Route>
 
-        <Route
-          path="/ticket/:ticketId"
-          element={
-            <ProtectedRoute>
-              <TicketDetailPage />
-            </ProtectedRoute>
-          }
-        />
+      <Route
+        path="/ticket/:ticketId"
+        element={
+          <ProtectedRoute>
+            <TicketDetailPage />
+          </ProtectedRoute>
+        }
+      />
 
-        <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );

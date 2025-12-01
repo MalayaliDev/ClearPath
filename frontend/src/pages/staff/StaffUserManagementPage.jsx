@@ -1,39 +1,41 @@
-import React, { useState } from 'react';
-import { ShieldBan, RefreshCw, UserX, Bell, MessageCircle } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import { ShieldBan, RefreshCw, UserX, Bell, MessageCircle, Loader2 } from 'lucide-react';
 
-const seedUsers = [
-  {
-    id: 'u-101',
-    name: 'Malayali Dev',
-    email: 'malayalidev123@gmail.com',
-    banned: false,
-    blacklisted: false,
-    aiQuota: 120,
-    watchlist: true,
-  },
-  {
-    id: 'u-102',
-    name: 'Safa Rahim',
-    email: 'safa@clearpath.app',
-    banned: false,
-    blacklisted: false,
-    aiQuota: 90,
-    watchlist: false,
-  },
-  {
-    id: 'u-103',
-    name: 'Joel Mathews',
-    email: 'joel@clearpath.app',
-    banned: false,
-    blacklisted: true,
-    aiQuota: 60,
-    watchlist: true,
-  },
-];
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 export default function StaffUserManagementPage() {
-  const [managedUsers, setManagedUsers] = useState(seedUsers);
+  const [managedUsers, setManagedUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const [lastAction, setLastAction] = useState('No actions yet');
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
+  const fetchUsers = async () => {
+    try {
+      setLoading(true);
+      setError('');
+      const response = await axios.get(`${API_BASE}/api/user/all`, {
+        withCredentials: true,
+      });
+      const users = response.data.users || [];
+      setManagedUsers(
+        users.map((user) => ({
+          ...user,
+          aiQuota: 100,
+          watchlist: false,
+        }))
+      );
+    } catch (err) {
+      console.error(err);
+      setError(err.response?.data?.message || 'Failed to load users');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const toggleFlag = (id, field) => {
     setManagedUsers((prev) =>
@@ -60,14 +62,43 @@ export default function StaffUserManagementPage() {
   return (
     <div className="space-y-5">
       <div className="rounded-2xl border border-slate-100 bg-white/90 p-4 text-sm text-slate-600">
-        <p className="font-semibold text-slate-900">Live controls</p>
-        <p className="text-xs text-slate-500">
-          These actions sync to the auth service instantly. Any bans or password resets will log the operator ID.
-        </p>
-        <p className="mt-2 text-xs text-emerald-600">{lastAction}</p>
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="font-semibold text-slate-900">Live controls</p>
+            <p className="text-xs text-slate-500">
+              These actions sync to the auth service instantly. Any bans or password resets will log the operator ID.
+            </p>
+            <p className="mt-2 text-xs text-emerald-600">{lastAction}</p>
+          </div>
+          <button
+            type="button"
+            onClick={fetchUsers}
+            disabled={loading}
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-semibold text-slate-600 hover:border-slate-300 disabled:opacity-50"
+          >
+            {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <RefreshCw className="h-4 w-4" />}
+            Refresh
+          </button>
+        </div>
       </div>
 
-      <div className="space-y-3">
+      {error && (
+        <div className="rounded-2xl border border-rose-100 bg-rose-50 px-4 py-3 text-sm text-rose-600">
+          {error}
+        </div>
+      )}
+
+      {loading ? (
+        <div className="rounded-2xl border border-slate-100 bg-white/80 px-4 py-6 text-center text-sm text-slate-500">
+          <Loader2 className="mx-auto mb-2 h-5 w-5 animate-spin" />
+          Loading users…
+        </div>
+      ) : managedUsers.length === 0 ? (
+        <div className="rounded-2xl border border-dashed border-slate-200 bg-white/60 px-4 py-10 text-center text-sm text-slate-500">
+          No users found.
+        </div>
+      ) : (
+        <div className="space-y-3">
         {managedUsers.map(({ id, name, email, banned, blacklisted, aiQuota, watchlist, lastPasswordReset }) => (
           <article key={id} className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-4 text-sm text-slate-700">
             <div className="flex flex-wrap items-center justify-between gap-3">
@@ -138,7 +169,8 @@ export default function StaffUserManagementPage() {
             </div>
           </article>
         ))}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

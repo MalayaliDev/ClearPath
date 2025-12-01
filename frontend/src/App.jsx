@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/react';
 import MainPage from './pages/MainPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import FeaturesPage from './pages/FeaturesPage.jsx';
@@ -48,63 +47,64 @@ function ProtectedRoute({ children, allowedRoles }) {
 export default function App() {
   return (
     <>
-      <Analytics />
+      {/* ❌ REMOVED <Analytics /> */}
       <Routes>
-      <Route path="/" element={<MainPage />} />
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/features" element={<FeaturesPage />} />
-      <Route path="/stats" element={<StatsPage />} />
-      <Route path="/support" element={<SupportPage />} />
+        <Route path="/" element={<MainPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/features" element={<FeaturesPage />} />
+        <Route path="/stats" element={<StatsPage />} />
+        <Route path="/support" element={<SupportPage />} />
 
-      <Route
-        path="/app"
-        element={
-          <ProtectedRoute>
-            <Layout />
-          </ProtectedRoute>
-        }
-      >
-        <Route index element={<StudentDashboard />} />
-        <Route path="pdf-lab" element={<PdfLab />} />
-        <Route path="mentor-lab" element={<MentorLab />} />
-        <Route path="exam-lab" element={<ExamLab />} />
-        <Route path="exam-lab/:sessionId" element={<ExamQuiz />} />
-        <Route path="study-tools" element={<StudyTools />} />
-        <Route path="study-lab" element={<StudyLab />} />
-        <Route path="complaints" element={<ComplaintsPage />} />
-        <Route path="my-tickets" element={<MyTicketsPage />} />
-        <Route path="profile" element={<ProfilePage />} />
-        <Route path="tickets/:ticketId" element={<TicketDetailPage />} />
         <Route
-          path="staff"
+          path="/app"
           element={
-            <ProtectedRoute allowedRoles={['staff', 'admin']}>
-              <StaffDashboard />
+            <ProtectedRoute>
+              <Layout />
             </ProtectedRoute>
           }
         >
-          <Route index element={<Navigate to="tickets" replace />} />
-          <Route path="tickets" element={<StaffTicketsPage />} />
-          <Route path="user-management" element={<StaffUserManagementPage />} />
-          <Route path="student-insights" element={<StaffStudentInsightsPage />} />
-          <Route path="ai-limits" element={<StaffAiLimitsPage />} />
-          <Route path="ticket-config" element={<StaffTicketConfigPage />} />
-          <Route path="pdf-maintenance" element={<StaffPdfMaintenancePage />} />
+          <Route index element={<StudentDashboard />} />
+          <Route path="pdf-lab" element={<PdfLab />} />
+          <Route path="mentor-lab" element={<MentorLab />} />
+          <Route path="exam-lab" element={<ExamLab />} />
+          <Route path="exam-lab/:sessionId" element={<ExamQuiz />} />
+          <Route path="study-tools" element={<StudyTools />} />
+          <Route path="study-lab" element={<StudyLab />} />
+          <Route path="complaints" element={<ComplaintsPage />} />
+          <Route path="my-tickets" element={<MyTicketsPage />} />
+          <Route path="profile" element={<ProfilePage />} />
+          <Route path="tickets/:ticketId" element={<TicketDetailPage />} />
+
+          <Route
+            path="staff"
+            element={
+              <ProtectedRoute allowedRoles={['staff', 'admin']}>
+                <StaffDashboard />
+              </ProtectedRoute>
+            }
+          >
+            <Route index element={<Navigate to="tickets" replace />} />
+            <Route path="tickets" element={<StaffTicketsPage />} />
+            <Route path="user-management" element={<StaffUserManagementPage />} />
+            <Route path="student-insights" element={<StaffStudentInsightsPage />} />
+            <Route path="ai-limits" element={<StaffAiLimitsPage />} />
+            <Route path="ticket-config" element={<StaffTicketConfigPage />} />
+            <Route path="pdf-maintenance" element={<StaffPdfMaintenancePage />} />
+          </Route>
         </Route>
-      </Route>
 
-      <Route
-        path="/ticket/:ticketId"
-        element={
-          <ProtectedRoute>
-            <TicketDetailPage />
-          </ProtectedRoute>
-        }
-      />
+        <Route
+          path="/ticket/:ticketId"
+          element={
+            <ProtectedRoute>
+              <TicketDetailPage />
+            </ProtectedRoute>
+          }
+        />
 
-      <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );

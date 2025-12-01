@@ -112,6 +112,11 @@ const User = {
     const result = await UserModel.deleteMany(query);
     return result;
   },
+
+  async updateRole(id, role) {
+    const result = await UserModel.findByIdAndUpdate(id, { role }, { new: true });
+    return result;
+  },
 };
 
 module.exports = User;

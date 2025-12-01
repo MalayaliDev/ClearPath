@@ -117,12 +117,23 @@ exports.getDiscordWebhook = async (req, res) => {
 
 exports.getAllUsers = async (req, res) => {
   try {
+    console.log('getAllUsers called, user:', req.user);
+    
     // Only allow staff and admin to view all users
-    if (!req.user?.id || !['staff', 'admin'].includes(req.user?.role)) {
-      return res.status(403).json({ success: false, message: 'Forbidden' });
+    if (!req.user?.id) {
+      console.warn('getAllUsers: No user ID');
+      return res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+    
+    if (!['staff', 'admin'].includes(req.user?.role)) {
+      console.warn('getAllUsers: User role not authorized:', req.user?.role);
+      return res.status(403).json({ success: false, message: 'Forbidden - staff or admin only' });
     }
 
+    console.log('Fetching all users...');
     const users = await User.findAll();
+    console.log('Found users:', users.length);
+    
     const formattedUsers = users.map((user) => ({
       id: user.id,
       name: user.name || 'Unknown',
@@ -136,6 +147,6 @@ exports.getAllUsers = async (req, res) => {
     res.json({ success: true, users: formattedUsers });
   } catch (error) {
     console.error('getAllUsers error', error);
-    res.status(500).json({ success: false, message: 'Failed to fetch users' });
+    res.status(500).json({ success: false, message: 'Failed to fetch users', error: error.message });
   }
 };

@@ -94,15 +94,18 @@ const User = {
 
   async findAll() {
     const docs = await UserModel.find({})
-      .select('name email role created_at')
+      .select('_id name email role created_at')
       .lean();
-    return docs.map((doc) => ({
-      id: doc._id.toString(),
-      name: doc.name,
-      email: doc.email,
-      role: doc.role,
-      createdAt: doc.created_at,
-    }));
+    return docs.map((doc) => {
+      console.log('Processing user doc:', doc);
+      return {
+        id: doc._id?.toString() || '',
+        name: doc.name || '',
+        email: doc.email || '',
+        role: doc.role || 'student',
+        createdAt: doc.created_at || new Date().toISOString(),
+      };
+    });
   },
 };
 

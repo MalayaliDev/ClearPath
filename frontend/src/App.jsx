@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import MainPage from './pages/MainPage.jsx';
+import { Analytics } from "@vercel/analytics/react";
 import AboutPage from './pages/AboutPage.jsx';
 import FeaturesPage from './pages/FeaturesPage.jsx';
 import StatsPage from './pages/StatsPage.jsx';

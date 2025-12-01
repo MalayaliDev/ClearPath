@@ -578,11 +578,11 @@ const callGroq = async (prompt) => {
     throw err;
   }
 
-  // Try multiple models in order
+  // Try multiple models in order (only currently available models)
   const models = [
     process.env.GROQ_MODEL || 'mixtral-8x7b-32768',
-    'llama-2-70b-chat',
-    'gemma-7b-it',
+    'llama-3.1-70b-versatile',
+    'llama-3.1-8b-instant',
   ];
 
   let lastError;

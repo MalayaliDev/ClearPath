@@ -114,3 +114,28 @@ exports.getDiscordWebhook = async (req, res) => {
     res.status(500).json({ success: false, message: 'Failed to fetch Discord webhook' });
   }
 };
+
+exports.getAllUsers = async (req, res) => {
+  try {
+    // Only allow staff and admin to view all users
+    if (!req.user?.id || !['staff', 'admin'].includes(req.user?.role)) {
+      return res.status(403).json({ success: false, message: 'Forbidden' });
+    }
+
+    const users = await User.find({}, { password: 0 }).lean();
+    const formattedUsers = users.map((user) => ({
+      id: user._id?.toString() || user.id,
+      name: user.name || 'Unknown',
+      email: user.email || '',
+      role: user.role || 'student',
+      createdAt: user.createdAt,
+      banned: user.banned || false,
+      blacklisted: user.blacklisted || false,
+    }));
+
+    res.json({ success: true, users: formattedUsers });
+  } catch (error) {
+    console.error('getAllUsers error', error);
+    res.status(500).json({ success: false, message: 'Failed to fetch users' });
+  }
+};

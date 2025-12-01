@@ -34,28 +34,38 @@ const formatChatDate = (iso) => {
 
 const renderMarkdownText = (text) => {
   if (!text) return text;
-  const parts = [];
-  let lastIndex = 0;
-  const regex = /\*\*([^*]+)\*\*/g;
-  let match;
+  
+  // Split by lines and process each line
+  const lines = text.split('\n');
+  
+  return lines.map((line, lineIdx) => {
+    const parts = [];
+    let lastIndex = 0;
+    const regex = /\*\*([^*]+)\*\*/g;
+    let match;
 
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.substring(lastIndex, match.index));
+    while ((match = regex.exec(line)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(line.substring(lastIndex, match.index));
+      }
+      parts.push(
+        <strong key={`bold-${lineIdx}-${match.index}`} className="font-bold text-slate-900">
+          {match[1]}
+        </strong>
+      );
+      lastIndex = regex.lastIndex;
     }
-    parts.push(
-      <strong key={`bold-${match.index}`} className="font-bold text-slate-900">
-        {match[1]}
-      </strong>
+
+    if (lastIndex < line.length) {
+      parts.push(line.substring(lastIndex));
+    }
+
+    return (
+      <div key={`line-${lineIdx}`}>
+        {parts.length > 0 ? parts : line}
+      </div>
     );
-    lastIndex = regex.lastIndex;
-  }
-
-  if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex));
-  }
-
-  return parts.length > 0 ? parts : text;
+  });
 };
 
 export default function PdfLab() {
@@ -668,9 +678,9 @@ export default function PdfLab() {
                         <span>Study AI</span>
                         <span>{formatChatTimestamp(entry.timestamp)}</span>
                       </div>
-                      <p className="mt-2 whitespace-pre-wrap text-base leading-relaxed">
+                      <div className="mt-2 text-base leading-relaxed space-y-0">
                         {renderMarkdownText(entry.answer)}
-                      </p>
+                      </div>
                     </div>
                   </div>
                 </div>

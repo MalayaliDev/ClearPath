@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import { BookOpen, FileText, Loader2, MessageSquare, Send, Sparkles, Trash2, UploadCloud } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
 import { getToken } from '../services/authStorage.js';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
@@ -31,6 +30,32 @@ const formatChatTimestamp = (iso) => {
 const formatChatDate = (iso) => {
   if (!iso) return '';
   return new Date(iso).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+};
+
+const renderMarkdownText = (text) => {
+  if (!text) return text;
+  const parts = [];
+  let lastIndex = 0;
+  const regex = /\*\*([^*]+)\*\*/g;
+  let match;
+
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    parts.push(
+      <strong key={`bold-${match.index}`} className="font-bold text-slate-900">
+        {match[1]}
+      </strong>
+    );
+    lastIndex = regex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
 };
 
 export default function PdfLab() {
@@ -643,23 +668,9 @@ export default function PdfLab() {
                         <span>Study AI</span>
                         <span>{formatChatTimestamp(entry.timestamp)}</span>
                       </div>
-                      <div className="mt-2 text-base leading-relaxed [&_strong]:font-bold [&_strong]:text-slate-900">
-                        <ReactMarkdown
-                          components={{
-                            p: ({ node, ...props }) => <p className="mb-2" {...props} />,
-                            strong: ({ node, ...props }) => <strong className="font-bold text-slate-900" {...props} />,
-                            em: ({ node, ...props }) => <em className="italic" {...props} />,
-                            ul: ({ node, ...props }) => <ul className="list-disc list-inside mb-2" {...props} />,
-                            ol: ({ node, ...props }) => <ol className="list-decimal list-inside mb-2" {...props} />,
-                            li: ({ node, ...props }) => <li className="mb-1" {...props} />,
-                            h1: ({ node, ...props }) => <h1 className="text-lg font-bold mb-2" {...props} />,
-                            h2: ({ node, ...props }) => <h2 className="text-base font-bold mb-2" {...props} />,
-                            h3: ({ node, ...props }) => <h3 className="text-sm font-bold mb-1" {...props} />,
-                          }}
-                        >
-                          {entry.answer}
-                        </ReactMarkdown>
-                      </div>
+                      <p className="mt-2 whitespace-pre-wrap text-base leading-relaxed">
+                        {renderMarkdownText(entry.answer)}
+                      </p>
                     </div>
                   </div>
                 </div>

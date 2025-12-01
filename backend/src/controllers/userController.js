@@ -137,7 +137,7 @@ exports.getAllUsers = async (req, res) => {
     const formattedUsers = users.map((user) => {
       const formatted = {
         id: user.id || '',
-        name: user.name && user.name.trim() ? user.name : 'Unknown User',
+        name: (user.name && user.name.trim()) ? user.name : (user.email || 'Unknown User'),
         email: user.email || '',
         role: user.role || 'student',
         createdAt: user.createdAt,

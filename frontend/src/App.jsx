@@ -1,6 +1,5 @@
 import React from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
-import { Analytics } from '@vercel/analytics/react';
 import MainPage from './pages/MainPage.jsx';
 import AboutPage from './pages/AboutPage.jsx';
 import FeaturesPage from './pages/FeaturesPage.jsx';
@@ -47,9 +46,7 @@ function ProtectedRoute({ children, allowedRoles }) {
 
 export default function App() {
   return (
-    <>
-      <Analytics />
-      <Routes>
+    <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
@@ -105,7 +102,6 @@ export default function App() {
       />
 
       <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
-    </>
+    </Routes>
   );
 }

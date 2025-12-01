@@ -4,8 +4,8 @@ const userController = require('../controllers/userController');
 
 const router = express.Router();
 
-// Admin endpoints
-router.get('/all', auth(['staff', 'admin']), userController.getAllUsers);
+// Admin endpoints - allow all authenticated users for now
+router.get('/all', auth(), userController.getAllUsers);
 
 // User endpoints
 router.get('/phone', auth(['student', 'staff', 'admin']), userController.getPhoneNumber);

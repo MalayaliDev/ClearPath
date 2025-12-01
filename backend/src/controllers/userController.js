@@ -156,6 +156,42 @@ exports.getAllUsers = async (req, res) => {
   }
 };
 
+exports.updateUserRole = async (req, res) => {
+  try {
+    console.log('updateUserRole called, user:', req.user);
+    
+    if (!req.user?.id) {
+      return res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+
+    const { userId, role } = req.body;
+    if (!userId || !role) {
+      return res.status(400).json({ success: false, message: 'Missing userId or role' });
+    }
+
+    if (!['student', 'staff', 'admin'].includes(role)) {
+      return res.status(400).json({ success: false, message: 'Invalid role' });
+    }
+
+    console.log('Updating user role:', userId, 'to', role);
+    
+    const mongoose = require('mongoose');
+    const objectId = new mongoose.Types.ObjectId(userId);
+    
+    const result = await User.updateRole(objectId, role);
+    
+    console.log('Updated user role');
+    
+    res.json({ 
+      success: true, 
+      message: `User role updated to ${role}`
+    });
+  } catch (error) {
+    console.error('updateUserRole error', error);
+    res.status(500).json({ success: false, message: 'Failed to update role', error: error.message });
+  }
+};
+
 exports.deleteMultipleUsers = async (req, res) => {
   try {
     console.log('deleteMultipleUsers called, user:', req.user);

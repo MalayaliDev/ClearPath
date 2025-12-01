@@ -11,6 +11,7 @@ export default function StaffUserManagementPage() {
   const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState('');
   const [lastAction, setLastAction] = useState('No actions yet');
+  const [tempPasswords, setTempPasswords] = useState({});
 
   useEffect(() => {
     fetchUsers();
@@ -117,6 +118,37 @@ export default function StaffUserManagementPage() {
     }
   };
 
+  const generateTempPassword = (id) => {
+    const tempPass = Math.random().toString(36).slice(-8).toUpperCase();
+    setTempPasswords((prev) => ({
+      ...prev,
+      [id]: tempPass,
+    }));
+    setLastAction(`Temp password generated for user`);
+  };
+
+  const handleMakeAdmin = async (id) => {
+    try {
+      setError('');
+      const user = managedUsers.find((u) => u.id === id);
+      const newRole = user?.role === 'admin' ? 'student' : 'admin';
+
+      await axios.post(
+        `${API_BASE}/api/user/update-role`,
+        { userId: id, role: newRole },
+        { withCredentials: true }
+      );
+
+      setManagedUsers((prev) =>
+        prev.map((u) => (u.id === id ? { ...u, role: newRole } : u))
+      );
+      setLastAction(`User role changed to ${newRole}`);
+    } catch (err) {
+      console.error('Error updating role:', err);
+      setError(err.response?.data?.message || 'Failed to update role');
+    }
+  };
+
   return (
     <div className="space-y-5">
       <div className="rounded-2xl border border-slate-100 bg-white/90 p-4 text-sm text-slate-600">
@@ -216,30 +248,57 @@ export default function StaffUserManagementPage() {
                     </span>
                   </td>
                   <td className="px-4 py-3">
-                    <div className="flex flex-wrap gap-2">
-                      <button
-                        type="button"
-                        onClick={() => handleResetPassword(id)}
-                        className="inline-flex items-center rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white hover:bg-orange-600 transition"
-                      >
-                        Reset
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => toggleFlag(id, 'banned')}
-                        className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold transition ${
-                          banned ? 'border-rose-200 bg-rose-50 text-rose-600' : 'border-slate-200 bg-white text-slate-600'
-                        }`}
-                      >
-                        {banned ? 'Unban' : 'Ban'}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => toggleUserSelection(id)}
-                        className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-600 hover:bg-rose-100 transition"
-                      >
-                        Delete
-                      </button>
+                    <div className="space-y-2">
+                      <div className="flex flex-wrap gap-2">
+                        <input
+                          type="text"
+                          placeholder="Temp password"
+                          value={tempPasswords[id] || ''}
+                          readOnly
+                          className="rounded border border-slate-300 px-2 py-1 text-xs bg-slate-50"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => generateTempPassword(id)}
+                          className="inline-flex items-center rounded border border-slate-300 bg-white px-2 py-1 text-xs font-semibold text-slate-600 hover:bg-slate-50 transition"
+                        >
+                          Generate
+                        </button>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={() => handleResetPassword(id)}
+                          className="inline-flex items-center rounded-full bg-orange-500 px-3 py-1 text-xs font-semibold text-white hover:bg-orange-600 transition"
+                        >
+                          Reset
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleMakeAdmin(id)}
+                          className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold transition ${
+                            role === 'admin' ? 'border-purple-200 bg-purple-50 text-purple-600' : 'border-slate-200 bg-white text-slate-600'
+                          }`}
+                        >
+                          {role === 'admin' ? 'Remove Admin' : 'Make Admin'}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => toggleFlag(id, 'banned')}
+                          className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-semibold transition ${
+                            banned ? 'border-rose-200 bg-rose-50 text-rose-600' : 'border-slate-200 bg-white text-slate-600'
+                          }`}
+                        >
+                          {banned ? 'Unban' : 'Ban'}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => toggleUserSelection(id)}
+                          className="inline-flex items-center rounded-full border border-rose-200 bg-rose-50 px-3 py-1 text-xs font-semibold text-rose-600 hover:bg-rose-100 transition"
+                        >
+                          Delete
+                        </button>
+                      </div>
                     </div>
                   </td>
                 </tr>

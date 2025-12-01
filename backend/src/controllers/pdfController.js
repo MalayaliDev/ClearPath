@@ -314,13 +314,13 @@ const buildFallbackSummary = (context, question) => {
     .map((line, idx) => `Q${idx + 1}: ${truncate(line, 180)}`);
 
   return [
-    'Highlights from your PDF:',
+    '**Highlights from your PDF:**',
     ...highlightItems,
     '',
-    'Formula / data nuggets:',
+    '**Formula / data nuggets:**',
     formulaHints.length ? formulaHints.join('\n') : '• Not enough formula-heavy sections detected in this excerpt.',
     '',
-    'Suggested quick questions:',
+    '**Suggested quick questions:**',
     suggestions.join('\n'),
     '',
     `Prompt: ${question || 'General summary'}`,

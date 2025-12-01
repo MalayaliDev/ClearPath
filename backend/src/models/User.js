@@ -91,6 +91,19 @@ const User = {
     const doc = await UserModel.findById(id).select('discord_webhook_masked').lean();
     return doc?.discord_webhook_masked || '';
   },
+
+  async findAll() {
+    const docs = await UserModel.find({})
+      .select('name email role created_at')
+      .lean();
+    return docs.map((doc) => ({
+      id: doc._id.toString(),
+      name: doc.name,
+      email: doc.email,
+      role: doc.role,
+      createdAt: doc.created_at,
+    }));
+  },
 };
 
 module.exports = User;

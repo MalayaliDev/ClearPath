@@ -107,6 +107,11 @@ const User = {
       };
     });
   },
+
+  async deleteMany(query) {
+    const result = await UserModel.deleteMany(query);
+    return result;
+  },
 };
 
 module.exports = User;

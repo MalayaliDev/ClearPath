@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import axios from 'axios';
 import { BookOpen, FileText, Loader2, MessageSquare, Send, Sparkles, Trash2, UploadCloud } from 'lucide-react';
+import ReactMarkdown from 'react-markdown';
 import { getToken } from '../services/authStorage.js';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
@@ -642,7 +643,9 @@ export default function PdfLab() {
                         <span>Study AI</span>
                         <span>{formatChatTimestamp(entry.timestamp)}</span>
                       </div>
-                      <p className="mt-2 whitespace-pre-wrap text-base leading-relaxed">{entry.answer}</p>
+                      <div className="mt-2 text-base leading-relaxed prose prose-sm max-w-none">
+                        <ReactMarkdown>{entry.answer}</ReactMarkdown>
+                      </div>
                     </div>
                   </div>
                 </div>

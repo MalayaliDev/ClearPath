@@ -18,10 +18,13 @@ export default function StaffUserManagementPage() {
     try {
       setLoading(true);
       setError('');
+      console.log('Fetching users from:', `${API_BASE}/api/user/all`);
       const response = await axios.get(`${API_BASE}/api/user/all`, {
         withCredentials: true,
       });
+      console.log('Users response:', response.data);
       const users = response.data.users || [];
+      console.log('Setting managed users:', users);
       setManagedUsers(
         users.map((user) => ({
           ...user,
@@ -30,8 +33,9 @@ export default function StaffUserManagementPage() {
         }))
       );
     } catch (err) {
-      console.error(err);
-      setError(err.response?.data?.message || 'Failed to load users');
+      console.error('Error fetching users:', err);
+      console.error('Error response:', err.response?.data);
+      setError(err.response?.data?.message || err.message || 'Failed to load users');
     } finally {
       setLoading(false);
     }

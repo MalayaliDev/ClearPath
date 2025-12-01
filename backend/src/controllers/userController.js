@@ -122,15 +122,15 @@ exports.getAllUsers = async (req, res) => {
       return res.status(403).json({ success: false, message: 'Forbidden' });
     }
 
-    const users = await User.find({}, { password: 0 }).lean();
+    const users = await User.findAll();
     const formattedUsers = users.map((user) => ({
-      id: user._id?.toString() || user.id,
+      id: user.id,
       name: user.name || 'Unknown',
       email: user.email || '',
       role: user.role || 'student',
       createdAt: user.createdAt,
-      banned: user.banned || false,
-      blacklisted: user.blacklisted || false,
+      banned: false,
+      blacklisted: false,
     }));
 
     res.json({ success: true, users: formattedUsers });

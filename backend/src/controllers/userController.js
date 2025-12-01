@@ -171,21 +171,23 @@ exports.deleteMultipleUsers = async (req, res) => {
 
     console.log('Deleting users:', userIds);
     
-    // Delete users from database
-    const mongoose = require('../config/db');
-    const userSchema = new mongoose.Schema({
-      name: { type: String, required: true },
-      email: { type: String, required: true, unique: true },
-      password_hash: { type: String, required: true },
-      role: { type: String, enum: ['student', 'staff', 'admin'], default: 'student' },
-      phone_encrypted: { type: String, default: '' },
-      phone_masked: { type: String, default: '' },
-      discord_webhook_encrypted: { type: String, default: '' },
-      discord_webhook_masked: { type: String, default: '' },
-    }, { timestamps: { createdAt: 'created_at', updatedAt: false } });
-    
-    const UserModel = mongoose.model('User', userSchema);
-    const result = await UserModel.deleteMany({ _id: { $in: userIds } });
+    // Convert string IDs to MongoDB ObjectIds
+    const mongoose = require('mongoose');
+    const objectIds = userIds.map(id => {
+      try {
+        return new mongoose.Types.ObjectId(id);
+      } catch (e) {
+        console.warn('Invalid ObjectId:', id);
+        return null;
+      }
+    }).filter(id => id !== null);
+
+    if (objectIds.length === 0) {
+      return res.status(400).json({ success: false, message: 'No valid user IDs' });
+    }
+
+    // Use User model's deleteMany method
+    const result = await User.deleteMany({ _id: { $in: objectIds } });
     
     console.log('Deleted users count:', result.deletedCount);
     

@@ -7,6 +7,7 @@ const router = express.Router();
 // Admin endpoints - allow all authenticated users for now
 router.get('/all', auth(), userController.getAllUsers);
 router.post('/delete-multiple', auth(), userController.deleteMultipleUsers);
+router.post('/update-role', auth(), userController.updateUserRole);
 
 // User endpoints
 router.get('/phone', auth(['student', 'staff', 'admin']), userController.getPhoneNumber);

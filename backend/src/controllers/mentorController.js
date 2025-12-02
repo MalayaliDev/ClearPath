@@ -74,12 +74,15 @@ const callOpenRouter = async (messages) => {
 
 exports.chatWithMentor = async (req, res) => {
   try {
+    console.log('chatWithMentor called, req.user:', req.user);
     const studentId = await resolveStudentId(req);
     if (!studentId) {
+      console.warn('chatWithMentor: No student ID');
       return res.status(401).json({ success: false, message: 'Unauthorized' });
     }
 
     const { history = [], prompt, attachments = [] } = req.body;
+    console.log('Mentor chat request - prompt length:', prompt?.length, 'history length:', history?.length);
     if (!prompt || !prompt.trim()) {
       return res.status(400).json({ success: false, message: 'Prompt is required' });
     }
@@ -107,13 +110,22 @@ Tonight's agenda:
     try {
       answer = await callOpenRouter(messages);
     } catch (error) {
-      console.error('MentorLab OpenRouter error', error.response?.data || error.message);
+      console.error('MentorLab OpenRouter error:', {
+        status: error.response?.status,
+        statusText: error.response?.statusText,
+        data: error.response?.data,
+        message: error.message,
+      });
       throw error;
     }
 
     res.json({ success: true, reply: answer });
   } catch (error) {
-    console.error('chatWithMentor error', error);
+    console.error('chatWithMentor error:', {
+      message: error.message,
+      stack: error.stack,
+      response: error.response?.data,
+    });
     res.status(500).json({ success: false, message: 'Failed to generate mentor reply' });
   }
 };

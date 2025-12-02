@@ -28,6 +28,7 @@ import StaffStudentInsightsPage from './pages/staff/StaffStudentInsightsPage.jsx
 import StaffAiLimitsPage from './pages/staff/StaffAiLimitsPage.jsx';
 import StaffTicketConfigPage from './pages/staff/StaffTicketConfigPage.jsx';
 import StaffPdfMaintenancePage from './pages/staff/StaffPdfMaintenancePage.jsx';
+import BannedPage from './pages/BannedPage.jsx';
 
 function ProtectedRoute({ children, allowedRoles }) {
   const user = getStoredUser();
@@ -35,6 +36,10 @@ function ProtectedRoute({ children, allowedRoles }) {
 
   if (!user) {
     return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  if (user.isBanned) {
+    return <Navigate to="/banned" replace />;
   }
 
   if (allowedRoles && !allowedRoles.includes(user.role)) {
@@ -55,6 +60,15 @@ export default function App() {
       <Route path="/features" element={<FeaturesPage />} />
       <Route path="/stats" element={<StatsPage />} />
       <Route path="/support" element={<SupportPage />} />
+      <Route path="/banned" element={<BannedPage />} />
+      <Route
+        path="/create-ticket"
+        element={
+          <ProtectedRoute>
+            <CreateTicketPage />
+          </ProtectedRoute>
+        }
+      />
 
       <Route
         path="/app"
@@ -73,7 +87,6 @@ export default function App() {
         <Route path="study-lab" element={<StudyLab />} />
         <Route path="complaints" element={<ComplaintsPage />} />
         <Route path="tickets" element={<MyTicketsPage />} />
-        <Route path="create-ticket" element={<CreateTicketPage />} />
         <Route path="my-tickets" element={<MyTicketsPage />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="tickets/:ticketId" element={<TicketDetailPage />} />

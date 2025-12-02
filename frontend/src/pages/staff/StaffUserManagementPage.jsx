@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ShieldBan, RefreshCw, UserX, Bell, MessageCircle, Loader2, Trash2 } from 'lucide-react';
-import { getToken } from '../../services/authStorage.js';
+import { getToken, getStoredUser, updateStoredUser } from '../../services/authStorage.js';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -49,11 +49,41 @@ export default function StaffUserManagementPage() {
     }
   };
 
-  const toggleFlag = (id, field) => {
-    setManagedUsers((prev) =>
-      prev.map((user) => (user.id === id ? { ...user, [field]: !user[field] } : user))
-    );
-    setLastAction(`${field} toggled for ${id}`);
+  const toggleFlag = async (id, field) => {
+    try {
+      setError('');
+      const token = getToken();
+      const currentUser = getStoredUser();
+      const user = managedUsers.find((u) => u.id === id);
+      const newValue = !user?.[field];
+
+      // Send to backend
+      await axios.post(
+        `${API_BASE}/api/user/toggle-flag`,
+        { userId: id, field, value: newValue },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          withCredentials: true,
+        }
+      );
+
+      // Update UI
+      setManagedUsers((prev) =>
+        prev.map((user) => (user.id === id ? { ...user, [field]: newValue } : user))
+      );
+
+      // If banning the current user, update localStorage
+      if (field === 'banned' && id === currentUser?.id) {
+        updateStoredUser({ isBanned: newValue });
+      }
+
+      setLastAction(`${field} ${newValue ? 'enabled' : 'disabled'} for user`);
+    } catch (err) {
+      console.error('Error toggling flag:', err);
+      setError(err.response?.data?.message || `Failed to toggle ${field}`);
+    }
   };
 
   const handleResetPassword = (id) => {

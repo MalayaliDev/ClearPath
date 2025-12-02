@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { ShieldBan, RefreshCw, UserX, Bell, MessageCircle, Loader2, Trash2 } from 'lucide-react';
+import { getToken } from '../../services/authStorage.js';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
@@ -21,8 +22,12 @@ export default function StaffUserManagementPage() {
     try {
       setLoading(true);
       setError('');
+      const token = getToken();
       console.log('Fetching users from:', `${API_BASE}/api/user/all`);
       const response = await axios.get(`${API_BASE}/api/user/all`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
         withCredentials: true,
       });
       console.log('Users response:', response.data);
@@ -97,13 +102,19 @@ export default function StaffUserManagementPage() {
     try {
       setDeleting(true);
       setError('');
+      const token = getToken();
       const userIds = Array.from(selectedUsers);
       console.log('Deleting users:', userIds);
 
       const response = await axios.post(
         `${API_BASE}/api/user/delete-multiple`,
         { userIds },
-        { withCredentials: true }
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          withCredentials: true,
+        }
       );
 
       console.log('Delete response:', response.data);
@@ -130,13 +141,19 @@ export default function StaffUserManagementPage() {
   const handleMakeAdmin = async (id) => {
     try {
       setError('');
+      const token = getToken();
       const user = managedUsers.find((u) => u.id === id);
       const newRole = user?.role === 'admin' ? 'student' : 'admin';
 
       await axios.post(
         `${API_BASE}/api/user/update-role`,
         { userId: id, role: newRole },
-        { withCredentials: true }
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+          withCredentials: true,
+        }
       );
 
       setManagedUsers((prev) =>

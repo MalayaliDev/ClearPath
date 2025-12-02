@@ -9,5 +9,7 @@ uploads/
 node_modules/
 .env
 .env.local
+backend/.env
+frontend/.env
 dist/
 build/

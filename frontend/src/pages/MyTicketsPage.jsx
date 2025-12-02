@@ -105,7 +105,7 @@ export default function MyTicketsPage() {
                 <RefreshCcw className="h-4 w-4" /> Refresh
               </button>
               <Link
-                to="/support"
+                to="/create-ticket"
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-amber-200/70"
               >
                 <LifeBuoy className="h-4 w-4" /> Create ticket

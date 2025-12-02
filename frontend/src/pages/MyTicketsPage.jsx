@@ -105,7 +105,7 @@ export default function MyTicketsPage() {
                 <RefreshCcw className="h-4 w-4" /> Refresh
               </button>
               <Link
-                to="/support"
+                to="/create-ticket"
                 className="inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-500 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-amber-200/70"
               >
                 <LifeBuoy className="h-4 w-4" /> Create ticket
@@ -137,7 +137,7 @@ export default function MyTicketsPage() {
             ) : tickets.length === 0 ? (
               <div className="rounded-[28px] border border-dashed border-amber-200 bg-amber-50/60 p-8 text-center text-sm text-amber-700">
                 No tickets yet.{' '}
-                <Link to="/support" className="font-semibold underline">
+                <Link to="/create-ticket" className="font-semibold underline">
                   Create one
                 </Link>{' '}
                 to get mentor support fast.

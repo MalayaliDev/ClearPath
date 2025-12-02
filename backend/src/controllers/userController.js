@@ -129,6 +129,11 @@ exports.getAllUsers = async (req, res) => {
     console.log('Found users:', users.length);
     console.log('Raw users data:', JSON.stringify(users, null, 2));
     
+    // Log each user's name field
+    users.forEach((u, idx) => {
+      console.log(`User ${idx}: id=${u.id}, name="${u.name}", email=${u.email}`);
+    });
+    
     if (!users || users.length === 0) {
       console.warn('No users found in database');
       return res.json({ success: true, users: [] });

@@ -21,30 +21,15 @@ const allowedOrigins = [
 // ============================================
 // CORS MIDDLEWARE - MUST BE FIRST
 // ============================================
-app.use(cors({
-  origin: function (origin, callback) {
-    console.log('CORS origin check:', origin);
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+const corsOptions = {
+  origin: allowedOrigins,
   credentials: true,
   methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
   maxAge: 86400,
-}));
+};
 
-// Additional CORS headers for safety
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  if (origin && allowedOrigins.includes(origin)) {
-    res.header('Access-Control-Allow-Origin', origin);
-    res.header('Access-Control-Allow-Credentials', 'true');
-  }
-  next();
-});
+app.use(cors(corsOptions));
 
 // ============================================
 // BODY PARSERS

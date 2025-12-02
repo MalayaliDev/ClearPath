@@ -114,3 +114,131 @@ exports.getDiscordWebhook = async (req, res) => {
     res.status(500).json({ success: false, message: 'Failed to fetch Discord webhook' });
   }
 };
+
+exports.getAllUsers = async (req, res) => {
+  try {
+    console.log('getAllUsers called, user:', req.user);
+    
+    if (!req.user?.id) {
+      console.warn('getAllUsers: No user ID');
+      return res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+
+    console.log('Fetching all users from database...');
+    const users = await User.findAll();
+    console.log('Found users:', users.length);
+    console.log('Raw users data:', JSON.stringify(users, null, 2));
+    
+    // Log each user's name field
+    users.forEach((u, idx) => {
+      console.log(`User ${idx}: id=${u.id}, name="${u.name}", email=${u.email}`);
+    });
+    
+    if (!users || users.length === 0) {
+      console.warn('No users found in database');
+      return res.json({ success: true, users: [] });
+    }
+    
+    const formattedUsers = users.map((user) => {
+      const formatted = {
+        id: user.id || '',
+        name: (user.name && user.name.trim()) ? user.name : (user.email || 'Unknown User'),
+        email: user.email || '',
+        role: user.role || 'student',
+        createdAt: user.createdAt,
+        banned: false,
+        blacklisted: false,
+      };
+      console.log('Formatted user:', formatted);
+      return formatted;
+    });
+
+    console.log('Returning formatted users count:', formattedUsers.length);
+    res.json({ success: true, users: formattedUsers });
+  } catch (error) {
+    console.error('getAllUsers error', error);
+    res.status(500).json({ success: false, message: 'Failed to fetch users', error: error.message });
+  }
+};
+
+exports.updateUserRole = async (req, res) => {
+  try {
+    console.log('updateUserRole called, user:', req.user);
+    
+    if (!req.user?.id) {
+      return res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+
+    const { userId, role } = req.body;
+    if (!userId || !role) {
+      return res.status(400).json({ success: false, message: 'Missing userId or role' });
+    }
+
+    if (!['student', 'staff', 'admin'].includes(role)) {
+      return res.status(400).json({ success: false, message: 'Invalid role' });
+    }
+
+    console.log('Updating user role:', userId, 'to', role);
+    
+    const mongoose = require('mongoose');
+    const objectId = new mongoose.Types.ObjectId(userId);
+    
+    const result = await User.updateRole(objectId, role);
+    
+    console.log('Updated user role');
+    
+    res.json({ 
+      success: true, 
+      message: `User role updated to ${role}`
+    });
+  } catch (error) {
+    console.error('updateUserRole error', error);
+    res.status(500).json({ success: false, message: 'Failed to update role', error: error.message });
+  }
+};
+
+exports.deleteMultipleUsers = async (req, res) => {
+  try {
+    console.log('deleteMultipleUsers called, user:', req.user);
+    
+    if (!req.user?.id) {
+      return res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+
+    const { userIds } = req.body;
+    if (!userIds || !Array.isArray(userIds) || userIds.length === 0) {
+      return res.status(400).json({ success: false, message: 'No user IDs provided' });
+    }
+
+    console.log('Deleting users:', userIds);
+    
+    // Convert string IDs to MongoDB ObjectIds
+    const mongoose = require('mongoose');
+    const objectIds = userIds.map(id => {
+      try {
+        return new mongoose.Types.ObjectId(id);
+      } catch (e) {
+        console.warn('Invalid ObjectId:', id);
+        return null;
+      }
+    }).filter(id => id !== null);
+
+    if (objectIds.length === 0) {
+      return res.status(400).json({ success: false, message: 'No valid user IDs' });
+    }
+
+    // Use User model's deleteMany method
+    const result = await User.deleteMany({ _id: { $in: objectIds } });
+    
+    console.log('Deleted users count:', result.deletedCount);
+    
+    res.json({ 
+      success: true, 
+      message: `Deleted ${result.deletedCount} user(s)`,
+      deletedCount: result.deletedCount 
+    });
+  } catch (error) {
+    console.error('deleteMultipleUsers error', error);
+    res.status(500).json({ success: false, message: 'Failed to delete users', error: error.message });
+  }
+};

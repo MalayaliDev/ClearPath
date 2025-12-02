@@ -84,7 +84,7 @@ ensureUploadDir();
 
 const metadataPath = (fileId) => path.join(UPLOAD_DIR, `${fileId}.json`);
 const textPath = (fileId) => path.join(UPLOAD_DIR, `${fileId}.txt`);
-const FALLBACK_NOTICE = '\n\n⚠️ Generated locally because the AI service was unavailable.';
+const FALLBACK_NOTICE = '';
 const safeUnlink = (filePath) => {
   try {
     if (filePath && fs.existsSync(filePath)) {
@@ -314,13 +314,13 @@ const buildFallbackSummary = (context, question) => {
     .map((line, idx) => `Q${idx + 1}: ${truncate(line, 180)}`);
 
   return [
-    'Highlights from your PDF:',
+    '**Highlights from your PDF:**',
     ...highlightItems,
     '',
-    'Formula / data nuggets:',
+    '**Formula / data nuggets:**',
     formulaHints.length ? formulaHints.join('\n') : '• Not enough formula-heavy sections detected in this excerpt.',
     '',
-    'Suggested quick questions:',
+    '**Suggested quick questions:**',
     suggestions.join('\n'),
     '',
     `Prompt: ${question || 'General summary'}`,
@@ -531,7 +531,9 @@ const readRecentUploads = async (limit = 5, studentId = null) => {
 
 const callOpenRouter = async (prompt) => {
   if (!process.env.OPENROUTER_API_KEY) {
-    throw new Error('OPENROUTER_API_KEY missing');
+    const err = new Error('OPENROUTER_API_KEY missing');
+    err.response = { status: 503 }; // Service unavailable
+    throw err;
   }
 
   const payload = {
@@ -540,7 +542,7 @@ const callOpenRouter = async (prompt) => {
       {
         role: 'system',
         content:
-          'You are a friendly study mentor. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing.',
+          'You are a friendly study mentor. IMPORTANT: Always respond in English only. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing. Do not translate or use any other language.',
       },
       {
         role: 'user',
@@ -571,42 +573,66 @@ const callOpenRouter = async (prompt) => {
 
 const callGroq = async (prompt) => {
   if (!process.env.GROQ_API_KEY) {
-    throw new Error('GROQ_API_KEY missing');
+    const err = new Error('GROQ_API_KEY missing');
+    err.response = { status: 503 }; // Service unavailable
+    throw err;
   }
 
-  const payload = {
-    model: process.env.GROQ_MODEL || 'llama3-8b-8192',
-    temperature: 0.2,
-    messages: [
-      {
-        role: 'system',
-        content:
-          'You are a friendly study mentor. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing.',
-      },
-      {
-        role: 'user',
-        content: prompt,
-      },
-    ],
-  };
+  // Try multiple models in order (only currently available models)
+  const models = [
+    process.env.GROQ_MODEL || 'mixtral-8x7b-32768',
+    'llama-3.1-70b-versatile',
+    'llama-3.1-8b-instant',
+  ];
 
-  const response = await axios.post(
-    `${process.env.GROQ_BASE_URL || 'https://api.groq.com/openai/v1'}/chat/completions`,
-    payload,
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
+  let lastError;
+  for (const model of models) {
+    try {
+      const payload = {
+        model,
+        temperature: 0.2,
+        messages: [
+          {
+            role: 'system',
+            content:
+              'You are a friendly study mentor. IMPORTANT: Always respond in English only. Prefer using the provided PDF excerpt, but if it does not contain the requested info, clearly say so and immediately offer actionable general study advice instead of refusing. Do not translate or use any other language.',
+          },
+          {
+            role: 'user',
+            content: prompt,
+          },
+        ],
+      };
+
+      const response = await axios.post(
+        `${process.env.GROQ_BASE_URL || 'https://api.groq.com/openai/v1'}/chat/completions`,
+        payload,
+        {
+          headers: {
+            Authorization: `Bearer ${process.env.GROQ_API_KEY}`,
+            'Content-Type': 'application/json',
+            'User-Agent': 'ClearPath/1.0',
+          },
+          timeout: 30000,
+        }
+      );
+
+      const message = response.data?.choices?.[0]?.message?.content;
+      if (!message) {
+        throw new Error('Groq returned an empty response');
+      }
+
+      console.log(`✅ Groq model ${model} succeeded`);
+      return message;
+    } catch (err) {
+      lastError = err;
+      console.warn(`⚠️ Groq model ${model} failed:`, err.response?.data?.error?.message || err.message);
+      // Continue to next model
     }
-  );
-
-  const message = response.data?.choices?.[0]?.message?.content;
-  if (!message) {
-    throw new Error('Groq returned an empty response');
   }
 
-  return message;
+  // All models failed
+  throw lastError || new Error('All Groq models failed');
 };
 
 exports.uploadPdf = async (req, res) => {
@@ -624,7 +650,16 @@ exports.uploadPdf = async (req, res) => {
     const fileBuffer = await readFileAsync(req.file.path);
     const parsed = await pdfParse(fileBuffer);
 
-    await writeFileAsync(textPath(fileId), parsed.text || '');
+    // Clean up extracted text - fix encoding issues
+    let extractedText = parsed.text || '';
+    // Remove corrupted characters and normalize whitespace
+    extractedText = extractedText
+      .replace(/[\u0080-\u009F]/g, '') // Remove control characters
+      .replace(/[\uFFF0-\uFFFF]/g, '') // Remove invalid Unicode
+      .replace(/\s+/g, ' ') // Normalize whitespace
+      .trim();
+
+    await writeFileAsync(textPath(fileId), extractedText);
 
     const metadata = {
       id: fileId,
@@ -677,6 +712,7 @@ Instructions:
 Question: ${requestedQuestion}`;
 
     let answer;
+    
     try {
       answer = await callOpenRouter(prompt);
     } catch (err) {
@@ -684,7 +720,7 @@ Question: ${requestedQuestion}`;
         throw err;
       }
 
-      console.warn('OpenRouter unavailable for analyzePdf. Trying Groq.', err.response?.status);
+      console.warn('OpenRouter unavailable. Trying Groq.', err.response?.status);
 
       try {
         answer = await callGroq(prompt);
@@ -693,7 +729,7 @@ Question: ${requestedQuestion}`;
           throw groqErr;
         }
 
-        console.warn('Groq unavailable for analyzePdf. Using fallback summary.', groqErr.response?.status);
+        console.warn('All AI services unavailable. Using fallback summary.');
         const fallback = buildFallbackSummary(snippet, requestedQuestion);
         answer = `${fallback}${FALLBACK_NOTICE}`;
       }
@@ -777,6 +813,7 @@ Instructions:
 Question: ${trimmedQuestion}`;
 
     let answer;
+    
     try {
       answer = await callOpenRouter(prompt);
     } catch (err) {
@@ -784,7 +821,7 @@ Question: ${trimmedQuestion}`;
         throw err;
       }
 
-      console.warn('OpenRouter unavailable for askPdf. Trying Groq.', err.response?.status);
+      console.warn('OpenRouter unavailable. Trying Groq.', err.response?.status);
 
       try {
         answer = await callGroq(prompt);
@@ -793,7 +830,7 @@ Question: ${trimmedQuestion}`;
           throw groqErr;
         }
 
-        console.warn('Groq unavailable for askPdf. Using fallback answer.', groqErr.response?.status);
+        console.warn('All AI services unavailable. Using fallback answer.');
         const fallback = buildFallbackAnswer(snippet, trimmedQuestion);
         answer = `${fallback}${FALLBACK_NOTICE}`;
       }

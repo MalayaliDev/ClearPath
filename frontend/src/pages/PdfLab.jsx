@@ -32,6 +32,42 @@ const formatChatDate = (iso) => {
   return new Date(iso).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
 };
 
+const renderMarkdownText = (text) => {
+  if (!text) return text;
+  
+  // Split by lines and process each line
+  const lines = text.split('\n');
+  
+  return lines.map((line, lineIdx) => {
+    const parts = [];
+    let lastIndex = 0;
+    const regex = /\*\*([^*]+)\*\*/g;
+    let match;
+
+    while ((match = regex.exec(line)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(line.substring(lastIndex, match.index));
+      }
+      parts.push(
+        <strong key={`bold-${lineIdx}-${match.index}`} className="font-bold text-slate-900">
+          {match[1]}
+        </strong>
+      );
+      lastIndex = regex.lastIndex;
+    }
+
+    if (lastIndex < line.length) {
+      parts.push(line.substring(lastIndex));
+    }
+
+    return (
+      <div key={`line-${lineIdx}`}>
+        {parts.length > 0 ? parts : line}
+      </div>
+    );
+  });
+};
+
 export default function PdfLab() {
   const [uploads, setUploads] = useState([]);
   const [selectedFileId, setSelectedFileId] = useState(null);
@@ -642,7 +678,9 @@ export default function PdfLab() {
                         <span>Study AI</span>
                         <span>{formatChatTimestamp(entry.timestamp)}</span>
                       </div>
-                      <p className="mt-2 whitespace-pre-wrap text-base leading-relaxed">{entry.answer}</p>
+                      <div className="mt-2 text-base leading-relaxed space-y-0">
+                        {renderMarkdownText(entry.answer)}
+                      </div>
                     </div>
                   </div>
                 </div>

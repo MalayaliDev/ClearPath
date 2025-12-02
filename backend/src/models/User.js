@@ -91,6 +91,32 @@ const User = {
     const doc = await UserModel.findById(id).select('discord_webhook_masked').lean();
     return doc?.discord_webhook_masked || '';
   },
+
+  async findAll() {
+    const docs = await UserModel.find({})
+      .select('_id name email role created_at')
+      .lean();
+    return docs.map((doc) => {
+      console.log('Processing user doc:', doc);
+      return {
+        id: doc._id?.toString() || '',
+        name: doc.name || '',
+        email: doc.email || '',
+        role: doc.role || 'student',
+        createdAt: doc.created_at || new Date().toISOString(),
+      };
+    });
+  },
+
+  async deleteMany(query) {
+    const result = await UserModel.deleteMany(query);
+    return result;
+  },
+
+  async updateRole(id, role) {
+    const result = await UserModel.findByIdAndUpdate(id, { role }, { new: true });
+    return result;
+  },
 };
 
 module.exports = User;

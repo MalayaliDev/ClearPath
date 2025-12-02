@@ -18,13 +18,6 @@ const staffSections = [
     path: 'user-management',
   },
   {
-    id: 'student-insights',
-    label: 'Student insights',
-    description: 'Grades & intervention radar',
-    icon: GraduationCap,
-    path: 'student-insights',
-  },
-  {
     id: 'ai-limits',
     label: 'AI limiting',
     description: 'Mentor guardrails & quotas',

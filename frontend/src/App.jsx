@@ -18,6 +18,7 @@ import ExamQuiz from './pages/ExamQuiz.jsx';
 import StudyTools from './pages/StudyTools.jsx';
 import TicketDetailPage from './pages/TicketDetailPage.jsx';
 import MyTicketsPage from './pages/MyTicketsPage.jsx';
+import CreateTicketPage from './pages/CreateTicketPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
 import Layout from './components/Layout.jsx';
 import { getStoredUser } from './services/authStorage.js';
@@ -71,6 +72,8 @@ export default function App() {
         <Route path="study-tools" element={<StudyTools />} />
         <Route path="study-lab" element={<StudyLab />} />
         <Route path="complaints" element={<ComplaintsPage />} />
+        <Route path="tickets" element={<MyTicketsPage />} />
+        <Route path="create-ticket" element={<CreateTicketPage />} />
         <Route path="my-tickets" element={<MyTicketsPage />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="tickets/:ticketId" element={<TicketDetailPage />} />

@@ -463,7 +463,7 @@ export default function StudentDashboard() {
           <div className="rounded-3xl border border-amber-50 bg-amber-50/70 px-5 py-4 text-sm text-slate-700">
             <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Need support?</p>
             <p className="font-semibold text-slate-900">Loop staff without email.</p>
-            <Link to="/app/create-ticket" className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-amber-600">
+            <Link to="/create-ticket" className="mt-2 inline-flex items-center gap-2 text-xs font-semibold text-amber-600">
               Open support ticket <ArrowRight className="h-3 w-3" />
             </Link>
           </div>
@@ -571,7 +571,7 @@ export default function StudentDashboard() {
             <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Workspace ritual</p>
             <h2 className="text-xl font-semibold text-slate-900">Ops notes & mentor signals moved</h2>
           </div>
-          <Link to="/app/create-ticket" className="text-xs font-semibold text-amber-600">
+          <Link to="/create-ticket" className="text-xs font-semibold text-amber-600">
             View latest ops memo ↗
           </Link>
         </div>

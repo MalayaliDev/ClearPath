@@ -2,11 +2,19 @@ const jwt = require('jsonwebtoken');
 
 function auth(requiredRoles = []) {
   return (req, res, next) => {
-    const token = req.cookies?.token;
+    // Try to get token from cookies first, then from Authorization header
+    let token = req.cookies?.token;
+    
+    if (!token) {
+      const authHeader = req.headers.authorization;
+      if (authHeader && authHeader.startsWith('Bearer ')) {
+        token = authHeader.slice(7);
+      }
+    }
 
     // DEBUG: Log if cookie is present
     if (!token) {
-      console.warn('❌ No token cookie found. Cookies received:', Object.keys(req.cookies || {}));
+      console.warn('❌ No token found. Cookies:', Object.keys(req.cookies || {}), 'Auth header:', req.headers.authorization ? 'present' : 'missing');
       return res.status(401).json({ message: 'No token provided' });
     }
     

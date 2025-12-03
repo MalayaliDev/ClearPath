@@ -10,6 +10,8 @@ const userSchema = new mongoose.Schema(
     phone_masked: { type: String, default: '' },
     discord_webhook_encrypted: { type: String, default: '' },
     discord_webhook_masked: { type: String, default: '' },
+    banned: { type: Boolean, default: false },
+    blacklisted: { type: Boolean, default: false },
   },
   {
     timestamps: { createdAt: 'created_at', updatedAt: false },
@@ -115,6 +117,12 @@ const User = {
 
   async updateRole(id, role) {
     const result = await UserModel.findByIdAndUpdate(id, { role }, { new: true });
+    return result;
+  },
+
+  async updateFlag(id, field, value) {
+    const updateData = { [field]: value };
+    const result = await UserModel.findByIdAndUpdate(id, updateData, { new: true });
     return result;
   },
 };

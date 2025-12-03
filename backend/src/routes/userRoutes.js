@@ -8,6 +8,7 @@ const router = express.Router();
 router.get('/all', auth(), userController.getAllUsers);
 router.post('/delete-multiple', auth(), userController.deleteMultipleUsers);
 router.post('/update-role', auth(), userController.updateUserRole);
+router.post('/toggle-flag', auth(), userController.toggleFlag);
 
 // User endpoints
 router.get('/phone', auth(['student', 'staff', 'admin']), userController.getPhoneNumber);

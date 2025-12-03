@@ -146,8 +146,8 @@ exports.getAllUsers = async (req, res) => {
         email: user.email || '',
         role: user.role || 'student',
         createdAt: user.createdAt,
-        banned: false,
-        blacklisted: false,
+        banned: user.banned || false,
+        blacklisted: user.blacklisted || false,
       };
       console.log('Formatted user:', formatted);
       return formatted;

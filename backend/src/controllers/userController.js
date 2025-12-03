@@ -242,3 +242,46 @@ exports.deleteMultipleUsers = async (req, res) => {
     res.status(500).json({ success: false, message: 'Failed to delete users', error: error.message });
   }
 };
+
+exports.toggleFlag = async (req, res) => {
+  try {
+    console.log('toggleFlag called, user:', req.user);
+    
+    if (!req.user?.id) {
+      return res.status(401).json({ success: false, message: 'Unauthorized' });
+    }
+
+    const { userId, field, value } = req.body;
+    if (!userId || !field || value === undefined) {
+      return res.status(400).json({ success: false, message: 'Missing userId, field, or value' });
+    }
+
+    // Only allow toggling banned and blacklisted fields
+    if (!['banned', 'blacklisted'].includes(field)) {
+      return res.status(400).json({ success: false, message: 'Invalid field' });
+    }
+
+    console.log(`Toggling ${field} for user ${userId} to ${value}`);
+    
+    const mongoose = require('mongoose');
+    const objectId = new mongoose.Types.ObjectId(userId);
+    
+    const updateData = { [field]: value };
+    const result = await User.findByIdAndUpdate(objectId, updateData, { new: true });
+    
+    if (!result) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+
+    console.log(`Updated user ${field}:`, result);
+    
+    res.json({ 
+      success: true, 
+      message: `${field} updated to ${value}`,
+      user: result
+    });
+  } catch (error) {
+    console.error('toggleFlag error', error);
+    res.status(500).json({ success: false, message: 'Failed to toggle flag', error: error.message });
+  }
+};

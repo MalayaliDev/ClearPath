@@ -74,6 +74,7 @@ router.post('/login', async (req, res) => {
         name: user.name,
         email: user.email,
         role: user.role,
+        isBanned: user.banned || false,
       },
     });
   } catch (err) {

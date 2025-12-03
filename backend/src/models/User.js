@@ -96,7 +96,7 @@ const User = {
 
   async findAll() {
     const docs = await UserModel.find({})
-      .select('_id name email role created_at')
+      .select('_id name email role created_at banned blacklisted')
       .lean();
     return docs.map((doc) => {
       console.log('Processing user doc:', doc);
@@ -106,6 +106,8 @@ const User = {
         email: doc.email || '',
         role: doc.role || 'student',
         createdAt: doc.created_at || new Date().toISOString(),
+        banned: doc.banned || false,
+        blacklisted: doc.blacklisted || false,
       };
     });
   },

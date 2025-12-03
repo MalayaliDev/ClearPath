@@ -266,8 +266,7 @@ exports.toggleFlag = async (req, res) => {
     const mongoose = require('mongoose');
     const objectId = new mongoose.Types.ObjectId(userId);
     
-    const updateData = { [field]: value };
-    const result = await User.findByIdAndUpdate(objectId, updateData, { new: true });
+    const result = await User.updateFlag(objectId, field, value);
     
     if (!result) {
       return res.status(404).json({ success: false, message: 'User not found' });

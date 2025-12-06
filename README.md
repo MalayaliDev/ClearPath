@@ -70,11 +70,4 @@
 - Staff “delete ticket” calls `DELETE /api/complaints/:id` and removes associated messages.
 - Entire UI honors the warm cream palette requested in the competition brief.
 
-## Support / contact
 
-- Email: `malayalidev123@gmail.com`
-- For backend issues, inspect the hosting logs (Render/Railway etc.).
-- For frontend deploy issues, view the static host deployment log (Vercel/Netlify/etc.).
-
-Good luck reviewing, and thank you for considering Clean Path for the Brototype competition!
-"# ClearPath" 

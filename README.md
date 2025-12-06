@@ -72,7 +72,7 @@
 
 ## Support / contact
 
-- Email: `support@cleanpath.com`
+- Email: `malayalidev123@gmail.com`
 - For backend issues, inspect the hosting logs (Render/Railway etc.).
 - For frontend deploy issues, view the static host deployment log (Vercel/Netlify/etc.).
 

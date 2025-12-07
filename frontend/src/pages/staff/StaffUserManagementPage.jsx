@@ -13,6 +13,7 @@ export default function StaffUserManagementPage() {
   const [error, setError] = useState('');
   const [lastAction, setLastAction] = useState('No actions yet');
   const [tempPasswords, setTempPasswords] = useState({});
+  const [editingPassword, setEditingPassword] = useState({});
 
   useEffect(() => {
     fetchUsers();
@@ -299,10 +300,10 @@ export default function StaffUserManagementPage() {
                       <div className="flex flex-wrap gap-2">
                         <input
                           type="text"
-                          placeholder="Temp password"
-                          value={tempPasswords[id] || ''}
-                          readOnly
-                          className="rounded border border-slate-300 px-2 py-1 text-xs bg-slate-50"
+                          placeholder="Enter or generate password"
+                          value={editingPassword[id] !== undefined ? editingPassword[id] : (tempPasswords[id] || '')}
+                          onChange={(e) => setEditingPassword((prev) => ({ ...prev, [id]: e.target.value }))}
+                          className="rounded border border-slate-300 px-2 py-1 text-xs bg-white focus:outline-none focus:ring-2 focus:ring-amber-400"
                         />
                         <button
                           type="button"

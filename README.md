@@ -149,4 +149,4 @@ Built with ❤️ for the Brototype Competition
 
 ---
 
-**Version:** 1.0.0 | **Last Updated:** December 2024 | **Status:** Active Development
+**Version:** 1.0.0 | **Last Updated:** December 2025 | **Status:** Active Development

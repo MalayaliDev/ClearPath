@@ -33,7 +33,7 @@ cd backend
 npm install
 
 # Create .env file
-echo "Mongo Uri" > .env
+echo "MONGO_URI=your_mongodb_uri" > .env
 echo "JWT_SECRET=your_secret_key_here" >> .env
 echo "PORT=5000" >> .env
 
@@ -139,13 +139,13 @@ VITE_API_URL=your_backend_url
 
 ## 📄 License
 
-Built for the Brototype Competition. All rights reserved.
+MIT License - See LICENSE file for details
 
-## 🎉 Credits
+## 🎉 Made by
 
-- Built with ❤️ for Brototype Competition
-- Modern complaint management platform
-- Full-stack production-ready application
+**Malayali Developer (AKA Ryan)**
+
+Built with ❤️ for the Brototype Competition
 
 ---
 

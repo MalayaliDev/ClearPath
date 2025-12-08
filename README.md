@@ -33,7 +33,7 @@ cd backend
 npm install
 
 # Create .env file
-echo "MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/clearpath" > .env
+echo "Mongo Uri" > .env
 echo "JWT_SECRET=your_secret_key_here" >> .env
 echo "PORT=5000" >> .env
 

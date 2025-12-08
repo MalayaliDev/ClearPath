@@ -1,73 +1,152 @@
-# Brototype Competition – Clean Path Complaint Portal
+# 🎓 ClearPath – Intelligent Complaint Management Portal
 
-> Submission for the **Brototype (Brototype) Competition** showing a full-stack complaint portal with AI-inspired workflows, staff tools, and a warm Clear Path brand. This README explains everything judges need to review, run, and deploy the project.
+**A modern, full-stack complaint resolution platform for educational institutions**
 
-## Quick overview
+ClearPath streamlines student complaints, enables AI-powered mentor support, and provides comprehensive staff management tools with a beautiful, intuitive interface. Built as a Brototype competition submission showcasing production-ready architecture and innovative features.
 
-| Area | Highlights |
-| --- | --- |
-| **Frontend** | Vite + React + Tailwind, warm “Clean Path” visuals, responsive cards, staff/student journeys |
-| **Backend** | Node/Express API with MongoDB Atlas, JWT auth, ticket messages, roster aggregation, delete endpoints |
-| **Experience** | Main landing, Support/About/Features, complaints cockpit, student/staff dashboards, AI reply helpers |
+---
 
-## Repository structure
+## � What Makes ClearPath Special
 
+| Feature | Benefit |
+|---------|---------|
+| 📝 **Smart Complaints** | Students submit, track, and resolve complaints in real-time |
+| 🤖 **AI Mentor Lab** | Intelligent coaching and response suggestions for staff |
+| 📚 **PDF Knowledge Base** | Upload PDFs → AI generates summaries, Q&A, and study materials |
+| 📊 **Exam Generator** | Create custom MCQ exams from uploaded materials |
+| 👥 **Staff Dashboard** | Complete admin panel for user & ticket management |
+| 🎨 **Beautiful UI** | Warm, modern design with smooth animations |
+| 📱 **Fully Responsive** | Works perfectly on desktop, tablet, and mobile |
+| 🔐 **Secure & Fast** | JWT auth, role-based access, optimized performance |
+
+## ⚡ Quick Start (5 minutes)
+
+### Prerequisites
+- Node.js v16+
+- MongoDB Atlas account
+- Git
+
+### Step 1: Backend Setup
+
+```bash
+cd backend
+npm install
+
+# Create .env file
+echo "MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/clearpath" > .env
+echo "JWT_SECRET=your_secret_key_here" >> .env
+echo "PORT=5000" >> .env
+
+# Start backend
+npm run dev
 ```
-.
-├── backend   # Express API, auth, complaints, roster endpoints
-└── frontend  # React UI / Vite dev server
+
+✅ Backend runs on `http://localhost:5000`
+
+### Step 2: Frontend Setup
+
+```bash
+cd frontend
+npm install
+
+# Create .env.local file
+echo "VITE_API_URL=http://localhost:5000" > .env.local
+
+# Start frontend
+npm run dev
 ```
 
-## Running locally (judging instructions)
+✅ Frontend runs on `http://localhost:5173`
 
-1. **Backend**
-   ```bash
-   cd backend
-   npm install
-   npm run dev   # http://localhost:5000
-   ```
-2. **Frontend**
-   ```bash
-   cd frontend
-   npm install
-   npm run dev   # http://localhost:5173
-   ```
-3. Keep both terminals running. The frontend proxies API calls to `VITE_API_URL`.
+### Step 3: Login & Explore
 
-## Key features to test
+1. Open `http://localhost:5173`
+2. Login with your credentials (sent via Google Form)
+3. Explore all features!
 
-- **Main landing (`/app`)**: hero metrics, portal pillars, workflow timeline, interactive showcase, testimonials, CTA.
-- **Support hub (`/support`)**: new hero, contact lanes, process cards, Clean Path loops/FAQ, shared footer.
-- **Complaints page (`/app/complaints`)**: real-time student roster fetched from backend (`/api/complaints/roster`).
-- **My tickets (`/app/my-tickets`)**: stats grid, ticket cards, staff-only delete action, embedded roster panel.
-- **Staff tickets (`/app/staff/tickets`)**: AI reply macros, status updates, chat timeline, delete/close options, roster view.
-- **Login/Register**: polished hero content, remember device toggle, support CTA, consistent gradient footers.
+## 🎯 Core Features
 
-## Deployment guide (competition-ready)
+- **📝 Complaint Management** – Submit, track, and resolve complaints in real-time
+- **🤖 Mentor Lab** – AI coaching and smart response suggestions for staff
+- **📚 PDF Lab** – Upload PDFs, get AI summaries, interactive Q&A
+- **📊 Exam Lab** – Generate custom MCQ exams from PDFs
+- **👥 User Management** – Role-based access for students, staff, and admins
+- **🔐 Security** – JWT auth, password hashing, protected routes, CORS
 
-1. **Backend**
-   - Deploy to Render/Railway/Fly.io/etc.
-   - Configure env vars above + MongoDB connection.
-   - Start with `npm run start`. Capture public API URL.
-2. **Frontend**
-   - Set `VITE_API_URL` to the API URL.
-   - Run `npm run build` in `frontend/`.
-   - Deploy `/dist` to Vercel, Netlify, Cloudflare Pages, or S3+CloudFront. Enable SPA fallback (rewrite `/* -> /index.html`).
-3. **Verification**
-   - Visit the deployed frontend, log in as the admin, check `/app/complaints`, `/app/my-tickets`, `/app/staff/tickets`, `/support`, `/features`, `/about`.
-   - Ensure roster + delete endpoints work (requires backend and Mongo running).
+## � API Endpoints
 
-## Tech stack
+| Endpoint | Method | Purpose |
+|----------|--------|---------|
+| `/api/auth/login` | POST | User login |
+| `/api/auth/register` | POST | User registration |
+| `/api/complaints` | GET/POST | List/create complaints |
+| `/api/complaints/:id` | GET/PUT/DELETE | Manage complaint |
+| `/api/pdf/upload` | POST | Upload PDF |
+| `/api/pdf/uploads/recent` | GET | Get recent uploads |
+| `/api/pdf/chats` | GET | Get chat history |
+| `/api/pdf/ask` | POST | Ask PDF question |
+| `/api/exam/history` | GET | Get exam history |
+| `/api/user/profile` | GET/PUT | User profile |
 
-- **Frontend:** React 18, Vite, Tailwind CSS, Lucide Icons
-- **Backend:** Node.js/Express, MongoDB (Atlas), JWT auth
-- **Build tools:** npm scripts, Vite dev server, optional AI placeholders (OpenRouter/Groq)
+## 🛠 Tech Stack
 
-## Notes for Brototype judges
+**Frontend:** React 18 • Vite • Tailwind CSS • Lucide Icons • Axios • React Router
 
-- Backend seeding is automatic on start; use the admin credentials above to explore.
-- Student roster uses aggregation on complaints to surface most active students.
-- Staff “delete ticket” calls `DELETE /api/complaints/:id` and removes associated messages.
-- Entire UI honors the warm cream palette requested in the competition brief.
+**Backend:** Node.js • Express • MongoDB • Mongoose • JWT • bcryptjs
 
+## � Deployment
 
+### Deploy Backend (Railway/Render/Fly.io)
+
+```bash
+# Set environment variables
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret_key
+NODE_ENV=production
+
+# Deploy
+npm start
+```
+
+### Deploy Frontend (Vercel/Netlify)
+
+```bash
+# Build
+npm run build
+
+# Set environment variable
+VITE_API_URL=your_backend_url
+
+# Deploy dist/ folder
+# Enable SPA routing: rewrite /* → /index.html
+```
+
+## 🐛 Troubleshooting
+
+**401 Errors?** Clear localStorage, sign out, and log back in.
+
+**MongoDB Issues?** Verify URI format and IP whitelist in MongoDB Atlas.
+
+**CORS Errors?** Update allowed origins in `backend/src/app.js`
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/amazing-feature`
+3. Commit: `git commit -m 'Add amazing feature'`
+4. Push: `git push origin feature/amazing-feature`
+5. Open Pull Request
+
+## 📄 License
+
+Built for the Brototype Competition. All rights reserved.
+
+## 🎉 Credits
+
+- Built with ❤️ for Brototype Competition
+- Modern complaint management platform
+- Full-stack production-ready application
+
+---
+
+**Version:** 1.0.0 | **Last Updated:** December 2024 | **Status:** Active Development

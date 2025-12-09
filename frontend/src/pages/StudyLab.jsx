@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Bot, CalendarClock, FileText, Sparkles } from 'lucide-react';
+import { Bot, CalendarClock, FileText, Mic, Sparkles, CheckCircle2 } from 'lucide-react';
 
 const studyModules = [
   {
@@ -11,6 +11,20 @@ const studyModules = [
     accent: 'from-[#fff6e8] to-white border-amber-100',
   },
   {
+    title: 'Exam Lab · MCQs',
+    description: 'Generate MCQ drills and practice exams.',
+    icon: CalendarClock,
+    to: '/app/exam-lab',
+    accent: 'from-[#fef3f2] to-white border-rose-100',
+  },
+  {
+    title: 'AI Study Tools',
+    description: 'Decks, notes, and study aids.',
+    icon: CheckCircle2,
+    to: '/app/study-tools',
+    accent: 'from-[#f0fdf4] to-white border-emerald-100',
+  },
+  {
     title: 'Personal AI mentor',
     description: 'Context-aware chat that knows your complaints + study material.',
     icon: Bot,
@@ -18,11 +32,11 @@ const studyModules = [
     accent: 'from-[#f4f0ff] to-white border-[#e5ddff]',
   },
   {
-    title: 'Study planner',
-    description: 'Schedule revision slots and get nudges before each session.',
-    icon: CalendarClock,
-    to: '/app/planner-lab',
-    accent: 'from-[#e9fbf5] to-white border-emerald-100',
+    title: 'Jarvis Voice Chat',
+    description: 'AI voice assistant for quick answers with voice input and output.',
+    icon: Mic,
+    to: '/app/jarvis',
+    accent: 'from-[#fef3f2] to-white border-orange-100',
   },
 ];
 

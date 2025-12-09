@@ -29,7 +29,7 @@ const studyModules = [
 export default function StudyLab() {
   return (
     <div className="space-y-8">
-      <header className="rounded-[32px] border border-amber-100 bg-gradient-to-r from-white via-amber-50 to-white px-6 py-6 shadow-sm">
+      <header className="rounded-[32px] border border-amber-100 bg-gradient-to-r from-white via-amber-50 to-white px-6 py-6 shadow-sm animate-fadeInUp">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <div className="flex items-center gap-2 text-xs uppercase tracking-[0.3em] text-amber-500">
@@ -51,11 +51,12 @@ export default function StudyLab() {
       </header>
 
       <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-        {studyModules.map(({ title, description, icon: Icon, to, accent }) => (
+        {studyModules.map(({ title, description, icon: Icon, to, accent }, idx) => (
           <Link
             key={title}
             to={to}
-            className={`rounded-3xl border bg-gradient-to-br ${accent} p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg`}
+            className={`rounded-3xl border bg-gradient-to-br ${accent} p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg animate-fadeInUp`}
+            style={{ animationDelay: `${idx * 0.08}s` }}
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold text-slate-500">
               <Icon className="h-3.5 w-3.5 text-amber-500" />

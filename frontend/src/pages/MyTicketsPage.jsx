@@ -119,8 +119,8 @@ export default function MyTicketsPage() {
               { label: 'Pending', value: statusSummary.pending, tone: 'from-[#fff1de] via-white to-white' },
               { label: 'In progress', value: statusSummary.progress, tone: 'from-[#e0f2fe] via-white to-white' },
               { label: 'Resolved', value: statusSummary.resolved, tone: 'from-[#dcfce7] via-white to-white' },
-            ].map((stat) => (
-              <div key={stat.label} className={`rounded-[28px] border border-amber-50 bg-gradient-to-br ${stat.tone} p-4`}>
+            ].map((stat, idx) => (
+              <div key={stat.label} className={`rounded-[28px] border border-amber-50 bg-gradient-to-br ${stat.tone} p-4 animate-fadeInUp`} style={{ animationDelay: `${idx * 0.08}s` }}>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">{stat.label}</p>
                 <p className="mt-2 text-2xl font-semibold">{stat.value}</p>
               </div>
@@ -137,14 +137,14 @@ export default function MyTicketsPage() {
             ) : tickets.length === 0 ? (
               <div className="rounded-[28px] border border-dashed border-amber-200 bg-amber-50/60 p-8 text-center text-sm text-amber-700">
                 No tickets yet.{' '}
-                <Link to="/support" className="font-semibold underline">
+                <Link to="/create-ticket" className="font-semibold underline">
                   Create one
                 </Link>{' '}
                 to get mentor support fast.
               </div>
             ) : (
               <div className="space-y-4">
-                {tickets.map((ticket) => {
+                {tickets.map((ticket, idx) => {
                   const ticketId = ticket._id || ticket.id;
                   const cardContent = (
                     <div className="flex flex-col gap-3">
@@ -193,7 +193,8 @@ export default function MyTicketsPage() {
                     <Link
                       key={ticketId}
                       to={`/app/tickets/${ticketId}`}
-                      className="flex flex-col gap-3 rounded-[28px] border border-amber-50 bg-white/95 p-5 text-left transition hover:-translate-y-0.5 hover:shadow-[0_15px_35px_rgba(255,193,111,0.25)]"
+                      className="flex flex-col gap-3 rounded-[28px] border border-amber-50 bg-white/95 p-5 text-left transition hover:-translate-y-0.5 hover:shadow-[0_15px_35px_rgba(255,193,111,0.25)] animate-fadeInUp"
+                      style={{ animationDelay: `${idx * 0.06}s` }}
                     >
                       {cardContent}
                     </Link>

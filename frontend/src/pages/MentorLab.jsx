@@ -126,7 +126,7 @@ export default function MentorLab() {
 
   return (
     <div className="space-y-8 text-slate-900">
-      <section className="rounded-[36px] border border-amber-100 bg-gradient-to-br from-[#fff5e6] via-white to-[#ffe4c6] px-6 py-7 shadow-[0_35px_90px_rgba(255,193,111,0.35)]">
+      <section className="rounded-[36px] border border-amber-100 bg-gradient-to-br from-[#fff5e6] via-white to-[#ffe4c6] px-6 py-7 shadow-[0_35px_90px_rgba(255,193,111,0.35)] animate-fadeInUp">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-amber-600">Mentor lab</p>
@@ -160,12 +160,13 @@ export default function MentorLab() {
               <MessageSquare className="h-5 w-5 text-amber-500" />
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
-              {quickPrompts.map((prompt) => (
+              {quickPrompts.map((prompt, idx) => (
                 <button
                   key={prompt}
                   type="button"
                   onClick={() => setInput(prompt)}
-                  className="rounded-2xl border border-amber-100 bg-amber-50/70 px-4 py-2 text-left text-sm text-amber-800 transition hover:border-amber-200"
+                  className="rounded-2xl border border-amber-100 bg-amber-50/70 px-4 py-2 text-left text-sm text-amber-800 transition hover:border-amber-200 hover-lift animate-fadeInUp"
+                  style={{ animationDelay: `${idx * 0.08}s` }}
                 >
                   {prompt}
                 </button>
@@ -201,7 +202,7 @@ export default function MentorLab() {
           </div>
         </div>
 
-        <div className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm">
+        <div className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Conversation</p>
@@ -209,7 +210,7 @@ export default function MentorLab() {
             </div>
             <Bot className="h-6 w-6 text-amber-500" />
           </div>
-          <div className="mt-4 flex flex-col gap-4 max-h-[420px] overflow-y-auto pr-2">
+          <div className="mt-4 flex flex-col gap-4 max-h-[420px] overflow-y-auto pr-2 animate-fadeInUp">
             {messages.map((message) => {
               const isMentor = message.role === 'mentor';
               return (
@@ -275,7 +276,7 @@ export default function MentorLab() {
         </div>
       </section>
 
-      <section className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm">
+      <section className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm animate-fadeInUp">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Playbook</p>
@@ -284,9 +285,9 @@ export default function MentorLab() {
           <ArrowRight className="h-4 w-4 text-amber-500" />
         </div>
         <ul className="mt-4 grid gap-3 text-sm text-slate-600 sm:grid-cols-3">
-          <li className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-3">Attach evidence (screens, transcripts) so mentors skip guesswork.</li>
-          <li className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-3">Mention your next session or exam date so recommendations are timely.</li>
-          <li className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-3">Close every chat with an explicit ask: review, advice, or accountability.</li>
+          <li className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-3 animate-fadeInUp" style={{ animationDelay: '0.04s' }}>Attach evidence (screens, transcripts) so mentors skip guesswork.</li>
+          <li className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-3 animate-fadeInUp" style={{ animationDelay: '0.12s' }}>Mention your next session or exam date so recommendations are timely.</li>
+          <li className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-3 animate-fadeInUp" style={{ animationDelay: '0.20s' }}>Close every chat with an explicit ask: review, advice, or accountability.</li>
         </ul>
       </section>
     </div>

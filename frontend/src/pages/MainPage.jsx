@@ -18,6 +18,78 @@ import MainNavbar from '../components/MainNavbar.jsx';
 export default function MainPage() {
   const user = getStoredUser();
 
+  // Animation styles
+  const animationStyles = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 165, 0, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 40px rgba(255, 165, 0, 0.6);
+      }
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.6s ease-out;
+    }
+    .animate-slideInLeft {
+      animation: slideInLeft 0.6s ease-out;
+    }
+    .animate-slideInRight {
+      animation: slideInRight 0.6s ease-out;
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+  `;
+
   const highlightCards = [
     {
       label: 'Complaints resolved',
@@ -214,6 +286,7 @@ export default function MainPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#fdf6ec] via-[#fff9f2] to-[#fce7cd] flex flex-col">
+      <style>{animationStyles}</style>
       <MainNavbar user={user} />
 
       {/* Main content */}
@@ -224,28 +297,28 @@ export default function MainPage() {
             <div className="relative overflow-hidden rounded-[44px] border border-[#ffe0bd] bg-gradient-to-br from-[#fffaf3] via-[#ffe9cf] to-[#ffc58d] px-6 py-10 md:px-12 md:py-14">
               <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.65),_transparent_60%)]" />
               <div className="relative flex flex-col gap-10 lg:flex-row lg:items-start">
-                <div className="flex-1 space-y-6">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/20 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#b87436]">
+                <div className="flex-1 space-y-6 animate-slideInLeft">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/20 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.4em] text-[#b87436] hover-lift">
                     ClearPath portal
                   </div>
-                  <h1 className="text-3xl md:text-[2.8rem] font-semibold leading-tight text-[#311a0d]">
+                  <h1 className="text-3xl md:text-[2.8rem] font-semibold leading-tight text-[#311a0d] animate-fadeInUp">
                     Raise, track, and resolve student complaints with calm clarity.
                   </h1>
                   <p className="text-base text-[#6b3f1f] max-w-2xl">
                     Students feel guided, staff stay coordinated, and admins see transparent outcomes — all inside one warm workspace aligned with your landing-page palette.
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 animate-fadeInUp">
                     <Link
                       to={user ? '/app' : '/login'}
-                      className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#b55c16] shadow-lg shadow-white/40"
+                      className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-3 text-sm font-semibold text-[#b55c16] shadow-lg shadow-white/40 hover-lift hover:shadow-xl hover:shadow-white/60 transition-all"
                     >
                       {user ? 'Go to dashboard' : 'Login to portal'}
-                      <ArrowRight className="h-4 w-4" />
+                      <ArrowRight className="h-4 w-4 animate-float" />
                     </Link>
                     {!user && (
                       <Link
                         to="/register"
-                        className="inline-flex items-center rounded-full border border-white/70 bg-transparent px-5 py-3 text-sm font-semibold text-white/90 hover:bg-white/10"
+                        className="inline-flex items-center rounded-full border border-white/70 bg-transparent px-5 py-3 text-sm font-semibold text-white/90 hover:bg-white/10 hover-lift transition-all"
                       >
                         Register as student
                       </Link>
@@ -260,12 +333,12 @@ export default function MainPage() {
                     ))}
                   </div>
                 </div>
-                <div className="flex-1 space-y-5">
-                  <div className="rounded-[30px] border border-white/50 bg-white/90 p-6 shadow-2xl">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#c17236]">Today’s signals</p>
+                <div className="flex-1 space-y-5 animate-slideInRight">
+                  <div className="rounded-[30px] border border-white/50 bg-white/90 p-6 shadow-2xl hover-lift">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#c17236]">Today's signals</p>
                     <div className="mt-4 grid gap-4 sm:grid-cols-3">
-                      {heroMetrics.map((metric) => (
-                        <div key={metric.label} className="rounded-2xl border border-[#ffe6cc] bg-white/90 px-4 py-3">
+                      {heroMetrics.map((metric, idx) => (
+                        <div key={metric.label} className="rounded-2xl border border-[#ffe6cc] bg-white/90 px-4 py-3 hover-lift" style={{ animationDelay: `${idx * 0.1}s` }}>
                           <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#bb6c2a]">{metric.label}</p>
                           <p className="mt-2 text-2xl font-semibold text-[#2f1a0f]">{metric.value}</p>
                           <p className="text-xs text-[#7b4b29]">{metric.meta}</p>
@@ -273,7 +346,7 @@ export default function MainPage() {
                       ))}
                     </div>
                   </div>
-                  <div className="rounded-[32px] border border-white/60 bg-white/85 p-6 shadow-lg space-y-4">
+                  <div className="rounded-[32px] border border-white/60 bg-white/85 p-6 shadow-lg space-y-4 hover-lift">
                     <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#c17236]">Ops readiness</p>
                     <p className="text-sm text-[#6b3f1f]">CleanPath keeps intake, mentors, and admins aligned with a single AI playbook.</p>
                     <ul className="space-y-2 text-xs text-[#6b3f1f]">
@@ -301,9 +374,9 @@ export default function MainPage() {
               </Link>
             </div>
             <div className="grid gap-4 md:grid-cols-2">
-              {highlightCards.map(({ label, value, caption, icon: Icon }) => (
-                <div key={label} className="rounded-[30px] border border-[#ffe6cc] bg-white/95 p-5 shadow-sm flex items-center gap-4">
-                  <div className="h-12 w-12 rounded-2xl bg-[#fff1dc] flex items-center justify-center text-[#cb722d]">
+              {highlightCards.map(({ label, value, caption, icon: Icon }, idx) => (
+                <div key={label} className="rounded-[30px] border border-[#ffe6cc] bg-white/95 p-5 shadow-sm flex items-center gap-4 hover-lift animate-fadeInUp" style={{ animationDelay: `${idx * 0.15}s` }}>
+                  <div className="h-12 w-12 rounded-2xl bg-[#fff1dc] flex items-center justify-center text-[#cb722d] animate-float">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>
@@ -364,10 +437,10 @@ export default function MainPage() {
               <h2 className="text-2xl font-semibold text-slate-900">Tailored views for everyone in the loop</h2>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
-              {roleSpaces.map(({ badge, title, body, icon: Icon, bg }) => (
-                <div key={badge} className={`rounded-3xl bg-gradient-to-br ${bg} border shadow-sm p-5 space-y-3`}>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold text-slate-700">
-                    <Icon className="h-3.5 w-3.5" /> {badge}
+              {roleSpaces.map(({ badge, title, body, icon: Icon, bg }, idx) => (
+                <div key={badge} className={`rounded-3xl bg-gradient-to-br ${bg} border shadow-sm p-5 space-y-3 hover-lift animate-fadeInUp`} style={{ animationDelay: `${idx * 0.15}s` }}>
+                  <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold text-slate-700 hover-lift">
+                    <Icon className="h-3.5 w-3.5 animate-float" /> {badge}
                   </div>
                   <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
                   <p className="text-sm text-slate-600">{body}</p>

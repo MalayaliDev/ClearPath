@@ -131,6 +131,32 @@ export default function ExamQuiz() {
     };
   }, [sessionId, location.state, authorizedConfig]);
 
+  // Prevent navigation away from exam while in progress
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      if (session && session.status !== 'completed' && !result) {
+        e.preventDefault();
+        e.returnValue = 'You have an exam in progress. Are you sure you want to leave?';
+        return 'You have an exam in progress. Are you sure you want to leave?';
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [session, result]);
+
+  // Override back button navigation
+  const handleBackNavigation = () => {
+    if (session && session.status !== 'completed' && !result) {
+      const confirmed = window.confirm('You have an exam in progress. Are you sure you want to leave without submitting?');
+      if (confirmed) {
+        navigate(-1);
+      }
+    } else {
+      navigate(-1);
+    }
+  };
+
   const handleSelectAnswer = (questionId, optionIndex) => {
     if (!questionId || isCompleted) return;
     setAnswers((prev) => ({
@@ -281,7 +307,7 @@ export default function ExamQuiz() {
           <div>
             <button
               type="button"
-              onClick={() => navigate(-1)}
+              onClick={handleBackNavigation}
               className="inline-flex items-center gap-2 text-sm font-semibold text-amber-700"
             >
               <ArrowLeft className="h-4 w-4" /> Back

@@ -36,7 +36,7 @@ export default function StaffAiLimitsPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl border border-amber-100 bg-white/90 p-4 shadow-sm">
+      <div className="rounded-2xl border border-amber-100 bg-white/90 p-4 shadow-sm animate-fadeInUp">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-[11px] uppercase tracking-[0.3em] text-amber-500">AI limiting</p>
@@ -51,7 +51,7 @@ export default function StaffAiLimitsPage() {
       </div>
 
       <div className="grid gap-4 lg:grid-cols-2">
-        <section className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm">
+        <section className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.08s' }}>
           <h3 className="text-sm font-semibold text-slate-900">Quota sliders</h3>
           <p className="text-xs text-slate-500">Daily cap resets at midnight IST. Metrics sync to Prometheus.</p>
           <div className="mt-4 space-y-4">
@@ -78,7 +78,7 @@ export default function StaffAiLimitsPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm">
+        <section className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.16s' }}>
           <div className="flex items-center justify-between">
             <h3 className="text-sm font-semibold text-slate-900">Guardrails</h3>
             <ShieldCheck className="h-4 w-4 text-emerald-500" />
@@ -106,7 +106,7 @@ export default function StaffAiLimitsPage() {
         </section>
       </div>
 
-      <section className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm">
+      <section className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.24s' }}>
         <div className="flex items-center gap-3">
           <Zap className="h-4 w-4 text-amber-500" />
           <p className="text-sm font-semibold text-slate-900">Experiments & overrides</p>

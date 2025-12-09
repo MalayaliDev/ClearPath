@@ -199,7 +199,7 @@ export default function StaffUserManagementPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl border border-slate-100 bg-white/90 p-4 text-sm text-slate-600">
+      <div className="rounded-2xl border border-slate-100 bg-white/90 p-4 text-sm text-slate-600 animate-fadeInUp">
         <div className="flex items-center justify-between">
           <div>
             <p className="font-semibold text-slate-900">Live controls</p>
@@ -234,7 +234,7 @@ export default function StaffUserManagementPage() {
       </div>
 
       {error && (
-        <div className="rounded-2xl border border-rose-100 bg-rose-50 px-4 py-3 text-sm text-rose-600">
+        <div className="rounded-2xl border border-rose-100 bg-rose-50 px-4 py-3 text-sm text-rose-600 animate-fadeInUp">
           {error}
         </div>
       )}
@@ -249,7 +249,7 @@ export default function StaffUserManagementPage() {
           No users found.
         </div>
       ) : (
-        <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden">
+        <div className="rounded-2xl border border-slate-200 bg-white overflow-hidden animate-fadeInUp">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-slate-200 bg-slate-50">
@@ -269,8 +269,8 @@ export default function StaffUserManagementPage() {
               </tr>
             </thead>
             <tbody>
-              {managedUsers.map(({ id, name, email, role, banned, blacklisted }) => (
-                <tr key={id} className="border-b border-slate-100 hover:bg-slate-50 transition">
+              {managedUsers.map(({ id, name, email, role, banned, blacklisted }, idx) => (
+                <tr key={id} className="border-b border-slate-100 hover:bg-slate-50 transition animate-fadeInUp" style={{ animationDelay: `${idx * 0.02}s` }}>
                   <td className="px-4 py-3">
                     <input
                       type="checkbox"

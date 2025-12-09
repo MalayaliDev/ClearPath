@@ -14,6 +14,7 @@ ClearPath streamlines student complaints, enables AI-powered mentor support, and
 | 🤖 **AI Mentor Lab** | Intelligent coaching and response suggestions for staff |
 | 📚 **PDF Knowledge Base** | Upload PDFs → AI generates summaries, Q&A, and study materials |
 | 📊 **Exam Generator** | Create custom MCQ exams from uploaded materials |
+| 🎤 **Jarvis Voice Chat** | AI voice assistant with speech recognition and text-to-speech |
 | 👥 **Staff Dashboard** | Complete admin panel for user & ticket management |
 | 🎨 **Beautiful UI** | Warm, modern design with smooth animations |
 | 📱 **Fully Responsive** | Works perfectly on desktop, tablet, and mobile |
@@ -70,6 +71,7 @@ npm run dev
 - **🤖 Mentor Lab** – AI coaching and smart response suggestions for staff
 - **📚 PDF Lab** – Upload PDFs, get AI summaries, interactive Q&A
 - **📊 Exam Lab** – Generate custom MCQ exams from PDFs
+- **🎤 Jarvis Voice Chat** – AI voice assistant with speech recognition, text-to-speech, and multiple voice options
 - **👥 User Management** – Role-based access for students, staff, and admins
 - **🔐 Security** – JWT auth, password hashing, protected routes, CORS
 

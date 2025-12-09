@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { clearAuth, getStoredUser } from '../services/authStorage.js';
 import UserMenuCard from './UserMenuCard.jsx';
+import { animationStyles } from '../utils/animations.js';
 
 export default function Layout() {
   const navigate = useNavigate();
@@ -25,7 +26,7 @@ export default function Layout() {
   };
 
   const navClass = (isActive) =>
-    `flex items-center gap-3 rounded-2xl px-4 py-2.5 text-sm font-semibold transition-all ${
+    `flex items-center gap-3 rounded-2xl px-4 py-2.5 text-sm font-semibold transition-all hover-lift ${
       isActive
         ? 'bg-amber-500 text-white shadow-lg shadow-amber-200/70'
         : 'text-slate-600 hover:bg-amber-50'
@@ -45,8 +46,9 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen bg-[#fff7ec] text-slate-900">
+      <style>{animationStyles}</style>
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-6 px-4 py-8 lg:flex-row lg:items-start lg:px-8">
-        <aside className="w-full rounded-[36px] border border-amber-100 bg-white/90 px-6 py-7 shadow-[0_25px_70px_rgba(255,193,111,0.25)] lg:sticky lg:top-6 lg:w-72">
+        <aside className="w-full rounded-[36px] border border-amber-100 bg-white/90 px-6 py-7 shadow-[0_25px_70px_rgba(255,193,111,0.25)] lg:sticky lg:top-6 lg:w-72 animate-slideInLeft">
           <div className="flex items-center gap-3 pb-6">
             <div className="rounded-2xl bg-[#fff4df] p-2 text-xl text-amber-500">
               <Zap className="h-6 w-6" />
@@ -99,7 +101,7 @@ export default function Layout() {
         </aside>
 
         <main className="flex-1 space-y-6">
-          <header className="rounded-[36px] border border-amber-100 bg-white/95 px-6 py-6 shadow-[0_25px_60px_rgba(255,193,111,0.25)]">
+          <header className="rounded-[36px] border border-amber-100 bg-white/95 px-6 py-6 shadow-[0_25px_60px_rgba(255,193,111,0.25)] animate-fadeInUp">
             <div className="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.35em] text-amber-500">Complaints portal</p>
@@ -138,7 +140,7 @@ export default function Layout() {
             </div>
           </header>
 
-          <section className="rounded-[36px] border border-amber-100 bg-white/95 px-6 py-6 shadow-[0_25px_60px_rgba(255,193,111,0.25)]">
+          <section className="rounded-[36px] border border-amber-100 bg-white/95 px-6 py-6 shadow-[0_25px_60px_rgba(255,193,111,0.25)] animate-fadeInUp">
             <Outlet />
           </section>
         </main>

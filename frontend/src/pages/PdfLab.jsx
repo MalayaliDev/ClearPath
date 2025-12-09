@@ -456,7 +456,7 @@ export default function PdfLab() {
 
   return (
     <div className="space-y-6">
-      <header className="rounded-[32px] border border-amber-100 bg-gradient-to-br from-amber-50/80 via-white to-white px-6 py-6 shadow-lg shadow-amber-100/70">
+      <header className="rounded-[32px] border border-amber-100 bg-gradient-to-br from-amber-50/80 via-white to-white px-6 py-6 shadow-lg shadow-amber-100/70 animate-fadeInUp">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-amber-500">PDF knowledge base</p>
@@ -467,8 +467,8 @@ export default function PdfLab() {
             </p>
           </div>
           <div className="grid grid-cols-3 gap-3">
-            {heroStats.map(({ label, value, icon: Icon }) => (
-              <div key={label} className="rounded-2xl border border-white/80 bg-white/80 px-5 py-3 text-left shadow-sm">
+            {heroStats.map(({ label, value, icon: Icon }, idx) => (
+              <div key={label} className="rounded-2xl border border-white/80 bg-white/80 px-5 py-3 text-left shadow-sm animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
                 <div className="flex items-center gap-2 text-xs uppercase tracking-wide text-slate-400">
                   <Icon className="h-3.5 w-3.5 text-amber-500" />
                   <span>{label}</span>
@@ -518,7 +518,7 @@ export default function PdfLab() {
               <div className="mt-3 space-y-3">
                 {uploads.length === 0 && <p className="rounded-2xl bg-white/70 px-3 py-2 text-sm text-slate-500">Nothing yet. Upload a PDF to get started.</p>}
                 {uploads.map((file) => (
-                  <div key={file.id} className="flex items-start gap-2">
+                  <div key={file.id} className="flex items-start gap-2 animate-fadeInUp">
                     <button
                       type="button"
                       onClick={() => setSelectedFileId(file.id)}

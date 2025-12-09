@@ -44,7 +44,7 @@ export default function ComplaintsPage() {
 
   return (
     <div className="space-y-8">
-      <section className="rounded-[40px] border border-[#ffd9ba] bg-gradient-to-br from-[#fff7ef] via-[#ffe5cb] to-[#ffc28e] px-6 py-8 text-[#4a2b18] shadow-[0_35px_90px_rgba(249,186,95,0.35)]">
+      <section className="rounded-[40px] border border-[#ffd9ba] bg-gradient-to-br from-[#fff7ef] via-[#ffe5cb] to-[#ffc28e] px-6 py-8 text-[#4a2b18] shadow-[0_35px_90px_rgba(249,186,95,0.35)] animate-fadeInUp">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-4">
             <div className="flex items-center gap-3 text-[#c27933]">
@@ -75,8 +75,8 @@ export default function ComplaintsPage() {
                 { label: 'Active tickets', value: '12', status: '4 urgent' },
                 { label: 'Avg. response', value: '12m', status: 'Target < 15m' },
                 { label: 'Student syncs', value: '6', status: 'Mentor & staff' },
-              ].map((item) => (
-                <li key={item.label} className="flex items-center justify-between rounded-2xl border border-[#ffe5cb] bg-white px-4 py-3">
+              ].map((item, idx) => (
+                <li key={item.label} className="flex items-center justify-between rounded-2xl border border-[#ffe5cb] bg-white px-4 py-3 animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
                   <div>
                     <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-[#ad6b2d]">{item.label}</p>
                     <p className="text-base font-semibold text-[#3a1f11]">{item.value}</p>
@@ -90,7 +90,7 @@ export default function ComplaintsPage() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-[1.5fr_0.5fr]">
-        <div className={`${cardBase} px-6 py-6`}>
+        <div className={`${cardBase} px-6 py-6 animate-fadeInUp`}>
           <div className="flex flex-wrap items-center justify-between gap-3">
             <div>
               <p className="text-xs uppercase tracking-[0.35em] text-amber-500">Complaints health</p>
@@ -100,8 +100,8 @@ export default function ComplaintsPage() {
             <span className="rounded-full bg-amber-50 px-3 py-1 text-[11px] font-semibold text-amber-700">Live sync</span>
           </div>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {complaintInsights.map((insight) => (
-              <div key={insight.label} className="rounded-3xl border border-amber-50 bg-[#fff9f2] px-4 py-4">
+            {complaintInsights.map((insight, idx) => (
+              <div key={insight.label} className="rounded-3xl border border-amber-50 bg-[#fff9f2] px-4 py-4 animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-amber-500">{insight.label}</p>
                 <p className="mt-2 text-3xl font-semibold text-slate-900">{insight.value}</p>
                 <p className="text-xs text-slate-500">{insight.sub}</p>
@@ -112,7 +112,7 @@ export default function ComplaintsPage() {
             ))}
           </div>
         </div>
-        <div className={`${cardBase} px-6 py-6`}>
+        <div className={`${cardBase} px-6 py-6 animate-fadeInUp`}>
           <div className="flex items-center gap-3">
             <LifeBuoy className="h-5 w-5 text-amber-500" />
             <div>
@@ -125,8 +125,8 @@ export default function ComplaintsPage() {
               { label: 'Mentor updates', value: 'Neha replied in 6m' },
               { label: 'Study hours logged', value: '12h this week' },
               { label: 'Focus topic', value: 'Unit 3 · Electrostatics' },
-            ].map((item) => (
-              <li key={item.label} className="rounded-3xl border border-amber-50 bg-amber-50/50 px-4 py-3">
+            ].map((item, idx) => (
+              <li key={item.label} className="rounded-3xl border border-amber-50 bg-amber-50/50 px-4 py-3 animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
                 <p className="text-xs font-semibold text-amber-600">{item.label}</p>
                 <p className="text-sm text-slate-900">{item.value}</p>
               </li>
@@ -136,7 +136,7 @@ export default function ComplaintsPage() {
       </section>
 
       <section className="grid gap-6 xl:grid-cols-[1fr_1fr]">
-        <div className={`${cardBase} px-6 py-6`}>
+        <div className={`${cardBase} px-6 py-6 animate-fadeInUp`}>
           <div className="flex items-center justify-between">
             <p className="text-xs uppercase tracking-[0.35em] text-amber-500">Ticket timeline</p>
             <Link to="/app/my-tickets" className="text-xs font-semibold text-amber-600">
@@ -144,8 +144,8 @@ export default function ComplaintsPage() {
             </Link>
           </div>
           <ul className="mt-4 space-y-4 text-sm">
-            {complaintTimeline.map((event) => (
-              <li key={event.title} className="rounded-3xl border border-amber-50 bg-amber-50/60 px-4 py-3">
+            {complaintTimeline.map((event, idx) => (
+              <li key={event.title} className="rounded-3xl border border-amber-50 bg-amber-50/60 px-4 py-3 animate-fadeInUp" style={{ animationDelay: `${idx * 0.06}s` }}>
                 <p className={`font-semibold ${event.tone}`}>{event.title}</p>
                 <p className="text-xs text-slate-500">{event.note}</p>
                 <span className="text-[11px] font-semibold text-amber-600">{event.time}</span>
@@ -153,7 +153,7 @@ export default function ComplaintsPage() {
             ))}
           </ul>
         </div>
-        <div className={`${cardBase} px-6 py-6`}>
+        <div className={`${cardBase} px-6 py-6 animate-fadeInUp`}>
           <div className="flex items-center gap-3">
             <UserCircle2 className="h-5 w-5 text-amber-500" />
             <div>
@@ -169,8 +169,8 @@ export default function ComplaintsPage() {
               <p className="text-xs text-rose-500">{rosterError}</p>
             )}
             {!rosterLoading &&
-              rosterList.map((student) => (
-                <div key={student.studentId || student.name} className="flex items-center justify-between rounded-3xl border border-amber-50 bg-white px-4 py-3">
+              rosterList.map((student, idx) => (
+                <div key={student.studentId || student.name} className="flex items-center justify-between rounded-3xl border border-amber-50 bg-white px-4 py-3 animate-fadeInUp" style={{ animationDelay: `${idx * 0.06}s` }}>
                   <div>
                     <p className="text-sm font-semibold text-slate-900">{student.name}</p>
                     <p className="text-xs text-slate-500">

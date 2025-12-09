@@ -126,7 +126,7 @@ export default function TicketDetailPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#ffe7ce] via-[#ffd2b0] to-[#ffb680] px-3 py-10 text-slate-900 sm:px-6">
       <main className="mx-auto max-w-5xl">
-        <div className="rounded-[42px] border border-white/70 bg-white/95 p-6 shadow-[0_45px_110px_rgba(255,150,90,0.35)] sm:p-9">
+        <div className="rounded-[42px] border border-white/70 bg-white/95 p-6 shadow-[0_45px_110px_rgba(255,150,90,0.35)] sm:p-9 animate-fadeInUp">
           <header className="space-y-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
               <Link to="/app/tickets" className="inline-flex items-center gap-2 text-sm font-semibold text-amber-600">
@@ -172,12 +172,12 @@ export default function TicketDetailPage() {
                   </div>
                 </div>
               </div>
-              <div className="rounded-[30px] border border-white/80 bg-gradient-to-br from-[#dff1ff] via-white to-[#f4fbff] p-5 shadow-inner">
+              <div className="rounded-[30px] border border-white/80 bg-gradient-to-br from-[#dff1ff] via-white to-[#f4fbff] p-5 shadow-inner animate-fadeInUp" style={{ animationDelay: '0.08s' }}>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Category</p>
                 <p className="mt-3 text-lg font-semibold">{ticket.category || 'Support'}</p>
                 <p className="text-xs text-slate-500">Updated {formatTicketDate(ticket.updated_at)}</p>
               </div>
-              <div className="rounded-[30px] border border-white/80 bg-gradient-to-br from-[#e9ffe8] via-white to-[#f6fff5] p-5 shadow-inner">
+              <div className="rounded-[30px] border border-white/80 bg-gradient-to-br from-[#e9ffe8] via-white to-[#f6fff5] p-5 shadow-inner animate-fadeInUp" style={{ animationDelay: '0.16s' }}>
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-400">Staff response</p>
                 <p className="mt-3 text-sm text-slate-600">{ticket.staff_response || 'Waiting for mentor reply'}</p>
               </div>
@@ -185,7 +185,7 @@ export default function TicketDetailPage() {
           )}
 
           <section className="mt-8 grid gap-6 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
-            <div className="rounded-[34px] border border-amber-50 bg-white/95 p-6 shadow-[0_30px_60px_rgba(255,170,108,0.25)]">
+            <div className="rounded-[34px] border border-amber-50 bg-white/95 p-6 shadow-[0_30px_60px_rgba(255,170,108,0.25)] animate-fadeInUp">
               <div className="mb-4 flex items-center justify-between">
                 <h2 className="text-lg font-semibold">Conversation</h2>
                 {hasMore && (
@@ -251,7 +251,7 @@ export default function TicketDetailPage() {
             </div>
 
             <aside className="space-y-4">
-              <div className="rounded-[28px] border border-amber-50 bg-gradient-to-br from-[#fff1da] via-white to-white p-5">
+              <div className="rounded-[28px] border border-amber-50 bg-gradient-to-br from-[#fff1da] via-white to-white p-5 animate-fadeInUp">
                 <div className="flex items-center gap-2 text-sm font-semibold text-amber-700">
                   <Sparkles className="h-4 w-4" /> Ticket ritual
                 </div>
@@ -259,7 +259,7 @@ export default function TicketDetailPage() {
                   Keep your responses factual, kind, and timestamped. Short updates every few hours earn faster resolutions.
                 </p>
               </div>
-              <div className="rounded-[28px] border border-emerald-50 bg-gradient-to-br from-[#e8fff0] via-white to-white p-5">
+              <div className="rounded-[28px] border border-emerald-50 bg-gradient-to-br from-[#e8fff0] via-white to-white p-5 animate-fadeInUp" style={{ animationDelay: '0.08s' }}>
                 <div className="flex items-center gap-2 text-sm font-semibold text-emerald-700">
                   <ShieldCheck className="h-4 w-4" /> Mentor tips
                 </div>

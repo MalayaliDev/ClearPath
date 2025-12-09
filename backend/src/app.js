@@ -9,6 +9,7 @@ const mentorRoutes = require('./routes/mentorRoutes');
 const userRoutes = require('./routes/userRoutes');
 const examRoutes = require('./routes/examRoutes');
 const studyRoutes = require('./routes/studyRoutes');
+const groqRoutes = require('./routes/groqRoutes');
 
 const app = express();
 app.set('trust proxy', 1);
@@ -49,6 +50,7 @@ app.use('/api/mentor', mentorRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/exam', examRoutes);
 app.use('/api/study', studyRoutes);
+app.use('/api/groq', groqRoutes);
 
 // ============================================
 // ERROR HANDLER - MUST ALSO SEND CORS HEADERS

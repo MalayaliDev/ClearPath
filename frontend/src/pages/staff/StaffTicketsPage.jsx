@@ -170,15 +170,15 @@ export default function StaffTicketsPage() {
   return (
     <div className="space-y-6">
       <section className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-xl border border-amber-100 bg-white/80 px-4 py-3 shadow-sm">
+        <div className="rounded-xl border border-amber-100 bg-white/80 px-4 py-3 shadow-sm animate-fadeInUp">
           <p className="text-xs text-slate-500">Total complaints</p>
           <p className="mt-1 text-2xl font-semibold text-slate-900">{complaints.length}</p>
         </div>
-        <div className="rounded-xl border border-amber-100 bg-white/80 px-4 py-3 shadow-sm">
+        <div className="rounded-xl border border-amber-100 bg-white/80 px-4 py-3 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.08s' }}>
           <p className="text-xs text-slate-500">Pending</p>
           <p className="mt-1 text-2xl font-semibold text-amber-600">{pendingCount}</p>
         </div>
-        <div className="rounded-xl border border-amber-100 bg-white/80 px-4 py-3 shadow-sm">
+        <div className="rounded-xl border border-amber-100 bg-white/80 px-4 py-3 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.16s' }}>
           <p className="text-xs text-slate-500">Resolved</p>
           <p className="mt-1 text-2xl font-semibold text-emerald-600">{resolvedCount}</p>
         </div>
@@ -195,16 +195,17 @@ export default function StaffTicketsPage() {
 
       <section className="grid gap-6 xl:grid-cols-[1.3fr_1fr]">
         <div className="space-y-3 max-h-[540px] overflow-y-auto pr-1">
-          {complaints.map((c) => (
+          {complaints.map((c, idx) => (
             <button
               key={c._id || c.id}
               type="button"
               onClick={() => handleSelect(c)}
-              className={`w-full rounded-xl border px-4 py-3 text-left text-sm shadow-sm transition ${
+              className={`w-full rounded-xl border px-4 py-3 text-left text-sm shadow-sm transition animate-fadeInUp ${
                 selectedId === (c._id || c.id)
                   ? 'border-amber-500 bg-[#fff7e8]'
                   : 'border-amber-100 bg-white/80 hover:border-amber-200'
               }`}
+              style={{ animationDelay: `${idx * 0.05}s` }}
             >
               <div className="flex items-center justify-between gap-2">
                 <div>
@@ -222,7 +223,7 @@ export default function StaffTicketsPage() {
         </div>
 
         <div className="space-y-6">
-          <div className="rounded-[24px] border border-amber-100 bg-white/90 p-5 shadow-sm">
+          <div className="rounded-[24px] border border-amber-100 bg-white/90 p-5 shadow-sm animate-fadeInUp">
             <div className="flex items-start justify-between">
               <div>
                 <h2 className="text-sm font-semibold text-slate-900">Update status & AI reply</h2>
@@ -305,7 +306,7 @@ export default function StaffTicketsPage() {
             )}
           </div>
 
-          <div className="rounded-[24px] border border-amber-100 bg-white/90 p-5 shadow-sm">
+          <div className="rounded-[24px] border border-amber-100 bg-white/90 p-5 shadow-sm animate-fadeInUp">
             <h2 className="text-sm font-semibold text-slate-900">Ticket chat</h2>
             {!selectedId && <p className="mt-2 text-sm text-slate-500">Select a complaint to view conversation.</p>}
             {selectedId && (

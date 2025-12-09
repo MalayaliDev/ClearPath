@@ -8,6 +8,7 @@ import {
   ClipboardList,
   Home,
   LifeBuoy,
+  Mic,
   Sparkles,
   Users,
   Zap,
@@ -42,6 +43,7 @@ export default function Layout() {
     { to: '/app/exam-lab', label: 'Exam Lab · MCQs', icon: CalendarClock },
     { to: '/app/study-tools', label: 'AI Study Tools', icon: Sparkles },
     { to: '/app/mentor-lab', label: 'Personal AI mentor', icon: Bot },
+    { to: '/app/jarvis', label: 'Jarvis Voice Chat', icon: Mic },
   ];
 
   return (

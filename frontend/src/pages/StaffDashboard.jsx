@@ -63,7 +63,7 @@ export default function StaffDashboard() {
 
   return (
     <div className="space-y-6 text-slate-900">
-      <header className="rounded-3xl border border-amber-100 bg-gradient-to-br from-white via-amber-50/80 to-white p-6 shadow-sm">
+      <header className="rounded-3xl border border-amber-100 bg-gradient-to-br from-white via-amber-50/80 to-white p-6 shadow-sm animate-fadeInUp">
         <p className="text-[11px] uppercase tracking-[0.35em] text-amber-500">Staff workspace</p>
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
           <div>
@@ -80,18 +80,21 @@ export default function StaffDashboard() {
       </header>
 
       <div className="flex snap-x gap-3 overflow-x-auto pb-2">
-        {staffSections.map(({ id, icon: Icon, label, description, path }) => (
+        {staffSections.map((section, idx) => {
+          const { id, icon: Icon, label, description, path } = section;
+          return (
           <NavLink
             key={id}
             to={`/app/staff/${path}`}
             className={({ isActive }) =>
-              `snap-start rounded-2xl border px-4 py-3 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 ${
+              `snap-start rounded-2xl border px-4 py-3 text-sm transition focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 animate-fadeInUp ${
                 isActive
                   ? 'border-amber-400 bg-[#fff7e8] text-amber-900 shadow'
                   : 'border-slate-100 bg-white/80 text-slate-600 hover:border-amber-200'
               }`
             }
             end={false}
+            style={{ animationDelay: `${idx * 0.06}s` }}
           >
             <div className="flex items-center gap-2 text-sm font-semibold">
               <Icon className="h-4 w-4" />
@@ -99,12 +102,13 @@ export default function StaffDashboard() {
             </div>
             <p className="mt-1 text-xs text-slate-500">{description}</p>
           </NavLink>
-        ))}
+          );
+        })}
       </div>
 
       <section className="grid gap-4 md:grid-cols-3">
-        {quickActions.map((card) => (
-          <article key={card.title} className="rounded-2xl border border-slate-100 bg-white/90 p-4 shadow-sm">
+        {quickActions.map((card, idx) => (
+          <article key={card.title} className="rounded-2xl border border-slate-100 bg-white/90 p-4 shadow-sm animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
             <div className="flex items-center justify-between text-xs text-slate-500">
               <span>{card.metric}</span>
               <span className="text-emerald-600">LIVE</span>
@@ -115,7 +119,7 @@ export default function StaffDashboard() {
         ))}
       </section>
 
-      <section className="rounded-3xl border border-slate-100 bg-white/95 p-4 shadow-sm">
+      <section className="rounded-3xl border border-slate-100 bg-white/95 p-4 shadow-sm animate-fadeInUp">
         <Outlet />
       </section>
     </div>

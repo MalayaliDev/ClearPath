@@ -29,7 +29,7 @@ export default function StaffTicketConfigPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl border border-amber-100 bg-white/90 p-4 shadow-sm">
+      <div className="rounded-2xl border border-amber-100 bg-white/90 p-4 shadow-sm animate-fadeInUp">
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-[11px] uppercase tracking-[0.3em] text-amber-500">Ticket config</p>
@@ -41,7 +41,7 @@ export default function StaffTicketConfigPage() {
       </div>
 
       <section className="grid gap-4 lg:grid-cols-2">
-        <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm space-y-3">
+        <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm space-y-3 animate-fadeInUp" style={{ animationDelay: '0.08s' }}>
           <label className="flex items-center justify-between rounded-2xl border border-amber-50 bg-amber-50/60 px-3 py-2 text-sm font-medium text-slate-700">
             <span>Autopilot triage</span>
             <input
@@ -97,7 +97,7 @@ export default function StaffTicketConfigPage() {
         </div>
 
         <div className="space-y-4">
-          <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm">
+          <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.16s' }}>
             <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
               <Bot className="h-4 w-4 text-amber-500" /> Autopilot automations
             </div>
@@ -124,7 +124,7 @@ export default function StaffTicketConfigPage() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm">
+          <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.24s' }}>
             <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
               <Inbox className="h-4 w-4 text-amber-500" /> Ticket templates
             </div>
@@ -142,7 +142,7 @@ export default function StaffTicketConfigPage() {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-100 bg-white/95 p-4 text-xs text-slate-500">
+          <div className="rounded-2xl border border-slate-100 bg-white/95 p-4 text-xs text-slate-500 animate-fadeInUp" style={{ animationDelay: '0.32s' }}>
             <div className="inline-flex items-center gap-2 text-sm font-semibold text-slate-900">
               <BookMarked className="h-4 w-4 text-amber-500" /> Playbook note
             </div>

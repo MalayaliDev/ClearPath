@@ -13,7 +13,7 @@ const menuActions = [
     label: 'Edit profile',
     description: 'Update your info & avatar',
     icon: UserRound,
-    to: '/app/profile',
+    to: '/app/edit-profile',
   },
   {
     label: 'Support & settings',
@@ -69,7 +69,11 @@ export default function UserMenuCard({ user, onLogout }) {
 
       {open && (
         <div className="absolute left-0 bottom-[calc(100%+12px)] w-64 rounded-[28px] border border-amber-400/20 bg-gradient-to-b from-[#1c0f03] via-[#120902] to-[#0a0502] text-amber-50 shadow-[0_24px_50px_rgba(79,29,7,0.55)]">
-          <div className="flex items-center gap-3 px-5 py-3">
+          <button
+            type="button"
+            onClick={() => handleNavigate('/app/profile')}
+            className="w-full flex items-center gap-3 px-5 py-3 transition hover:bg-amber-50/5 rounded-t-[28px]"
+          >
             <div className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-b from-amber-100 to-amber-400 text-xs font-semibold text-amber-900">
               {user?.avatarUrl ? (
                 <img src={user.avatarUrl} alt="Avatar" className="h-full w-full object-cover" />
@@ -77,11 +81,11 @@ export default function UserMenuCard({ user, onLogout }) {
                 <span>{user?.name ? user.name.charAt(0) : 'M'}</span>
               )}
             </div>
-            <div>
+            <div className="text-left">
               <p className="text-sm font-semibold text-white">{user?.name || 'Malayali Dev'}</p>
               <p className="text-xs text-amber-200/80">{user?.email || 'user@clearpath.app'}</p>
             </div>
-          </div>
+          </button>
           <div className="border-t border-amber-50/10" />
           <div className="p-2 text-sm">
             {menuActions.map(({ label, description, icon: Icon, to }) => (

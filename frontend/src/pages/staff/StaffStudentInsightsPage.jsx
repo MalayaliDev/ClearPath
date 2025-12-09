@@ -27,7 +27,7 @@ export default function StaffStudentInsightsPage() {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl border border-amber-100 bg-white/90 p-4 shadow-sm">
+      <div className="rounded-2xl border border-amber-100 bg-white/90 p-4 shadow-sm animate-fadeInUp">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-[11px] uppercase tracking-[0.3em] text-amber-500">Student lens</p>
@@ -42,16 +42,17 @@ export default function StaffStudentInsightsPage() {
 
       <div className="grid gap-4 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="space-y-3">
-          {performanceData.map((cohort) => (
+          {performanceData.map((cohort, idx) => (
             <button
               key={cohort.id}
               type="button"
               onClick={() => setSelectedCohort(cohort.id)}
-              className={`w-full rounded-2xl border px-4 py-3 text-left text-sm transition ${
+              className={`w-full rounded-2xl border px-4 py-3 text-left text-sm transition animate-fadeInUp ${
                 selectedCohort === cohort.id
                   ? 'border-amber-400 bg-[#fff7e8] text-slate-900 shadow'
                   : 'border-slate-100 bg-white/90 text-slate-600 hover:border-amber-200'
               }`}
+              style={{ animationDelay: `${idx * 0.08}s` }}
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -75,7 +76,7 @@ export default function StaffStudentInsightsPage() {
         </div>
 
         <div className="space-y-4">
-          <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm">
+          <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.08s' }}>
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Selected cohort</p>
@@ -97,7 +98,7 @@ export default function StaffStudentInsightsPage() {
             </button>
           </div>
 
-          <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm">
+          <div className="rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.16s' }}>
             <div className="flex items-center justify-between text-sm text-slate-600">
               <p className="font-semibold text-slate-900">Risk alerts</p>
               <label className="inline-flex items-center gap-2 text-xs">
@@ -111,8 +112,8 @@ export default function StaffStudentInsightsPage() {
               </label>
             </div>
             <div className="mt-4 space-y-3">
-              {visibleRisks.map((alert) => (
-                <div key={alert.id} className="rounded-2xl border border-amber-100 bg-amber-50/70 px-4 py-3">
+              {visibleRisks.map((alert, idx) => (
+                <div key={alert.id} className="rounded-2xl border border-amber-100 bg-amber-50/70 px-4 py-3 animate-fadeInUp" style={{ animationDelay: `${0.24 + idx * 0.08}s` }}>
                   <div className="flex items-center justify-between text-sm">
                     <p className="font-semibold text-slate-900">{alert.name}</p>
                     <span className="inline-flex items-center gap-1 rounded-full border border-amber-200 bg-white px-2 py-0.5 text-xs text-amber-600">

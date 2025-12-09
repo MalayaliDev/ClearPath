@@ -162,7 +162,7 @@ export default function ExamLab() {
 
   return (
     <div className="space-y-8 text-slate-900">
-      <section className="rounded-[36px] border border-amber-100 bg-gradient-to-br from-[#fff5e6] via-white to-[#ffe4c6] px-6 py-7 shadow-[0_35px_90px_rgba(255,193,111,0.35)]">
+      <section className="rounded-[36px] border border-amber-100 bg-gradient-to-br from-[#fff5e6] via-white to-[#ffe4c6] px-6 py-7 shadow-[0_35px_90px_rgba(255,193,111,0.35)] animate-fadeInUp">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-amber-600">Exam lab</p>
@@ -190,8 +190,8 @@ export default function ExamLab() {
         </div>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {heroStats.map(({ label, value, sub, icon: Icon }) => (
-            <div key={label} className="rounded-2xl border border-white/80 bg-white/85 px-4 py-4 shadow-sm">
+          {heroStats.map(({ label, value, sub, icon: Icon }, idx) => (
+            <div key={label} className="rounded-2xl border border-white/80 bg-white/85 px-4 py-4 shadow-sm animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
               <div className="flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-slate-400">
                 <Icon className="h-3.5 w-3.5 text-amber-500" />
                 <span>{label}</span>
@@ -208,7 +208,7 @@ export default function ExamLab() {
       )}
 
       <section className="grid gap-6 lg:grid-cols-[1.5fr_0.8fr]">
-        <div className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm">
+        <div className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm animate-fadeInUp">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-amber-500">1. Select PDF</p>
@@ -230,7 +230,7 @@ export default function ExamLab() {
               </p>
             )}
 
-            {uploads.map((file) => {
+            {uploads.map((file, idx) => {
               const id = file.id || file.fileId;
               const isActive = selectedFileId === id;
               return (
@@ -238,9 +238,10 @@ export default function ExamLab() {
                   key={id}
                   type="button"
                   onClick={() => handleSelectFile(file)}
-                  className={`text-left rounded-2xl border px-4 py-4 transition ${
+                  className={`text-left rounded-2xl border px-4 py-4 transition animate-fadeInUp ${
                     isActive ? 'border-amber-500 bg-[#fff7ea] shadow-[0_10px_30px_rgba(255,193,111,0.25)]' : 'border-amber-50 bg-white hover:border-amber-200'
                   }`}
+                  style={{ animationDelay: `${idx * 0.06}s` }}
                 >
                   <div className="flex items-center justify-between gap-3">
                     <div>
@@ -259,7 +260,7 @@ export default function ExamLab() {
           </div>
         </div>
 
-        <div className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm">
+        <div className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm animate-fadeInUp">
           <p className="text-xs uppercase tracking-[0.3em] text-amber-500">2. Question volume</p>
           <h2 className="text-xl font-semibold">Pick how intense the drill should be</h2>
           <div className="mt-4 flex flex-wrap gap-3">
@@ -298,7 +299,7 @@ export default function ExamLab() {
         </div>
       </section>
 
-      <section className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm">
+      <section className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm animate-fadeInUp">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-amber-500">3. Recent drills</p>
@@ -323,10 +324,10 @@ export default function ExamLab() {
           </p>
         ) : (
           <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            {history.map((entry) => {
+            {history.map((entry, idx) => {
               const percent = entry.total ? Math.round(((entry.score || 0) / entry.total) * 100) : 0;
               return (
-                <div key={entry.id} className="rounded-3xl border border-amber-50 bg-gradient-to-br from-white via-[#fff8ef] to-white p-5 shadow-sm">
+                <div key={entry.id} className="rounded-3xl border border-amber-50 bg-gradient-to-br from-white via-[#fff8ef] to-white p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
                   <div className="flex items-center justify-between gap-3">
                     <div>
                       <p className="text-sm font-semibold text-slate-900">{entry.fileName || 'Exam session'}</p>

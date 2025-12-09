@@ -30,6 +30,7 @@ import StaffAiLimitsPage from './pages/staff/StaffAiLimitsPage.jsx';
 import StaffTicketConfigPage from './pages/staff/StaffTicketConfigPage.jsx';
 import StaffPdfMaintenancePage from './pages/staff/StaffPdfMaintenancePage.jsx';
 import BannedPage from './pages/BannedPage.jsx';
+import JarvisVoiceChat from './pages/JarvisVoiceChat.jsx';
 
 function ProtectedRoute({ children, allowedRoles }) {
   const user = getStoredUser();
@@ -91,6 +92,7 @@ export default function App() {
         <Route path="my-tickets" element={<MyTicketsPage />} />
         <Route path="profile" element={<ProfilePage />} />
         <Route path="edit-profile" element={<EditProfilePage />} />
+        <Route path="jarvis" element={<JarvisVoiceChat />} />
         <Route path="tickets/:ticketId" element={<TicketDetailPage />} />
         <Route
           path="staff"

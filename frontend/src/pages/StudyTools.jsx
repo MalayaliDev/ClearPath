@@ -56,7 +56,7 @@ export default function StudyTools() {
 
   return (
     <div className="space-y-8 text-slate-900">
-      <section className="rounded-[36px] border border-amber-100 bg-gradient-to-br from-[#fff5e6] via-white to-[#ffe4c6] px-6 py-7 shadow-[0_35px_90px_rgba(255,193,111,0.35)]">
+      <section className="rounded-[36px] border border-amber-100 bg-gradient-to-br from-[#fff5e6] via-white to-[#ffe4c6] px-6 py-7 shadow-[0_35px_90px_rgba(255,193,111,0.35)] animate-fadeInUp">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-3">
             <p className="text-[11px] font-semibold uppercase tracking-[0.35em] text-amber-600">Study tools</p>
@@ -78,8 +78,8 @@ export default function StudyTools() {
         </div>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {heroStats.map(({ label, value, sub, icon: Icon }) => (
-            <div key={label} className="rounded-2xl border border-white/80 bg-white/85 px-4 py-4 shadow-sm">
+          {heroStats.map(({ label, value, sub, icon: Icon }, idx) => (
+            <div key={label} className="rounded-2xl border border-white/80 bg-white/85 px-4 py-4 shadow-sm animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
               <div className="flex items-center gap-2 text-xs uppercase tracking-[0.35em] text-slate-400">
                 <Icon className="h-3.5 w-3.5 text-amber-500" />
                 <span>{label}</span>
@@ -92,7 +92,7 @@ export default function StudyTools() {
       </section>
 
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
-        <form onSubmit={handleCreateAsset} className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm space-y-4">
+        <form onSubmit={handleCreateAsset} className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm space-y-4 animate-fadeInUp">
           <div className="flex items-center justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Create asset</p>
@@ -148,11 +148,11 @@ export default function StudyTools() {
           <p className="text-xs text-slate-500">Assets stay private. Decks auto-sync with Exam Lab when you convert them into quizzes.</p>
         </form>
 
-        <div className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm">
+        <div className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm animate-fadeInUp">
           <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Recent assets</p>
           <ul className="mt-4 space-y-3 text-sm text-slate-600">
-            {assets.map((asset) => (
-              <li key={asset.id} className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-3">
+            {assets.map((asset, idx) => (
+              <li key={asset.id} className="rounded-2xl border border-amber-50 bg-amber-50/60 px-4 py-3 animate-fadeInUp" style={{ animationDelay: `${idx * 0.06}s` }}>
                 <div className="flex items-center justify-between">
                   <p className="font-semibold text-slate-900">{asset.title}</p>
                   <span className="rounded-full bg-white/80 px-3 py-1 text-[11px] font-semibold text-amber-600">{asset.type}</span>
@@ -164,7 +164,7 @@ export default function StudyTools() {
         </div>
       </section>
 
-      <section className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm">
+      <section className="rounded-[32px] border border-amber-100 bg-white px-6 py-6 shadow-sm animate-fadeInUp">
         <div className="flex items-center justify-between">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Decks & quizzes</p>
@@ -173,8 +173,8 @@ export default function StudyTools() {
           <CheckCircle2 className="h-5 w-5 text-emerald-500" />
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-3">
-          {decks.map((deck) => (
-            <div key={deck.id} className="rounded-3xl border border-amber-50 bg-gradient-to-br from-white via-[#fff8ef] to-white p-5 shadow-sm">
+          {decks.map((deck, idx) => (
+            <div key={deck.id} className="rounded-3xl border border-amber-50 bg-gradient-to-br from-white via-[#fff8ef] to-white p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: `${idx * 0.08}s` }}>
               <p className="text-sm font-semibold text-slate-900">{deck.title}</p>
               <p className="text-xs text-slate-500">{deck.count} cards · Updated {deck.updatedAt}</p>
               <div className="mt-4 flex items-end justify-between">

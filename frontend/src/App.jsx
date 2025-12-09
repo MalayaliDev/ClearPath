@@ -20,6 +20,7 @@ import TicketDetailPage from './pages/TicketDetailPage.jsx';
 import MyTicketsPage from './pages/MyTicketsPage.jsx';
 import CreateTicketPage from './pages/CreateTicketPage.jsx';
 import ProfilePage from './pages/ProfilePage.jsx';
+import EditProfilePage from './pages/EditProfilePage.jsx';
 import Layout from './components/Layout.jsx';
 import { getStoredUser } from './services/authStorage.js';
 import StaffTicketsPage from './pages/staff/StaffTicketsPage.jsx';
@@ -89,6 +90,7 @@ export default function App() {
         <Route path="tickets" element={<MyTicketsPage />} />
         <Route path="my-tickets" element={<MyTicketsPage />} />
         <Route path="profile" element={<ProfilePage />} />
+        <Route path="edit-profile" element={<EditProfilePage />} />
         <Route path="tickets/:ticketId" element={<TicketDetailPage />} />
         <Route
           path="staff"

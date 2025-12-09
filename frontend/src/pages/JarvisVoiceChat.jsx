@@ -265,21 +265,21 @@ export default function JarvisVoiceChat() {
   return (
     <div className="flex h-screen flex-col bg-gradient-to-br from-amber-50 via-slate-50 to-slate-100">
       {/* Header */}
-      <div className="border-b border-amber-200/50 bg-gradient-to-r from-amber-50 to-orange-50 px-6 py-5 shadow-sm">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <MessageCircle className="h-8 w-8 text-amber-600" />
-            <div>
-              <h1 className="text-2xl font-bold text-slate-900">Jarvis Voice Chat</h1>
-              <p className="text-xs text-slate-500">Your AI study companion • Made by Malayali Dev</p>
+      <div className="border-b border-amber-200/50 bg-gradient-to-r from-amber-50 to-orange-50 px-3 sm:px-6 py-3 sm:py-5 shadow-sm">
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center gap-2">
+            <MessageCircle className="h-5 sm:h-8 w-5 sm:w-8 text-amber-600 flex-shrink-0" />
+            <div className="min-w-0 flex-1">
+              <h1 className="text-base sm:text-2xl font-bold text-slate-900 truncate">Jarvis Voice Chat</h1>
+              <p className="text-xs text-slate-500 truncate">Your AI study companion • Made by Malayali Dev</p>
             </div>
           </div>
-          <div className="flex items-center gap-2 relative">
+          <div className="flex items-center gap-1 sm:gap-2 relative flex-wrap">
             {/* Voice Selection Dropdown */}
             <div className="relative">
               <button
                 onClick={() => setShowVoiceMenu(!showVoiceMenu)}
-                className="flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-sm font-semibold text-purple-700 transition hover:bg-purple-200"
+                className="flex items-center gap-1 rounded-full bg-purple-100 px-2 py-1 text-xs font-semibold text-purple-700 transition hover:bg-purple-200 whitespace-nowrap"
                 title="Change voice"
               >
                 {(() => {
@@ -321,7 +321,7 @@ export default function JarvisVoiceChat() {
 
             <button
               onClick={clearChat}
-              className="flex items-center gap-2 rounded-full bg-slate-100 px-4 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-200"
+              className="flex items-center gap-1 rounded-full bg-slate-100 px-2 py-1 text-xs font-semibold text-slate-600 transition hover:bg-slate-200 whitespace-nowrap"
               title="Clear chat"
             >
               <Trash2 className="h-4 w-4" />
@@ -329,21 +329,21 @@ export default function JarvisVoiceChat() {
             </button>
             <button
               onClick={() => setSoundEnabled(!soundEnabled)}
-              className={`rounded-full p-3 transition ${
+              className={`rounded-full p-2 sm:p-3 transition flex-shrink-0 ${
                 soundEnabled
                   ? 'bg-amber-100 text-amber-600 hover:bg-amber-200'
                   : 'bg-slate-100 text-slate-400 hover:bg-slate-200'
               }`}
               title={soundEnabled ? 'Disable sound' : 'Enable sound'}
             >
-              {soundEnabled ? <Volume2 className="h-5 w-5" /> : <VolumeX className="h-5 w-5" />}
+              {soundEnabled ? <Volume2 className="h-4 sm:h-5 w-4 sm:w-5" /> : <VolumeX className="h-4 sm:h-5 w-4 sm:w-5" />}
             </button>
           </div>
         </div>
       </div>
 
       {/* Messages Container */}
-      <div className="flex-1 overflow-y-auto p-6 space-y-5">
+      <div className="flex-1 overflow-y-auto p-3 sm:p-6 space-y-3 sm:space-y-5">
         {messages.map((message, idx) => (
           <div
             key={message.id}
@@ -351,13 +351,13 @@ export default function JarvisVoiceChat() {
             style={{ animationDelay: `${idx * 0.05}s` }}
           >
             <div
-              className={`max-w-md rounded-3xl px-5 py-4 ${
+              className={`max-w-xs sm:max-w-md rounded-3xl px-4 sm:px-5 py-3 sm:py-4 ${
                 message.type === 'user'
                   ? 'bg-gradient-to-br from-amber-500 to-amber-600 text-white shadow-lg hover:shadow-xl transition'
                   : 'bg-white text-slate-900 border border-amber-100/50 shadow-md hover:shadow-lg transition'
               }`}
             >
-              <p className="text-sm leading-relaxed font-medium">{message.text}</p>
+              <p className="text-xs sm:text-sm leading-relaxed font-medium break-words">{message.text}</p>
               <p className={`mt-2 text-xs ${message.type === 'user' ? 'text-amber-100' : 'text-slate-400'}`}>
                 {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
               </p>
@@ -380,20 +380,20 @@ export default function JarvisVoiceChat() {
       </div>
 
       {/* Premium Input Area */}
-      <div className="border-t border-amber-200/50 bg-gradient-to-t from-white to-amber-50/30 p-6 shadow-2xl">
-        <div className="flex gap-3 mb-4">
+      <div className="border-t border-amber-200/50 bg-gradient-to-t from-white to-amber-50/30 px-3 sm:px-6 py-4 sm:py-6 shadow-2xl">
+        <div className="flex gap-2 sm:gap-3 mb-2 sm:mb-3 items-end">
           {/* Voice Input Button */}
           <button
             onClick={isListening ? stopListening : startListening}
             disabled={isLoading || isSpeaking}
-            className={`flex h-14 w-14 items-center justify-center rounded-full font-bold transition shadow-lg ${
+            className={`flex h-11 sm:h-12 w-11 sm:w-12 items-center justify-center rounded-full font-bold transition shadow-lg flex-shrink-0 ${
               isListening
                 ? 'bg-gradient-to-br from-rose-500 to-rose-600 text-white animate-pulse'
                 : 'bg-gradient-to-br from-slate-200 to-slate-300 text-slate-700 hover:from-slate-300 hover:to-slate-400'
             } disabled:opacity-50`}
             title={isListening ? 'Stop listening' : 'Start listening'}
           >
-            {isListening ? <MicOff className="h-6 w-6" /> : <Mic className="h-6 w-6" />}
+            {isListening ? <MicOff className="h-5 w-5" /> : <Mic className="h-5 w-5" />}
           </button>
 
           {/* Text Input */}
@@ -401,8 +401,8 @@ export default function JarvisVoiceChat() {
             value={textInput}
             onChange={(e) => setTextInput(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Ask me anything... or use the microphone"
-            className="flex-1 rounded-3xl border-2 border-amber-200 bg-white px-5 py-3 text-sm text-slate-900 placeholder-slate-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-200/50 resize-none font-medium"
+            placeholder="Ask me anything..."
+            className="flex-1 rounded-2xl border-2 border-amber-200 bg-white px-3 py-2 text-xs sm:text-sm text-slate-900 placeholder-slate-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-200/50 resize-none font-medium"
             rows="2"
             disabled={isLoading}
           />
@@ -411,45 +411,47 @@ export default function JarvisVoiceChat() {
           <button
             onClick={sendMessage}
             disabled={!textInput.trim() || isLoading}
-            className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-amber-600 text-white font-bold transition hover:from-amber-600 hover:to-amber-700 shadow-lg hover:shadow-xl disabled:opacity-50"
+            className="flex h-11 sm:h-12 w-11 sm:w-12 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-amber-600 text-white font-bold transition hover:from-amber-600 hover:to-amber-700 shadow-lg hover:shadow-xl disabled:opacity-50 flex-shrink-0"
             title="Send message"
           >
-            {isLoading ? <Loader2 className="h-6 w-6 animate-spin" /> : <Send className="h-6 w-6" />}
+            {isLoading ? <Loader2 className="h-5 w-5 animate-spin" /> : <Send className="h-5 w-5" />}
           </button>
 
           {/* Stop Speaking Button */}
           {isSpeaking && (
             <button
               onClick={stopSpeaking}
-              className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-600 text-white font-bold transition hover:from-red-600 hover:to-red-700 shadow-lg animate-pulse"
+              className="flex h-11 sm:h-12 w-11 sm:w-12 items-center justify-center rounded-full bg-gradient-to-br from-red-500 to-red-600 text-white font-bold transition hover:from-red-600 hover:to-red-700 shadow-lg animate-pulse flex-shrink-0"
               title="Stop speaking"
             >
-              <Square className="h-6 w-6" />
+              <Square className="h-5 w-5" />
             </button>
           )}
         </div>
 
         {/* Status Indicators */}
-        <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-600">
-          {isListening && (
-            <span className="flex items-center gap-1 bg-rose-100 text-rose-700 px-3 py-1 rounded-full">
-              <Mic className="h-3 w-3" />
-              Listening...
-            </span>
-          )}
-          {isSpeaking && (
-            <span className="flex items-center gap-1 bg-amber-100 text-amber-700 px-3 py-1 rounded-full">
-              <Volume2 className="h-3 w-3" />
-              Speaking... (click stop to interrupt)
-            </span>
-          )}
-          {soundEnabled && (
-            <span className="flex items-center gap-1 bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full">
-              <Zap className="h-3 w-3" />
-              Sound enabled
-            </span>
-          )}
-        </div>
+        {(isListening || isSpeaking || soundEnabled) && (
+          <div className="flex flex-wrap gap-2 text-xs font-semibold text-slate-600">
+            {isListening && (
+              <span className="flex items-center gap-1 bg-rose-100 text-rose-700 px-2 py-1 rounded-full">
+                <Mic className="h-3 w-3" />
+                Listening...
+              </span>
+            )}
+            {isSpeaking && (
+              <span className="flex items-center gap-1 bg-amber-100 text-amber-700 px-2 py-1 rounded-full">
+                <Volume2 className="h-3 w-3" />
+                Speaking...
+              </span>
+            )}
+            {soundEnabled && (
+              <span className="flex items-center gap-1 bg-emerald-100 text-emerald-700 px-2 py-1 rounded-full">
+                <Zap className="h-3 w-3" />
+                Sound enabled
+              </span>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowRight,
@@ -269,6 +269,129 @@ const quoteOfDay = {
 
 export default function StudentDashboard() {
   const user = getStoredUser();
+  const [isVisible, setIsVisible] = useState(false);
+  const [metrics, setMetrics] = useState(usageMetrics);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  // Real-time metric updates
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMetrics((prev) =>
+        prev.map((metric) => {
+          // Simulate real-time changes
+          if (metric.label === 'Exam completion') {
+            const change = Math.random() * 2 - 0.5; // -0.5 to +1.5
+            const newValue = Math.min(100, Math.max(0, metric.value + change));
+            return { ...metric, value: Math.round(newValue) };
+          }
+          if (metric.label === 'AI chat usage') {
+            const change = Math.random() * 1.5 - 0.3;
+            const newValue = Math.min(100, Math.max(0, metric.value + change));
+            return { ...metric, value: Math.round(newValue) };
+          }
+          if (metric.label === 'Study hours') {
+            const change = Math.random() * 1 - 0.2;
+            const newValue = Math.min(100, Math.max(0, metric.value + change));
+            return { ...metric, value: Math.round(newValue) };
+          }
+          return metric;
+        })
+      );
+    }, 3000); // Update every 3 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const animationStyles = `
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow: 0 0 15px rgba(249, 115, 22, 0.2);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(249, 115, 22, 0.4);
+      }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    .animate-slideInLeft {
+      animation: slideInLeft 0.6s ease-out forwards;
+    }
+    .animate-slideInRight {
+      animation: slideInRight 0.6s ease-out forwards;
+    }
+    .animate-float {
+      animation: float 3s ease-in-out infinite;
+    }
+    .animate-pulse-glow {
+      animation: pulse-glow 2s ease-in-out infinite;
+    }
+    .hover-lift {
+      transition: all 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+    .progress-bar {
+      transition: width 0.5s ease-out;
+    }
+    .metric-value {
+      transition: all 0.3s ease;
+    }
+    .live-indicator {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.6;
+      }
+    }
+  `;
 
   const studyInsights = useMemo(
     () => ({
@@ -287,7 +410,8 @@ export default function StudentDashboard() {
 
   return (
     <div className="space-y-10 text-slate-900">
-      <section className="relative overflow-hidden rounded-[40px] border border-[#ffd5ad] bg-gradient-to-br from-[#fff6ea] via-[#ffdcb3] to-[#ffb774] px-6 py-8 text-[#4b2f1c] shadow-[0_30px_70px_rgba(255,193,111,0.28)]">
+      <style>{animationStyles}</style>
+      <section className={`relative overflow-hidden rounded-[40px] border border-[#ffd5ad] bg-gradient-to-br from-[#fff6ea] via-[#ffdcb3] to-[#ffb774] px-6 py-8 text-[#4b2f1c] shadow-[0_30px_70px_rgba(255,193,111,0.28)] ${isVisible ? 'animate-slideInLeft' : ''}`}>
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.45),_transparent_60%)]" />
         <div className="pointer-events-none absolute -right-12 -top-12 h-56 w-56 rounded-full bg-white/30 blur-[120px]" />
         <div className="relative z-10 flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
@@ -340,11 +464,12 @@ export default function StudentDashboard() {
           </div>
         </div>
         <div className="relative z-10 mt-6 grid gap-4 md:grid-cols-3">
-          {actionShortcuts.map((shortcut) => (
+          {actionShortcuts.map((shortcut, idx) => (
             <Link
               key={shortcut.title}
               to={shortcut.to}
-              className="flex h-full flex-col justify-between rounded-3xl border border-[#f4cba0] bg-white/85 px-4 py-4 text-[#4b2f1c] transition hover:border-[#f09a4d] hover:bg-white"
+              className={`flex h-full flex-col justify-between rounded-3xl border border-[#f4cba0] bg-white/85 px-4 py-4 text-[#4b2f1c] transition hover:border-[#f09a4d] hover:bg-white hover-lift animate-fadeInUp`}
+              style={{ animationDelay: `${idx * 0.1}s` }}
             >
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-[#c1823f]">{shortcut.pill}</p>
@@ -357,7 +482,7 @@ export default function StudentDashboard() {
         </div>
       </section>
 
-      <section className="rounded-[34px] border border-amber-100 bg-white px-6 py-6 shadow-sm">
+      <section className={`rounded-[34px] border border-amber-100 bg-white px-6 py-6 shadow-sm ${isVisible ? 'animate-slideInRight' : ''}`}>
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-amber-500">Workspace launchpad</p>
@@ -366,8 +491,8 @@ export default function StudentDashboard() {
           <p className="text-xs text-slate-500">Labs sync every 15 minutes</p>
         </div>
         <div className="mt-4 grid gap-3 md:grid-cols-3">
-          {launchpadHighlights.map((item) => (
-            <div key={item.label} className="rounded-3xl border border-amber-50 bg-amber-50/60 px-4 py-4">
+          {launchpadHighlights.map((item, idx) => (
+            <div key={item.label} className="rounded-3xl border border-amber-50 bg-amber-50/60 px-4 py-4 hover-lift animate-fadeInUp" style={{ animationDelay: `${idx * 0.1}s` }}>
               <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-amber-500">{item.label}</p>
               <p className="mt-2 text-xl font-semibold text-slate-900">{item.value}</p>
               <p className="text-xs text-slate-500">{item.note}</p>
@@ -375,11 +500,12 @@ export default function StudentDashboard() {
           ))}
         </div>
         <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {quickLaunchLinks.map(({ title, desc, to, icon: Icon }) => (
+          {quickLaunchLinks.map(({ title, desc, to, icon: Icon }, idx) => (
             <Link
               key={title}
               to={to}
-              className="flex items-center gap-3 rounded-3xl border border-amber-50 bg-amber-50/60 px-4 py-4 text-sm text-slate-700 transition hover:border-amber-200 hover:bg-white"
+              className={`flex items-center gap-3 rounded-3xl border border-amber-50 bg-amber-50/60 px-4 py-4 text-sm text-slate-700 transition hover:border-amber-200 hover:bg-white hover-lift animate-fadeInUp`}
+              style={{ animationDelay: `${idx * 0.08}s` }}
             >
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white text-amber-600">
                 <Icon className="h-5 w-5" />
@@ -488,13 +614,16 @@ export default function StudentDashboard() {
             ))}
           </div>
           <div className="mt-4 grid gap-4 md:grid-cols-3">
-            {usageMetrics.map((metric) => (
-              <div key={metric.label} className={`rounded-3xl px-4 py-4 ${metric.tone}`}>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-500">{metric.label}</p>
-                <p className="mt-2 text-3xl font-semibold">{metric.value}%</p>
+            {metrics.map((metric) => (
+              <div key={metric.label} className={`rounded-3xl px-4 py-4 ${metric.tone} hover-lift`}>
+                <div className="flex items-center justify-between">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-500">{metric.label}</p>
+                  <span className="live-indicator h-2 w-2 rounded-full bg-current" />
+                </div>
+                <p className="metric-value mt-2 text-3xl font-semibold">{metric.value}%</p>
                 <p className="text-xs text-slate-500">{metric.sub}</p>
                 <div className="mt-3 h-2 rounded-full bg-white/60">
-                  <div className="h-full rounded-full bg-current" style={{ width: `${metric.value}%` }} />
+                  <div className="progress-bar h-full rounded-full bg-current" style={{ width: `${metric.value}%` }} />
                 </div>
               </div>
             ))}

@@ -276,7 +276,7 @@ export default function ExamQuiz() {
 
   return (
     <div className="space-y-6 text-slate-900">
-      <section className="rounded-[32px] bg-gradient-to-r from-[#fff4df] via-[#ffe5c2] to-[#ffd09b] p-6 text-slate-900 shadow-[0_25px_50px_rgba(255,193,111,0.35)]">
+      <section className="rounded-[32px] bg-gradient-to-r from-[#fff4df] via-[#ffe5c2] to-[#ffd09b] p-6 text-slate-900 shadow-[0_25px_50px_rgba(255,193,111,0.35)] animate-fadeInUp">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <button
@@ -326,7 +326,11 @@ export default function ExamQuiz() {
               </div>
             )}
 
-            {derivedQuestions.map((question, index) => renderQuestionCard(question, index))}
+            {derivedQuestions.map((question, index) => (
+              <div className="animate-fadeInUp" style={{ animationDelay: `${index * 0.04}s` }} key={question.id || index}>
+                {renderQuestionCard(question, index)}
+              </div>
+            ))}
 
             {!isCompleted && derivedQuestions.length > 0 && (
               <div className="flex flex-wrap gap-3">
@@ -352,7 +356,7 @@ export default function ExamQuiz() {
           </div>
 
           <aside className="space-y-4">
-            <div className="rounded-[28px] border border-slate-100 bg-white p-5 shadow-sm">
+            <div className="rounded-[28px] border border-slate-100 bg-white p-5 shadow-sm animate-fadeInUp">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Exam meta</p>
@@ -375,7 +379,7 @@ export default function ExamQuiz() {
             </div>
 
             {(isCompleted || result) && (
-              <div className="rounded-[28px] border border-emerald-100 bg-white p-5 shadow-sm">
+              <div className="rounded-[28px] border border-emerald-100 bg-white p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.08s' }}>
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.3em] text-emerald-600">Your score</p>
@@ -403,7 +407,7 @@ export default function ExamQuiz() {
             )}
 
             {!isCompleted && (
-              <div className="rounded-[28px] border border-amber-100 bg-white p-5 shadow-sm">
+              <div className="rounded-[28px] border border-amber-100 bg-white p-5 shadow-sm animate-fadeInUp" style={{ animationDelay: '0.16s' }}>
                 <p className="text-xs uppercase tracking-[0.3em] text-amber-600">Quick tips</p>
                 <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-slate-600">
                   <li>Answer confidently—there is no penalty for skipping, but attempted questions help tailor feedback.</li>
